@@ -13,8 +13,13 @@
     <Implicit_KindOfTask>{a5b9220f-8371-48a4-9c4d-448f40011e9d}</Implicit_KindOfTask>
     <Implicit_Jitter_Distribution>{52b46af5-2285-4b75-b816-c923daf7c79d}</Implicit_Jitter_Distribution>
     <LibraryReferences>{b7bab649-b18f-4421-a81c-7a3381e3f2d7}</LibraryReferences>
+    <CompilerDefines>L</CompilerDefines>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="GVLs\GVL.TcGVL">
+      <SubType>Code</SubType>
+      <LinkAlways>true</LinkAlways>
+    </Compile>
     <Compile Include="PlcTask.TcTTO">
       <SubType>Code</SubType>
     </Compile>
@@ -33,6 +38,18 @@
       <DefaultResolution>lcls-twincat-motion, * (SLAC)</DefaultResolution>
       <Namespace>lcls_twincat_motion</Namespace>
     </PlaceholderReference>
+    <PlaceholderReference Include="lcls2-cc-lib">
+      <DefaultResolution>lcls2-cc-lib, * (SLAC)</DefaultResolution>
+      <Namespace>lcls2_cc_lib</Namespace>
+    </PlaceholderReference>
+    <PlaceholderReference Include="PMPS">
+      <DefaultResolution>PMPS, * (SLAC - LCLS)</DefaultResolution>
+      <Namespace>PMPS</Namespace>
+    </PlaceholderReference>
+    <PlaceholderReference Include="Tc2_SerialCom">
+      <DefaultResolution>Tc2_SerialCom, * (Beckhoff Automation GmbH)</DefaultResolution>
+      <Namespace>Tc2_SerialCom</Namespace>
+    </PlaceholderReference>
     <PlaceholderReference Include="Tc2_Standard">
       <DefaultResolution>Tc2_Standard, * (Beckhoff Automation GmbH)</DefaultResolution>
       <Namespace>Tc2_Standard</Namespace>
@@ -49,6 +66,12 @@
   <ItemGroup>
     <PlaceholderResolution Include="lcls-twincat-motion">
       <Resolution>lcls-twincat-motion, 1.8.0 (SLAC)</Resolution>
+    </PlaceholderResolution>
+    <PlaceholderResolution Include="lcls2-cc-lib">
+      <Resolution>lcls2-cc-lib, * (SLAC)</Resolution>
+    </PlaceholderResolution>
+    <PlaceholderResolution Include="PMPS">
+      <Resolution>PMPS, * (SLAC - LCLS)</Resolution>
     </PlaceholderResolution>
   </ItemGroup>
   <ItemGroup>

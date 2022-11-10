@@ -26,15 +26,68 @@ VAR
     '}
     M3: DUT_MotionStage;
     fbMotion3: FB_MotionStage;
+    
+    
+    {attribute 'pytmc' := '
+        pv: PLC:TST:MOT:SIM:XPIM
+        io: io
+    '}
+    fbIM1L0: FB_XPIM;
+    stEL6In AT %I*: EL6InData22b;
+    stEL6Out AT %Q*: EL6OutData22b;
+    bInit: BOOL := TRUE;
+    
+    fbArbiterIO: FB_SubSysToArbiter_IO;
 END_VAR]]></Declaration>
     <Implementation>
-      <ST><![CDATA[fbMotion1(stMotionStage := M1);
-fbMotion2(stMotionStage := M2);
-fbMotion3(stMotionStage := M3);
-M3.bHardwareEnable := TRUE;
-M3.bPowerSelf := TRUE;
+      <ST><![CDATA[// fbMotion1(stMotionStage := M1);
+// fbMotion2(stMotionStage := M2);
+// fbMotion3(stMotionStage := M3);
+// M3.bHardwareEnable := TRUE;
+// M3.bPowerSelf := TRUE;
 M3.bLimitForwardEnable := M3.Axis.NcToPlc.ActPos < 99.7;
-M3.bLimitBackwardEnable := M3.Axis.NcToPlc.ActPos > 0.2;]]></ST>
+M3.bLimitBackwardEnable := M3.Axis.NcToPlc.ActPos > 0.2;
+
+IF bInit THEN
+    fbIM1L0.nTransitionAssertionID := 16#2100;
+    fbIM1L0.nUnknownAssertionID := 16#2109;
+    fbIM1L0.stOut.fPosition := 0;
+    fbIM1L0.stOut.bUseRawCounts := FALSE;
+    fbIM1L0.stOut.nRequestAssertionID := 16#2101;
+    fbIM1L0.stOut.stBeamParams := PMPS_GVL.cstFullBeam;
+    fbIM1L0.stOut.bValid := TRUE;
+    fbIM1L0.stYag.fPosition := -86.65;
+    fbIM1L0.stYag.bUseRawCounts := FALSE;
+    fbIM1L0.stYag.nRequestAssertionID := 16#2102;
+    fbIM1L0.stYag.stBeamParams := PMPS_GVL.cstFullBeam;
+    fbIM1L0.stYag.stBeamParams.neVRange := F_eVExcludeRange(2100, 3800) AND F_eVExcludeRange(16900, 24000);
+    fbIM1L0.stYag.bValid := TRUE;
+    fbIM1L0.stDiamond.fPosition := -56.65;
+    fbIM1L0.stDiamond.bUseRawCounts := FALSE;
+    fbIM1L0.stDiamond.nRequestAssertionID := 16#2103;
+    fbIM1L0.stDiamond.stBeamParams := PMPS_GVL.cstFullBeam;
+    fbIM1L0.stDiamond.bValid := TRUE;
+    fbIM1L0.stReticle.fPosition := -26.65;
+    fbIM1L0.stReticle.bUseRawCounts := FALSE;
+    fbIM1L0.stReticle.nRequestAssertionID := 16#2104;
+    fbIM1L0.stReticle.stBeamParams := PMPS_GVL.cst0RateBeam;
+    fbIM1L0.stReticle.bValid := TRUE;
+    bInit := FALSE;
+END_IF
+
+fbIM1L0(
+    fbArbiter := GVL.fbArbiter,
+    fbFFHWO := GVL.fbFastFaultOutput1,
+    stYStage := M1,
+    stZoomStage := M2,
+    stFocusStage := M3,
+    stEl6In := stEL6In,
+    stEl6Out := stEl6Out);
+
+GVL.fbFastFaultOutput1.Execute();
+fbArbiterIO(
+    Arbiter:=GVL.fbArbiter,
+    fbFFHWO:=GVL.fbFastFaultOutput1);]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
