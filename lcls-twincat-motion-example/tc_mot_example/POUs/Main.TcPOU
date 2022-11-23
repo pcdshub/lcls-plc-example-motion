@@ -38,7 +38,6 @@ VAR
     bInit: BOOL := TRUE;
     
     fbArbiterIO: FB_SubSysToArbiter_IO;
-    fbPMPSDB: FB_Standard_PMPSDB;
 END_VAR]]></Declaration>
     <Implementation>
       <ST><![CDATA[// fbMotion1(stMotionStage := M1);
@@ -82,7 +81,7 @@ fbIM1L0(
     nUnknownAssertionID := 1001,
 );
 
-fbPMPSDB(
+MOTION_GVL.fbStandardPMPSDB(
     io_fbFFHWO:=GVL.fbFastFaultOutput1,
     bEnable:=TRUE,
     sPLCName:='tst-motion',
