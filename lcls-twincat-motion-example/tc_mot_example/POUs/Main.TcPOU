@@ -38,6 +38,7 @@ VAR
     bInit: BOOL := TRUE;
     
     fbArbiterIO: FB_SubSysToArbiter_IO;
+    fbPMPSDB: FB_Standard_PMPSDB;
 END_VAR]]></Declaration>
     <Implementation>
       <ST><![CDATA[// fbMotion1(stMotionStage := M1);
@@ -79,6 +80,11 @@ fbIM1L0(
     sPmpsDeviceName := 'IM1K0-XTES',
 );
 
+fbPMPSDB(
+    io_fbFFHWO:=GVL.fbFastFaultOutput1,
+    bEnable:=TRUE,
+    sPLCName:='tst-motion',
+);
 GVL.fbFastFaultOutput1.Execute();
 fbArbiterIO(
     Arbiter:=GVL.fbArbiter,
