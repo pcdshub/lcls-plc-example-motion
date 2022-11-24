@@ -2660,6 +2660,20 @@ record(bo, "PLC:TST:MOT:SIM:XPIM:CAM:PWR") {
   info(archive, "VAL")
 }
 
+record(bi, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:10:PMPS_LOADED_RBV") {
+  # TRUE if PMPS loaded parameters from the database.
+  field(DESC, "TRUE if PMPS loaded ...rom the database.")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbIM1L0.fbStates.arrStates[10].bBeamParamsLoaded?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
 record(bi, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:10:LOCKED_RBV") {
   field(DESC, "TRUE if state is immutable")
   field(SCAN, "I/O Intr")
@@ -2842,6 +2856,21 @@ record(waveform, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:10:NAME_RBV") {
   info(archive, "VAL")
 }
 
+record(waveform, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:10:PMPS_STATE_RBV") {
+  field(DESC, "PMPS Database Lookup Key")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbIM1L0.fbStates.arrStates[10].sPmpsState?")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+  field(MPST, "On Change")
+  field(APST, "On Change")
+  info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
+  info(archive, "VAL")
+}
+
 record(waveform, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:10:BP:Veto_RBV") {
   # Main.fbIM1L0.fbStates.arrStates[10].stBeamParams.aVetoDevices
   field(DESC, "Main.fbIM1L0.fbState...rams.aVetoDevices")
@@ -2956,6 +2985,20 @@ record(bi, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:10:BP:Valid_RBV") {
   field(TSE, "-2")
   field(DTYP, "asynInt32")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbIM1L0.fbStates.arrStates[10].stBeamParams.xValid?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:11:PMPS_LOADED_RBV") {
+  # TRUE if PMPS loaded parameters from the database.
+  field(DESC, "TRUE if PMPS loaded ...rom the database.")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbIM1L0.fbStates.arrStates[11].bBeamParamsLoaded?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
@@ -3144,6 +3187,21 @@ record(waveform, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:11:NAME_RBV") {
   info(archive, "VAL")
 }
 
+record(waveform, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:11:PMPS_STATE_RBV") {
+  field(DESC, "PMPS Database Lookup Key")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbIM1L0.fbStates.arrStates[11].sPmpsState?")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+  field(MPST, "On Change")
+  field(APST, "On Change")
+  info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
+  info(archive, "VAL")
+}
+
 record(waveform, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:11:BP:Veto_RBV") {
   # Main.fbIM1L0.fbStates.arrStates[11].stBeamParams.aVetoDevices
   field(DESC, "Main.fbIM1L0.fbState...rams.aVetoDevices")
@@ -3258,6 +3316,20 @@ record(bi, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:11:BP:Valid_RBV") {
   field(TSE, "-2")
   field(DTYP, "asynInt32")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbIM1L0.fbStates.arrStates[11].stBeamParams.xValid?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:12:PMPS_LOADED_RBV") {
+  # TRUE if PMPS loaded parameters from the database.
+  field(DESC, "TRUE if PMPS loaded ...rom the database.")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbIM1L0.fbStates.arrStates[12].bBeamParamsLoaded?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
@@ -3446,6 +3518,21 @@ record(waveform, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:12:NAME_RBV") {
   info(archive, "VAL")
 }
 
+record(waveform, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:12:PMPS_STATE_RBV") {
+  field(DESC, "PMPS Database Lookup Key")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbIM1L0.fbStates.arrStates[12].sPmpsState?")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+  field(MPST, "On Change")
+  field(APST, "On Change")
+  info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
+  info(archive, "VAL")
+}
+
 record(waveform, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:12:BP:Veto_RBV") {
   # Main.fbIM1L0.fbStates.arrStates[12].stBeamParams.aVetoDevices
   field(DESC, "Main.fbIM1L0.fbState...rams.aVetoDevices")
@@ -3560,6 +3647,20 @@ record(bi, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:12:BP:Valid_RBV") {
   field(TSE, "-2")
   field(DTYP, "asynInt32")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbIM1L0.fbStates.arrStates[12].stBeamParams.xValid?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:13:PMPS_LOADED_RBV") {
+  # TRUE if PMPS loaded parameters from the database.
+  field(DESC, "TRUE if PMPS loaded ...rom the database.")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbIM1L0.fbStates.arrStates[13].bBeamParamsLoaded?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
@@ -3748,6 +3849,21 @@ record(waveform, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:13:NAME_RBV") {
   info(archive, "VAL")
 }
 
+record(waveform, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:13:PMPS_STATE_RBV") {
+  field(DESC, "PMPS Database Lookup Key")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbIM1L0.fbStates.arrStates[13].sPmpsState?")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+  field(MPST, "On Change")
+  field(APST, "On Change")
+  info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
+  info(archive, "VAL")
+}
+
 record(waveform, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:13:BP:Veto_RBV") {
   # Main.fbIM1L0.fbStates.arrStates[13].stBeamParams.aVetoDevices
   field(DESC, "Main.fbIM1L0.fbState...rams.aVetoDevices")
@@ -3862,6 +3978,20 @@ record(bi, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:13:BP:Valid_RBV") {
   field(TSE, "-2")
   field(DTYP, "asynInt32")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbIM1L0.fbStates.arrStates[13].stBeamParams.xValid?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:14:PMPS_LOADED_RBV") {
+  # TRUE if PMPS loaded parameters from the database.
+  field(DESC, "TRUE if PMPS loaded ...rom the database.")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbIM1L0.fbStates.arrStates[14].bBeamParamsLoaded?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
@@ -4050,6 +4180,21 @@ record(waveform, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:14:NAME_RBV") {
   info(archive, "VAL")
 }
 
+record(waveform, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:14:PMPS_STATE_RBV") {
+  field(DESC, "PMPS Database Lookup Key")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbIM1L0.fbStates.arrStates[14].sPmpsState?")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+  field(MPST, "On Change")
+  field(APST, "On Change")
+  info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
+  info(archive, "VAL")
+}
+
 record(waveform, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:14:BP:Veto_RBV") {
   # Main.fbIM1L0.fbStates.arrStates[14].stBeamParams.aVetoDevices
   field(DESC, "Main.fbIM1L0.fbState...rams.aVetoDevices")
@@ -4164,6 +4309,20 @@ record(bi, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:14:BP:Valid_RBV") {
   field(TSE, "-2")
   field(DTYP, "asynInt32")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbIM1L0.fbStates.arrStates[14].stBeamParams.xValid?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:15:PMPS_LOADED_RBV") {
+  # TRUE if PMPS loaded parameters from the database.
+  field(DESC, "TRUE if PMPS loaded ...rom the database.")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbIM1L0.fbStates.arrStates[15].bBeamParamsLoaded?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
@@ -4352,6 +4511,21 @@ record(waveform, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:15:NAME_RBV") {
   info(archive, "VAL")
 }
 
+record(waveform, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:15:PMPS_STATE_RBV") {
+  field(DESC, "PMPS Database Lookup Key")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbIM1L0.fbStates.arrStates[15].sPmpsState?")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+  field(MPST, "On Change")
+  field(APST, "On Change")
+  info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
+  info(archive, "VAL")
+}
+
 record(waveform, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:15:BP:Veto_RBV") {
   # Main.fbIM1L0.fbStates.arrStates[15].stBeamParams.aVetoDevices
   field(DESC, "Main.fbIM1L0.fbState...rams.aVetoDevices")
@@ -4466,6 +4640,20 @@ record(bi, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:15:BP:Valid_RBV") {
   field(TSE, "-2")
   field(DTYP, "asynInt32")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbIM1L0.fbStates.arrStates[15].stBeamParams.xValid?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:01:PMPS_LOADED_RBV") {
+  # TRUE if PMPS loaded parameters from the database.
+  field(DESC, "TRUE if PMPS loaded ...rom the database.")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbIM1L0.fbStates.arrStates[1].bBeamParamsLoaded?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
@@ -4654,6 +4842,21 @@ record(waveform, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:01:NAME_RBV") {
   info(archive, "VAL")
 }
 
+record(waveform, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:01:PMPS_STATE_RBV") {
+  field(DESC, "PMPS Database Lookup Key")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbIM1L0.fbStates.arrStates[1].sPmpsState?")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+  field(MPST, "On Change")
+  field(APST, "On Change")
+  info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
+  info(archive, "VAL")
+}
+
 record(waveform, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:01:BP:Veto_RBV") {
   # Main.fbIM1L0.fbStates.arrStates[1].stBeamParams.aVetoDevices
   field(DESC, "Main.fbIM1L0.fbState...rams.aVetoDevices")
@@ -4768,6 +4971,20 @@ record(bi, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:01:BP:Valid_RBV") {
   field(TSE, "-2")
   field(DTYP, "asynInt32")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbIM1L0.fbStates.arrStates[1].stBeamParams.xValid?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:02:PMPS_LOADED_RBV") {
+  # TRUE if PMPS loaded parameters from the database.
+  field(DESC, "TRUE if PMPS loaded ...rom the database.")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbIM1L0.fbStates.arrStates[2].bBeamParamsLoaded?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
@@ -4956,6 +5173,21 @@ record(waveform, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:02:NAME_RBV") {
   info(archive, "VAL")
 }
 
+record(waveform, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:02:PMPS_STATE_RBV") {
+  field(DESC, "PMPS Database Lookup Key")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbIM1L0.fbStates.arrStates[2].sPmpsState?")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+  field(MPST, "On Change")
+  field(APST, "On Change")
+  info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
+  info(archive, "VAL")
+}
+
 record(waveform, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:02:BP:Veto_RBV") {
   # Main.fbIM1L0.fbStates.arrStates[2].stBeamParams.aVetoDevices
   field(DESC, "Main.fbIM1L0.fbState...rams.aVetoDevices")
@@ -5070,6 +5302,20 @@ record(bi, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:02:BP:Valid_RBV") {
   field(TSE, "-2")
   field(DTYP, "asynInt32")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbIM1L0.fbStates.arrStates[2].stBeamParams.xValid?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:03:PMPS_LOADED_RBV") {
+  # TRUE if PMPS loaded parameters from the database.
+  field(DESC, "TRUE if PMPS loaded ...rom the database.")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbIM1L0.fbStates.arrStates[3].bBeamParamsLoaded?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
@@ -5258,6 +5504,21 @@ record(waveform, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:03:NAME_RBV") {
   info(archive, "VAL")
 }
 
+record(waveform, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:03:PMPS_STATE_RBV") {
+  field(DESC, "PMPS Database Lookup Key")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbIM1L0.fbStates.arrStates[3].sPmpsState?")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+  field(MPST, "On Change")
+  field(APST, "On Change")
+  info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
+  info(archive, "VAL")
+}
+
 record(waveform, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:03:BP:Veto_RBV") {
   # Main.fbIM1L0.fbStates.arrStates[3].stBeamParams.aVetoDevices
   field(DESC, "Main.fbIM1L0.fbState...rams.aVetoDevices")
@@ -5372,6 +5633,20 @@ record(bi, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:03:BP:Valid_RBV") {
   field(TSE, "-2")
   field(DTYP, "asynInt32")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbIM1L0.fbStates.arrStates[3].stBeamParams.xValid?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:04:PMPS_LOADED_RBV") {
+  # TRUE if PMPS loaded parameters from the database.
+  field(DESC, "TRUE if PMPS loaded ...rom the database.")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbIM1L0.fbStates.arrStates[4].bBeamParamsLoaded?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
@@ -5560,6 +5835,21 @@ record(waveform, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:04:NAME_RBV") {
   info(archive, "VAL")
 }
 
+record(waveform, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:04:PMPS_STATE_RBV") {
+  field(DESC, "PMPS Database Lookup Key")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbIM1L0.fbStates.arrStates[4].sPmpsState?")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+  field(MPST, "On Change")
+  field(APST, "On Change")
+  info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
+  info(archive, "VAL")
+}
+
 record(waveform, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:04:BP:Veto_RBV") {
   # Main.fbIM1L0.fbStates.arrStates[4].stBeamParams.aVetoDevices
   field(DESC, "Main.fbIM1L0.fbState...rams.aVetoDevices")
@@ -5674,6 +5964,20 @@ record(bi, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:04:BP:Valid_RBV") {
   field(TSE, "-2")
   field(DTYP, "asynInt32")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbIM1L0.fbStates.arrStates[4].stBeamParams.xValid?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:05:PMPS_LOADED_RBV") {
+  # TRUE if PMPS loaded parameters from the database.
+  field(DESC, "TRUE if PMPS loaded ...rom the database.")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbIM1L0.fbStates.arrStates[5].bBeamParamsLoaded?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
@@ -5862,6 +6166,21 @@ record(waveform, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:05:NAME_RBV") {
   info(archive, "VAL")
 }
 
+record(waveform, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:05:PMPS_STATE_RBV") {
+  field(DESC, "PMPS Database Lookup Key")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbIM1L0.fbStates.arrStates[5].sPmpsState?")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+  field(MPST, "On Change")
+  field(APST, "On Change")
+  info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
+  info(archive, "VAL")
+}
+
 record(waveform, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:05:BP:Veto_RBV") {
   # Main.fbIM1L0.fbStates.arrStates[5].stBeamParams.aVetoDevices
   field(DESC, "Main.fbIM1L0.fbState...rams.aVetoDevices")
@@ -5976,6 +6295,20 @@ record(bi, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:05:BP:Valid_RBV") {
   field(TSE, "-2")
   field(DTYP, "asynInt32")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbIM1L0.fbStates.arrStates[5].stBeamParams.xValid?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:06:PMPS_LOADED_RBV") {
+  # TRUE if PMPS loaded parameters from the database.
+  field(DESC, "TRUE if PMPS loaded ...rom the database.")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbIM1L0.fbStates.arrStates[6].bBeamParamsLoaded?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
@@ -6164,6 +6497,21 @@ record(waveform, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:06:NAME_RBV") {
   info(archive, "VAL")
 }
 
+record(waveform, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:06:PMPS_STATE_RBV") {
+  field(DESC, "PMPS Database Lookup Key")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbIM1L0.fbStates.arrStates[6].sPmpsState?")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+  field(MPST, "On Change")
+  field(APST, "On Change")
+  info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
+  info(archive, "VAL")
+}
+
 record(waveform, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:06:BP:Veto_RBV") {
   # Main.fbIM1L0.fbStates.arrStates[6].stBeamParams.aVetoDevices
   field(DESC, "Main.fbIM1L0.fbState...rams.aVetoDevices")
@@ -6278,6 +6626,20 @@ record(bi, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:06:BP:Valid_RBV") {
   field(TSE, "-2")
   field(DTYP, "asynInt32")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbIM1L0.fbStates.arrStates[6].stBeamParams.xValid?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:07:PMPS_LOADED_RBV") {
+  # TRUE if PMPS loaded parameters from the database.
+  field(DESC, "TRUE if PMPS loaded ...rom the database.")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbIM1L0.fbStates.arrStates[7].bBeamParamsLoaded?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
@@ -6466,6 +6828,21 @@ record(waveform, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:07:NAME_RBV") {
   info(archive, "VAL")
 }
 
+record(waveform, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:07:PMPS_STATE_RBV") {
+  field(DESC, "PMPS Database Lookup Key")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbIM1L0.fbStates.arrStates[7].sPmpsState?")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+  field(MPST, "On Change")
+  field(APST, "On Change")
+  info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
+  info(archive, "VAL")
+}
+
 record(waveform, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:07:BP:Veto_RBV") {
   # Main.fbIM1L0.fbStates.arrStates[7].stBeamParams.aVetoDevices
   field(DESC, "Main.fbIM1L0.fbState...rams.aVetoDevices")
@@ -6580,6 +6957,20 @@ record(bi, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:07:BP:Valid_RBV") {
   field(TSE, "-2")
   field(DTYP, "asynInt32")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbIM1L0.fbStates.arrStates[7].stBeamParams.xValid?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:08:PMPS_LOADED_RBV") {
+  # TRUE if PMPS loaded parameters from the database.
+  field(DESC, "TRUE if PMPS loaded ...rom the database.")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbIM1L0.fbStates.arrStates[8].bBeamParamsLoaded?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
@@ -6768,6 +7159,21 @@ record(waveform, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:08:NAME_RBV") {
   info(archive, "VAL")
 }
 
+record(waveform, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:08:PMPS_STATE_RBV") {
+  field(DESC, "PMPS Database Lookup Key")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbIM1L0.fbStates.arrStates[8].sPmpsState?")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+  field(MPST, "On Change")
+  field(APST, "On Change")
+  info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
+  info(archive, "VAL")
+}
+
 record(waveform, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:08:BP:Veto_RBV") {
   # Main.fbIM1L0.fbStates.arrStates[8].stBeamParams.aVetoDevices
   field(DESC, "Main.fbIM1L0.fbState...rams.aVetoDevices")
@@ -6882,6 +7288,20 @@ record(bi, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:08:BP:Valid_RBV") {
   field(TSE, "-2")
   field(DTYP, "asynInt32")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbIM1L0.fbStates.arrStates[8].stBeamParams.xValid?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:09:PMPS_LOADED_RBV") {
+  # TRUE if PMPS loaded parameters from the database.
+  field(DESC, "TRUE if PMPS loaded ...rom the database.")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbIM1L0.fbStates.arrStates[9].bBeamParamsLoaded?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
@@ -7062,6 +7482,21 @@ record(waveform, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:09:NAME_RBV") {
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbIM1L0.fbStates.arrStates[9].sName?")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+  field(MPST, "On Change")
+  field(APST, "On Change")
+  info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(waveform, "PLC:TST:MOT:SIM:XPIM:MMS:STATE:09:PMPS_STATE_RBV") {
+  field(DESC, "PMPS Database Lookup Key")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbIM1L0.fbStates.arrStates[9].sPmpsState?")
   field(FTVL, "CHAR")
   field(NELM, "80")
   field(MPST, "On Change")

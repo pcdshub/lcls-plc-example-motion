@@ -4,8 +4,8 @@
 #         Project: lcls-twincat-motion-example.tsproj
 #        PLC name: tc_mot_example (tc_mot_example Instance)
 # Generated using: pytmc 2.14.1
-# Project version: a057838
-#    Project hash: a0578389b0fe91fe761fa6ef151961ca47a1493b
+# Project version: 1402919
+#    Project hash: 140291997cd6800d81e8512d6ab582688fdbff56
 #     PLC IP/host: 172.21.148.148
 #      PLC Net ID: 172.21.148.148.1.1
 # ** DEVELOPMENT MODE IOC **
@@ -41,7 +41,7 @@ epicsEnvSet("ASYN_PORT",        "ASYN_PLC")
 epicsEnvSet("IPADDR",           "172.21.148.148")
 epicsEnvSet("AMSID",            "172.21.148.148.1.1")
 epicsEnvSet("AMS_PORT",         "851")
-epicsEnvSet("ADS_MAX_PARAMS",   "1614")
+epicsEnvSet("ADS_MAX_PARAMS",   "1644")
 epicsEnvSet("ADS_SAMPLE_MS",    "50")
 epicsEnvSet("ADS_MAX_DELAY_MS", "100")
 epicsEnvSet("ADS_TIMEOUT_MS",   "1000")
@@ -165,7 +165,7 @@ dbLoadRecords("caPutLog.db", "IOC=$(IOC)")
 dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:TST:MOT,IDX=1")
 dbLoadRecords("TwinCAT_AppInfo.db", "PORT=$(ASYN_PORT), PREFIX=PLC:TST:MOT")
 
-dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:TST:MOT,PROJECT=lcls-twincat-motion-example.tsproj,HASH=a057838,VERSION=a057838,PYTMC=2.14.1,PLC_HOST=172.21.148.148")
+dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:TST:MOT,PROJECT=lcls-twincat-motion-example.tsproj,HASH=1402919,VERSION=1402919,PYTMC=2.14.1,PLC_HOST=172.21.148.148")
 
 #   LCLS General: * -> 0.0.0 (SLAC)
 dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TST:MOT,DEPENDENCY=LCLS_General,VERSION=0.0.0,VENDOR=SLAC")
@@ -189,8 +189,8 @@ cd "$(IOC_TOP)"
 ## PLC Project Database files ##
 dbLoadRecords("tc_mot_example.db", "PORT=$(ASYN_PORT),PREFIX=PLC:TST:MOT:,IOCNAME=$(IOC),IOC=$(IOC)")
 
-# Total records: 614
-callbackSetQueueSize(3228)
+# Total records: 644
+callbackSetQueueSize(3288)
 
 # Autosave and archive settings:
 save_restoreSet_status_prefix("PLC:TST:MOT:")
