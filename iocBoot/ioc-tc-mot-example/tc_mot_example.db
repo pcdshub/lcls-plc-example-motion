@@ -94,6 +94,18 @@ record(bo, "$(PREFIX)DB:REFRESH") {
   info(archive, "VAL")
 }
 
+record(longin, "$(PREFIX)DB:LAST_REFRESH_RBV") {
+  # MOTION_GVL.fbStandardPMPSDB.nLastRefreshTime
+  field(DESC, "MOTION_GVL.fbStandar....nLastRefreshTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MOTION_GVL.fbStandardPMPSDB.nLastRefreshTime?")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
+  info(archive, "VAL")
+}
+
 record(bi, "PLC:TST:MOT:SIM:01:PLC:bAllBackwardEnable_RBV") {
   # Summary of axis permission to move backward
   field(DESC, "Summary of axis perm... to move backward")

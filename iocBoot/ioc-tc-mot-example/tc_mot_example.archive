@@ -6,6 +6,7 @@ $(PREFIX)LCLSGeneral:LogPort.VAL	1	scan
 $(PREFIX)LCLSGeneral:LogMessageCount_RBV.VAL	1	scan
 $(PREFIX)DB:REFRESH_RBV.VAL	1	scan
 $(PREFIX)DB:REFRESH.VAL	1	scan
+$(PREFIX)DB:LAST_REFRESH_RBV.VAL	1	scan
 PLC:TST:MOT:SIM:01:PLC:bAllBackwardEnable_RBV.VAL	1	scan
 PLC:TST:MOT:SIM:01:PLC:bAllEnable_RBV.VAL	1	scan
 PLC:TST:MOT:SIM:01:PLC:bAllForwardEnable_RBV.VAL	1	scan
