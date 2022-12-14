@@ -77,8 +77,7 @@ fbIM1L0(
     stEl6In := stEL6In,
     stEl6Out := stEl6Out,
     sPmpsDeviceName := 'IM1K0-XTES',
-    nTransitionAssertionID := 1000,
-    nUnknownAssertionID := 1001,
+    sTransitionKey:='IM1K0-MOVING',
 );
 
 MOTION_GVL.fbStandardPMPSDB(
