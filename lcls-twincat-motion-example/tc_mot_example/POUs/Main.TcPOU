@@ -51,19 +51,19 @@ M3.bLimitBackwardEnable := M3.Axis.NcToPlc.ActPos > 0.2;
 IF bInit THEN
     fbIM1L0.stOut.fPosition := 0;
     fbIM1L0.stOut.bUseRawCounts := FALSE;
-    fbIM1L0.stOut.sPmpsState := 'IM1K0-XTES-OUT';
+    fbIM1L0.stOut.stPMPS.sPmpsState := 'IM1K0-XTES-OUT';
     fbIM1L0.stOut.bValid := TRUE;
     fbIM1L0.stYag.fPosition := -86.65;
     fbIM1L0.stYag.bUseRawCounts := FALSE;
-    fbIM1L0.stYag.sPmpsState := 'IM1K0-XTES-YAG';
+    fbIM1L0.stYag.stPMPS.sPmpsState := 'IM1K0-XTES-YAG';
     fbIM1L0.stYag.bValid := TRUE;
     fbIM1L0.stDiamond.fPosition := -56.65;
     fbIM1L0.stDiamond.bUseRawCounts := FALSE;
-    fbIM1L0.stDiamond.sPmpsState := 'IM1K0-XTES-DIAMOND';
+    fbIM1L0.stDiamond.stPMPS.sPmpsState := 'IM1K0-XTES-DIAMOND';
     fbIM1L0.stDiamond.bValid := TRUE;
     fbIM1L0.stReticle.fPosition := -26.65;
     fbIM1L0.stReticle.bUseRawCounts := FALSE;
-    fbIM1L0.stReticle.sPmpsState := 'IM1K0-XTES-RETICLE';
+    fbIM1L0.stReticle.stPMPS.sPmpsState := 'IM1K0-XTES-RETICLE';
     fbIM1L0.stReticle.bValid := TRUE;
     bInit := FALSE;
 END_IF
