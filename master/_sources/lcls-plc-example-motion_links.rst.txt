@@ -1,0 +1,28 @@
+
+Links
+-----
+
+.. csv-table::
+    :header: Owner A, Item A, Owner B, Item B
+    :align: center
+
+        tc_mot_example Instance, PlcTask Inputs^Main.M1.Axis.NcToPlc, TINC^NC-Task 1 SAF^Axes^Example 1 Simulated Working, Outputs^ToPlc
+        tc_mot_example Instance, PlcTask Inputs^Main.M10.Axis.NcToPlc, TINC^NC-Task 1 SAF^Axes^Example 10 Limit to Limit, Outputs^ToPlc
+        tc_mot_example Instance, PlcTask Inputs^Main.M2.Axis.NcToPlc, TINC^NC-Task 1 SAF^Axes^Example 2 Simulated Broken, Outputs^ToPlc
+        tc_mot_example Instance, PlcTask Inputs^Main.M3.Axis.NcToPlc, TINC^NC-Task 1 SAF^Axes^Example 3 Simulated Limits, Outputs^ToPlc
+        tc_mot_example Instance, PlcTask Inputs^Main.M4.Axis.NcToPlc, TINC^NC-Task 1 SAF^Axes^Example 4 XPIM Y, Outputs^ToPlc
+        tc_mot_example Instance, PlcTask Inputs^Main.M5.Axis.NcToPlc, TINC^NC-Task 1 SAF^Axes^Example 5 XPIM Zoom, Outputs^ToPlc
+        tc_mot_example Instance, PlcTask Inputs^Main.M6.Axis.NcToPlc, TINC^NC-Task 1 SAF^Axes^Example 6 XPIM Focus, Outputs^ToPlc
+        tc_mot_example Instance, PlcTask Inputs^Main.M7.Axis.NcToPlc, TINC^NC-Task 1 SAF^Axes^Example 7 3D X, Outputs^ToPlc
+        tc_mot_example Instance, PlcTask Inputs^Main.M8.Axis.NcToPlc, TINC^NC-Task 1 SAF^Axes^Example 8 3D Y, Outputs^ToPlc
+        tc_mot_example Instance, PlcTask Inputs^Main.M9.Axis.NcToPlc, TINC^NC-Task 1 SAF^Axes^Example 9 3D Z, Outputs^ToPlc
+        tc_mot_example Instance, PlcTask Outputs^Main.M1.Axis.PlcToNc, TINC^NC-Task 1 SAF^Axes^Example 1 Simulated Working, Inputs^FromPlc
+        tc_mot_example Instance, PlcTask Outputs^Main.M10.Axis.PlcToNc, TINC^NC-Task 1 SAF^Axes^Example 10 Limit to Limit, Inputs^FromPlc
+        tc_mot_example Instance, PlcTask Outputs^Main.M2.Axis.PlcToNc, TINC^NC-Task 1 SAF^Axes^Example 2 Simulated Broken, Inputs^FromPlc
+        tc_mot_example Instance, PlcTask Outputs^Main.M3.Axis.PlcToNc, TINC^NC-Task 1 SAF^Axes^Example 3 Simulated Limits, Inputs^FromPlc
+        tc_mot_example Instance, PlcTask Outputs^Main.M4.Axis.PlcToNc, TINC^NC-Task 1 SAF^Axes^Example 4 XPIM Y, Inputs^FromPlc
+        tc_mot_example Instance, PlcTask Outputs^Main.M5.Axis.PlcToNc, TINC^NC-Task 1 SAF^Axes^Example 5 XPIM Zoom, Inputs^FromPlc
+        tc_mot_example Instance, PlcTask Outputs^Main.M6.Axis.PlcToNc, TINC^NC-Task 1 SAF^Axes^Example 6 XPIM Focus, Inputs^FromPlc
+        tc_mot_example Instance, PlcTask Outputs^Main.M7.Axis.PlcToNc, TINC^NC-Task 1 SAF^Axes^Example 7 3D X, Inputs^FromPlc
+        tc_mot_example Instance, PlcTask Outputs^Main.M8.Axis.PlcToNc, TINC^NC-Task 1 SAF^Axes^Example 8 3D Y, Inputs^FromPlc
+        tc_mot_example Instance, PlcTask Outputs^Main.M9.Axis.PlcToNc, TINC^NC-Task 1 SAF^Axes^Example 9 3D Z, Inputs^FromPlc
