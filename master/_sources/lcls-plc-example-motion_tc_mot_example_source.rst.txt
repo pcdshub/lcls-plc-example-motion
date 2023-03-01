@@ -1,0 +1,378 @@
+
+
+DUTs
+----
+
+
+E_TwoTargets
+^^^^^^^^^^^^
+
+::
+
+    {attribute 'qualified_only'}
+    TYPE E_TwoTargets :
+    (
+        Unknown := 0,
+        OUT := 1,
+        TARGET1 := 2,
+        TARGET2 := 3
+    ) UINT;
+    END_TYPE
+
+
+Related:
+    * `E_TwoTargets`_
+
+
+GVLs
+----
+
+
+GVL
+^^^
+
+::
+
+    {attribute 'qualified_only'}
+    VAR_GLOBAL
+        {attribute 'pytmc' := 'pv: @(PREFIX)ARB'}
+        fbArbiter: FB_Arbiter(1);
+        {attribute 'pytmc' := 'pv: @(PREFIX)FFO:01'}
+        fbFastFaultOutput1: FB_HardwareFFOutput := (bAutoReset := TRUE, i_sNetID := '172.21.148.148.1.1');
+    END_VAR
+
+
+
+
+POUs
+----
+
+
+Main
+^^^^
+
+::
+
+    PROGRAM Main
+    VAR
+        // Simulated motor that is always allowed to move
+        {attribute 'pytmc' := '
+            pv: @(PREFIX)01
+            field: DESC Simulated Working Motor
+        '}
+        M1: ST_MotionStage := (sName := 'SIM:01');
+        fbMotion1: FB_MotionStageSim;
+
+        // Tool for simulating an NC error
+        fbCauseError: FB_CauseNCError;
+
+
+        // Simulated motor that is never allowed to move
+        {attribute 'pytmc' := '
+            pv: @(PREFIX)02
+            field: DESC Simulated Broken Motor
+        '}
+        M2: DUT_MotionStage := (sName := 'SIM:02');
+        fbMotion2: FB_MotionStage;
+
+        // Simulated motor with limits at 0 and 100 and EPS
+        {attribute 'pytmc' := '
+            pv: @(PREFIX)03
+            field: DESC Simulated Working Motor With Limits
+        '}
+        M3: ST_MotionStage := (sName := 'SIM:03');
+        fbMotion3: FB_MotionStage;
+
+        // Online write FALSE to simulate an EPS concern
+        fbM3FwdEPS: FB_EPS;
+        bM3EPSFwd1: BOOL := TRUE;
+        fbM3BwdEPS: FB_EPS;
+        bM3EPSBwd1: BOOL := TRUE;
+        bM3EPSBwd2: BOOL := TRUE;
+        fbM3PwrEPS: FB_EPS;
+        bM3EPSPwr1: BOOL := TRUE;
+        bM3EPSPwr2: BOOL := TRUE;
+        bM3EPSPwr3: BOOL := TRUE;
+        sM3EPSMessage: STRING := 'Sim EPS Message';
+
+        // Simulated motor xpim y
+        {attribute 'pytmc' := '
+            pv: IMTST:XTES:MMS
+            field: DESC Simulated XPIM Y
+        '}
+        M4: ST_MotionStage := (sName := 'IMTST:XTES:MMS');
+        // Simulated motor xpim zoom
+        {attribute 'pytmc' := '
+            pv: IMTST:XTES:CLZ
+            field: DESC Simulated XPIM ZOOM
+        '}
+        M5: ST_MotionStage := (sName := 'IMTST:XTES:CLZ');
+        // Simulated motor xpim focus
+        {attribute 'pytmc' := '
+            pv: IMTST:XTES:CLF
+            field: DESC Simulated XPIM FOCUS
+        '}
+        M6: ST_MotionStage := (sName := 'IMTST:XTES:CLF');
+
+        {attribute 'pytmc' := '
+            pv: IMTST:XTES
+        '}
+        fbIM1L0: FB_XPIM;
+        stEL6In AT %I*: EL6InData22b;
+        stEL6Out AT %Q*: EL6OutData22b;
+
+        // Simulated motor dimension X for 3d test
+        {attribute 'pytmc' := '
+            pv: @(PREFIX)3D:X
+            field: DESC Simulated X motor for 3d move
+        '}
+        M7: ST_MotionStage := (sName := '3D:X');
+        fbMotion7: FB_MotionStage;
+        // Simulated motor dimension Y for 3d test
+        {attribute 'pytmc' := '
+            pv: @(PREFIX)3D:Y
+            field: DESC Simulated Y motor for 3d move
+        '}
+        M8: ST_MotionStage := (sName := '3D:Y');
+        fbMotion8: FB_MotionStage;
+        // Simulated motor dimension Z for 3d test
+        {attribute 'pytmc' := '
+            pv: @(PREFIX)3D:Z
+            field: DESC Simulated Z motor for 3d move
+        '}
+        M9: ST_MotionStage := (sName := '3D:Z');
+        fbMotion9: FB_MotionStage;
+        {attribute 'pytmc' := '
+            pv: @(PREFIX)3D
+            astPositionState1.array: 1..3
+            astPositionState2.array: 1..3
+            astPositionState3.array: 1..3
+        '}
+        fb3D: FB_PositionStatePMPS3D;
+
+        fbStateSetup: FB_StateSetupHelper;
+        stDefault: ST_PositionState := (
+            fDelta := 0.5,
+            fVelocity := 10,
+            bUseRawCounts := FALSE,
+            bMoveOk := TRUE,
+            bValid := TRUE
+        );
+        astM7States: ARRAY[1..GeneralConstants.MAX_STATES] OF ST_PositionState;
+        astM8States: ARRAY[1..GeneralConstants.MAX_STATES] OF ST_PositionState;
+        astM9States: ARRAY[1..GeneralConstants.MAX_STATES] OF ST_PositionState;
+        {attribute 'pytmc' := '
+            pv: @(PREFIX)3D:STATE:SET
+            io: io
+        '}
+        e3DSet: E_TwoTargets;
+        {attribute 'pytmc' := '
+            pv: @(PREFIX)3D:STATE:GET
+            io: i
+        '}
+        e3DGet: E_TwoTargets;
+
+        // Simulated motor for limit to limit test
+        {attribute 'pytmc' := '
+            pv: @(PREFIX)L2L:MOT
+            field: DESC Simulated motor for limit to limit state move
+        '}
+        M10: ST_MotionStage := (sName := 'SIM:L2L');
+        fbMotion10: FB_MotionStage;
+        {attribute 'pytmc' := '
+            pv: @(PREFIX)L2L
+            astPositionState.array: 1..2
+        '}
+        fbM10States: FB_PositionState1D;
+        astM10States: ARRAY[1..GeneralConstants.MAX_STATES] OF ST_PositionState;
+        {attribute 'pytmc' := '
+            pv: @(PREFIX)L2L:STATE:SET
+            io: io
+        '}
+        eL2LSet: E_EpicsInOut;
+        {attribute 'pytmc' := '
+            pv: @(PREFIX)L2L:STATE:GET
+            io: io
+        '}
+        eL2LGet: E_EpicsInOut;
+
+        bInit: BOOL := TRUE;
+        fbArbiterIO: FB_DummyArbIO;
+    END_VAR
+    IF bInit THEN
+        // Set static enables once so we can demo turning them off
+        M3.bHardwareEnable := TRUE;
+        M3.bPowerSelf := TRUE;
+        fb3D.bEnableMotion := TRUE;
+        fb3D.bEnableBeamParams := TRUE;
+        fb3D.bEnablePositionLimits := TRUE;
+        M4.bHardwareEnable := TRUE;
+        M4.bLimitForwardEnable := TRUE;
+        M4.bLimitBackwardEnable := TRUE;
+        M5.bHardwareEnable := TRUE;
+        M5.bLimitForwardEnable := TRUE;
+        M5.bLimitBackwardEnable := TRUE;
+        M6.bHardwareEnable := TRUE;
+        M6.bLimitForwardEnable := TRUE;
+        M6.bLimitBackwardEnable := TRUE;
+        M7.bHardwareEnable := TRUE;
+        M7.bLimitForwardEnable := TRUE;
+        M7.bLimitBackwardEnable := TRUE;
+        M8.bHardwareEnable := TRUE;
+        M8.bLimitForwardEnable := TRUE;
+        M8.bLimitBackwardEnable := TRUE;
+        M9.bHardwareEnable := TRUE;
+        M9.bLimitForwardEnable := TRUE;
+        M9.bLimitBackwardEnable := TRUE;
+        M10.bHardwareEnable := TRUE;
+
+        bInit := FALSE;
+    END_IF
+
+    // Set some reasonable sim state defaults for all the states
+    fbStateSetup(stPositionState:=stDefault, bSetDefault:=TRUE);
+
+    // Simulated IM1L0 Positions and Parameters
+    fbStateSetup(stPositionState:=fbIM1L0.stOut, sName:='OUT', fPosition:=0, sPmpsState:='IM1K0:XTES-OUT');
+    fbStateSetup(stPositionState:=fbIM1L0.stYag, sName:='YAG', fPosition:=-86.65, sPmpsState:='IM1K0:XTES-YAG');
+    fbStateSetup(stPositionState:=fbIM1L0.stDiamond, sName:='DIAMOND', fPosition:=-56.65, sPmpsState:='IM1K0:XTES-DIAMOND');
+    fbStateSetup(stPositionState:=fbIM1L0.stReticle, sName:='RETICLE', fPosition:=-26.65, sPmpsState:='IM1K0:XTES-RETICLE');
+
+    // M7 X-axis of 3D States
+    fbStateSetup(stPositionState:=astM7States[1], sName:='OUT', fPosition:=0, sPmpsState:='3D-OUT');
+    fbStateSetup(stPositionState:=astM7States[2], sName:='TARGET1', fPosition:=15, sPmpsState:='3D-TARGET1');
+    fbStateSetup(stPositionState:=astM7States[3], sName:='TARGET2', fPosition:=30, sPmpsState:='3D-TARGET2');
+    // M8 Y-axis of 3D States
+    fbStateSetup(stPositionState:=astM8States[1], sName:='OUT', fPosition:=15);
+    fbStateSetup(stPositionState:=astM8States[2], sName:='TARGET1', fPosition:=0);
+    fbStateSetup(stPositionState:=astM8States[3], sName:='TARGET2', fPosition:=-15);
+    // M9 Z-axis of 3D States
+    fbStateSetup(stPositionState:=astM9States[1], sName:='OUT', fPosition:=-30);
+    fbStateSetup(stPositionState:=astM9States[2], sName:='TARGET1', fPosition:=-15);
+    fbStateSetup(stPositionState:=astM9States[3], sName:='TARGET2', fPosition:=0);
+
+    // Fixed portion of M10 L2L states
+    fbStateSetup(stPositionState:=astM10States[1], sName:='OUT', fPosition:=100);
+    fbStateSetup(stPositionState:=astM10States[2], sName:='IN', fPosition:=0);
+
+    // Run a few fake motors
+    fbMotion1(stMotionStage := M1);
+    fbMotion2(stMotionStage := M2);
+    fbMotion3(stMotionStage := M3);
+    M3.bLimitForwardEnable := M3.Axis.NcToPlc.ActPos < 99.7;
+    M3.bLimitBackwardEnable := M3.Axis.NcToPlc.ActPos > 0.2;
+
+    // Let us simulate NC errors on M1 by online writing to the inputs here
+    fbCauseError(Axis:=M1.Axis);
+
+    // Let us simulate EPS status on M3 by calling the EPS handlers.
+    // Start as OK and allow login to make it not OK.
+    // Have 1, 2 or 3 cases depending on the direction so we can see different sizes in the ui.
+    fbM3FwdEPS(eps:=M3.stEPSForwardEnable);
+    fbM3FwdEPS.setDescription('Sim Forward 1');
+    fbM3FwdEPS.setMessage(sM3EPSMessage);
+    fbM3FwdEPS.setBit(0, bM3EPSFwd1);
+
+    fbM3BwdEPS(eps:=M3.stEPSBackwardEnable);
+    fbM3BwdEPS.setDescription('Sim Backward 1;Sim Backward 2');
+    fbM3BwdEPS.setMessage(sM3EPSMessage);
+    fbM3BwdEPS.setBit(0, bM3EPSBwd1);
+    fbM3BwdEPS.setBit(1, bM3EPSBwd2);
+
+    fbM3PwrEPS(eps:=M3.stEPSPowerEnable);
+    fbM3PwrEPS.setDescription('Sim Power 1;Sim Power 2;Sim Power 3');
+    fbM3PwrEPS.setMessage(sM3EPSMessage);
+    fbM3PwrEPS.setBit(0, bM3EPSPwr1);
+    fbM3PwrEPS.setBit(1, bM3EPSPwr2);
+    fbM3PwrEPS.setBit(2, bM3EPSPwr3);
+
+    // Run the fake IM1L0
+    fbIM1L0(
+        fbArbiter := GVL.fbArbiter,
+        fbFFHWO := GVL.fbFastFaultOutput1,
+        stYStage := M4,
+        stZoomStage := M5,
+        stFocusStage := M6,
+        stEl6In := stEL6In,
+        stEl6Out := stEl6Out,
+        sDeviceName := 'IM1K0:XTES',
+        sTransitionKey:='IM1K0:XTES-TRANSITION',
+        bEnableMotion:=TRUE,
+        bEnableBeamParams:=TRUE,
+        bEnablePositionLimits:=TRUE,
+    );
+
+    // Run the 3D demo
+    M7.bPowerSelf := FALSE;
+    M8.bPowerSelf := FALSE;
+    M9.bPowerSelf := FALSE;
+    fbMotion7(stMotionStage:=M7);
+    fbMotion8(stMotionStage:=M8);
+    fbMotion9(stMotionStage:=M9);
+    fb3D(
+        stMotionStage1:=M7,
+        stMotionStage2:=M8,
+        stMotionStage3:=M9,
+        astPositionState1:=astM7States,
+        astPositionState2:=astM8States,
+        astPositionState3:=astM9States,
+        eEnumSet:=e3DSet,
+        eEnumGet:=e3DGet,
+        fbFFHWO:=GVL.fbFastFaultOutput1,
+        fbArbiter:=GVL.fbArbiter,
+        sDeviceName:='3D',
+        sTransitionKey:='3D-TRANS',
+    );
+
+    // Run the limit to limit demo
+    M10.bPowerSelf := TRUE;
+    M10.bLimitForwardEnable := M10.Axis.NcToPlc.ActPos < 99.7;
+    M10.bLimitBackwardEnable := M10.Axis.NcToPlc.ActPos > 0.2;
+    fbMotion10(stMotionStage:=M10);
+    // Dynamically adjust the states for our unencoded l2l move
+    // Notes: forward goes out, out is index 1 pos 100mm, in is index 2 pos 0mm
+    IF NOT M10.Axis.Status.ControlLoopClosed THEN
+        // Neither limit hit: assume both goals are 105 away
+        IF M10.bLimitBackwardEnable AND M10.bLimitForwardEnable THEN
+            astM10States[1].fPosition := M10.stAxisStatus.fActPosition + 105;
+            astM10States[2].fPosition := M10.stAxisStatus.fActPosition - 105;
+        // Both limits hit: reset positions, something is broken
+        ELSIF NOT M10.bLimitBackwardEnable AND NOT M10.bLimitForwardEnable THEN
+            astM10States[1].fPosition := 100;
+            astM10States[2].fPosition := 0;
+        // Top hit: here is top, lower is 105 away
+        ELSIF NOT M10.bLimitForwardEnable THEN
+            astM10States[1].fPosition := M10.stAxisStatus.fActPosition;
+            astM10States[2].fPosition := M10.stAxisStatus.fActPosition - 105;
+        // Bottom hit: here is bottom, upper is 105 away
+        ELSIF NOT M10.bLimitBackwardEnable THEN
+            astM10States[1].fPosition := M10.stAxisStatus.fActPosition + 105;
+            astM10States[2].fPosition := M10.stAxisStatus.fActPosition;
+        END_IF
+    END_IF
+    fbM10States(
+        stMotionStage:=M10,
+        astPositionState:=astM10States,
+        eEnumSet:=eL2LSet,
+        eEnumGet:=eL2LGet,
+        bEnable:=TRUE,
+    );
+
+    // Simulate some PMPS nonsense
+    MOTION_GVL.fbStandardPMPSDB(
+        io_fbFFHWO:=GVL.fbFastFaultOutput1,
+        bEnable:=TRUE,
+        sPLCName:='plc-tst-motion',
+    );
+    GVL.fbFastFaultOutput1.Execute();
+    fbArbiterIO(
+        LA:=GVL.fbArbiter,
+        FFO:=GVL.fbFastFaultOutput1);
+
+    END_PROGRAM
+
+
+Related:
+    * `E_TwoTargets`_
+    * `GVL`_
+

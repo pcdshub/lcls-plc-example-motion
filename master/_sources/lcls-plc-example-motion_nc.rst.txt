@@ -1,0 +1,198 @@
+
+NC Settings
+-----------
+
+.. csv-table::
+    :header: Axis ID, Name
+    :align: center
+
+        1, Example 1 Simulated Working
+        2, Example 2 Simulated Broken
+        3, Example 3 Simulated Limits
+        4, Example 4 XPIM Y
+        5, Example 5 XPIM Zoom
+        6, Example 6 XPIM Focus
+        7, Example 7 3D X
+        8, Example 8 3D Y
+        9, Example 9 3D Z
+        10, Example 10 Limit to Limit
+
+
+
+Axis 1: Example 1 Simulated Working
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 1
+    Name, Example 1 Simulated Working
+    AxisType, 1
+    CreateSymbols, true
+    Enc:EncType, 1
+    Id, 1
+    OtherSettings:AllowMotionCmdToSlave, true
+
+
+
+Axis 2: Example 2 Simulated Broken
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 2
+    Name, Example 2 Simulated Broken
+    AxisType, 1
+    CreateSymbols, true
+    Enc:EncType, 1
+    Id, 2
+    OtherSettings:AllowMotionCmdToSlave, true
+
+
+
+Axis 3: Example 3 Simulated Limits
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 3
+    Name, Example 3 Simulated Limits
+    AxisType, 1
+    CreateSymbols, true
+    Dynamic:Acceleration, 100
+    Dynamic:AccelerationMaximum, 100
+    Dynamic:Deceleration, 100
+    Dynamic:DecelerationMaximum, 100
+    Enc:EncType, 1
+    Enc:SoftEndMaxControl:Enable, true
+    Enc:SoftEndMaxControl:Range, 100
+    Enc:SoftEndMinControl:Enable, true
+    Id, 3
+    OtherSettings:AllowMotionCmdToSlave, true
+    Velo:Maximum, 10
+
+
+
+Axis 4: Example 4 XPIM Y
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 4
+    Name, Example 4 XPIM Y
+    AxisType, 1
+    CreateSymbols, true
+    Enc:EncType, 1
+    Id, 4
+    OtherSettings:AllowMotionCmdToSlave, true
+
+
+
+Axis 5: Example 5 XPIM Zoom
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 5
+    Name, Example 5 XPIM Zoom
+    AxisType, 1
+    CreateSymbols, true
+    Enc:EncType, 1
+    Id, 5
+    OtherSettings:AllowMotionCmdToSlave, true
+
+
+
+Axis 6: Example 6 XPIM Focus
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 6
+    Name, Example 6 XPIM Focus
+    AxisType, 1
+    CreateSymbols, true
+    Enc:EncType, 1
+    Id, 6
+    OtherSettings:AllowMotionCmdToSlave, true
+
+
+
+Axis 7: Example 7 3D X
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 7
+    Name, Example 7 3D X
+    AxisType, 1
+    CreateSymbols, true
+    Enc:EncType, 1
+    Id, 7
+    OtherSettings:AllowMotionCmdToSlave, true
+
+
+
+Axis 8: Example 8 3D Y
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 8
+    Name, Example 8 3D Y
+    AxisType, 1
+    CreateSymbols, true
+    Enc:EncType, 1
+    Id, 8
+    OtherSettings:AllowMotionCmdToSlave, true
+
+
+
+Axis 9: Example 9 3D Z
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 9
+    Name, Example 9 3D Z
+    AxisType, 1
+    CreateSymbols, true
+    Enc:EncType, 1
+    Id, 9
+    OtherSettings:AllowMotionCmdToSlave, true
+
+
+
+Axis 10: Example 10 Limit to Limit
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 10
+    Name, Example 10 Limit to Limit
+    AxisType, 1
+    CreateSymbols, true
+    Enc:EncType, 1
+    Id, 10
+    OtherSettings:AllowMotionCmdToSlave, true
+
+

@@ -1,23 +1,24 @@
-lcls-twincat-motion-example
----------------------------
+lcls-plc-example-motion
+-----------------------
 
 .. toctree::
     :maxdepth: 2
-    :caption: lcls-twincat-motion-example
+    :caption: lcls-plc-example-motion
 
-    lcls-twincat-motion-example_pragmas
-    lcls-twincat-motion-example_nc
-    lcls-twincat-motion-example_boxes
-    lcls-twincat-motion-example_links
+    lcls-plc-example-motion_pragmas
+    lcls-plc-example-motion_nc
+    lcls-plc-example-motion_ethercat
+    lcls-plc-example-motion_boxes
+    lcls-plc-example-motion_links
 
 
 .. toctree::
     :maxdepth: 2
     :caption: tc_mot_example
 
-    lcls-twincat-motion-example_tc_mot_example_summary
-    lcls-twincat-motion-example_tc_mot_example_epics
-    lcls-twincat-motion-example_tc_mot_example_source
+    lcls-plc-example-motion_tc_mot_example_summary
+    lcls-plc-example-motion_tc_mot_example_epics
+    lcls-plc-example-motion_tc_mot_example_source
 
 
 
