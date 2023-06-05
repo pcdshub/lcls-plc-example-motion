@@ -4,8 +4,8 @@
 #         Project: lcls-twincat-motion-example.tsproj
 #        PLC name: tc_mot_example (tc_mot_example Instance)
 # Generated using: pytmc 2.14.1
-# Project version: 160a979
-#    Project hash: 160a9798014a436108755a0745ff18a950b458c3
+# Project version: 02eb161
+#    Project hash: 02eb1616d22165f8b64ef51104f5c2108cd3d137
 #     PLC IP/host: 172.21.148.148
 #      PLC Net ID: 172.21.148.148.1.1
 # ** DEVELOPMENT MODE IOC **
@@ -14,7 +14,11 @@
 #
 # Libraries:
 #
-#   lcls-twincat-motion: * -> 1.8.0 (SLAC)
+#   LCLS General: * -> 0.0.0 (SLAC)
+#   lcls-twincat-motion: * -> 0.0.0 (SLAC)
+#   lcls2-cc-lib: * -> 0.0.0 (SLAC)
+#   PMPS: * -> 0.0.0 (SLAC - LCLS)
+#   Tc2_SerialCom: * (Beckhoff Automation GmbH)
 #   Tc2_Standard: * (Beckhoff Automation GmbH)
 #   Tc2_System: * (Beckhoff Automation GmbH)
 #   Tc3_Module: * (Beckhoff Automation GmbH)
@@ -37,7 +41,7 @@ epicsEnvSet("ASYN_PORT",        "ASYN_PLC")
 epicsEnvSet("IPADDR",           "172.21.148.148")
 epicsEnvSet("AMSID",            "172.21.148.148.1.1")
 epicsEnvSet("AMS_PORT",         "851")
-epicsEnvSet("ADS_MAX_PARAMS",   "1195")
+epicsEnvSet("ADS_MAX_PARAMS",   "1645")
 epicsEnvSet("ADS_SAMPLE_MS",    "50")
 epicsEnvSet("ADS_MAX_DELAY_MS", "100")
 epicsEnvSet("ADS_TIMEOUT_MS",   "1000")
@@ -161,10 +165,18 @@ dbLoadRecords("caPutLog.db", "IOC=$(IOC)")
 dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:TST:MOT,IDX=1")
 dbLoadRecords("TwinCAT_AppInfo.db", "PORT=$(ASYN_PORT), PREFIX=PLC:TST:MOT")
 
-dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:TST:MOT,PROJECT=lcls-twincat-motion-example.tsproj,HASH=160a979,VERSION=160a979,PYTMC=2.14.1,PLC_HOST=172.21.148.148")
+dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:TST:MOT,PROJECT=lcls-twincat-motion-example.tsproj,HASH=02eb161,VERSION=02eb161,PYTMC=2.14.1,PLC_HOST=172.21.148.148")
 
-#   lcls-twincat-motion: * -> 1.8.0 (SLAC)
-dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TST:MOT,DEPENDENCY=lcls-twincat-motion,VERSION=1.8.0,VENDOR=SLAC")
+#   LCLS General: * -> 0.0.0 (SLAC)
+dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TST:MOT,DEPENDENCY=LCLS_General,VERSION=0.0.0,VENDOR=SLAC")
+#   lcls-twincat-motion: * -> 0.0.0 (SLAC)
+dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TST:MOT,DEPENDENCY=lcls-twincat-motion,VERSION=0.0.0,VENDOR=SLAC")
+#   lcls2-cc-lib: * -> 0.0.0 (SLAC)
+dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TST:MOT,DEPENDENCY=lcls2-cc-lib,VERSION=0.0.0,VENDOR=SLAC")
+#   PMPS: * -> 0.0.0 (SLAC - LCLS)
+dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TST:MOT,DEPENDENCY=PMPS,VERSION=0.0.0,VENDOR=SLAC - LCLS")
+#   Tc2_SerialCom: * (Beckhoff Automation GmbH)
+dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TST:MOT,DEPENDENCY=Tc2_SerialCom,VERSION=*,VENDOR=Beckhoff Automation GmbH")
 #   Tc2_Standard: * (Beckhoff Automation GmbH)
 dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TST:MOT,DEPENDENCY=Tc2_Standard,VERSION=*,VENDOR=Beckhoff Automation GmbH")
 #   Tc2_System: * (Beckhoff Automation GmbH)
@@ -177,8 +189,8 @@ cd "$(IOC_TOP)"
 ## PLC Project Database files ##
 dbLoadRecords("tc_mot_example.db", "PORT=$(ASYN_PORT),PREFIX=PLC:TST:MOT:,IOCNAME=$(IOC),IOC=$(IOC)")
 
-# Total records: 195
-callbackSetQueueSize(2390)
+# Total records: 645
+callbackSetQueueSize(3290)
 
 # Autosave and archive settings:
 save_restoreSet_status_prefix("PLC:TST:MOT:")

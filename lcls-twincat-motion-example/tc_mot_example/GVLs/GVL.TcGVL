@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <GVL Name="GVL" Id="{9b9d6ea6-28e0-43fe-bc83-62be23c2a739}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+    fbArbiter: FB_Arbiter(1);
+    fbFastFaultOutput1: FB_HardwareFFOutput := (bAutoReset := TRUE, i_sNetID := '172.21.148.148.1.1');
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

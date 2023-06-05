@@ -26,15 +26,69 @@ VAR
     '}
     M3: DUT_MotionStage;
     fbMotion3: FB_MotionStage;
+    
+    
+    {attribute 'pytmc' := '
+        pv: PLC:TST:MOT:SIM:XPIM
+        io: io
+    '}
+    fbIM1L0: FB_XPIM;
+    stEL6In AT %I*: EL6InData22b;
+    stEL6Out AT %Q*: EL6OutData22b;
+    bInit: BOOL := TRUE;
+    
+    fbArbiterIO: FB_SubSysToArbiter_IO;
 END_VAR]]></Declaration>
     <Implementation>
-      <ST><![CDATA[fbMotion1(stMotionStage := M1);
-fbMotion2(stMotionStage := M2);
-fbMotion3(stMotionStage := M3);
-M3.bHardwareEnable := TRUE;
-M3.bPowerSelf := TRUE;
+      <ST><![CDATA[// fbMotion1(stMotionStage := M1);
+// fbMotion2(stMotionStage := M2);
+// fbMotion3(stMotionStage := M3);
+// M3.bHardwareEnable := TRUE;
+// M3.bPowerSelf := TRUE;
 M3.bLimitForwardEnable := M3.Axis.NcToPlc.ActPos < 99.7;
-M3.bLimitBackwardEnable := M3.Axis.NcToPlc.ActPos > 0.2;]]></ST>
+M3.bLimitBackwardEnable := M3.Axis.NcToPlc.ActPos > 0.2;
+
+IF bInit THEN
+    fbIM1L0.stOut.fPosition := 0;
+    fbIM1L0.stOut.bUseRawCounts := FALSE;
+    fbIM1L0.stOut.stPMPS.sPmpsState := 'IM1K0-XTES-OUT';
+    fbIM1L0.stOut.bValid := TRUE;
+    fbIM1L0.stYag.fPosition := -86.65;
+    fbIM1L0.stYag.bUseRawCounts := FALSE;
+    fbIM1L0.stYag.stPMPS.sPmpsState := 'IM1K0-XTES-YAG';
+    fbIM1L0.stYag.bValid := TRUE;
+    fbIM1L0.stDiamond.fPosition := -56.65;
+    fbIM1L0.stDiamond.bUseRawCounts := FALSE;
+    fbIM1L0.stDiamond.stPMPS.sPmpsState := 'IM1K0-XTES-DIAMOND';
+    fbIM1L0.stDiamond.bValid := TRUE;
+    fbIM1L0.stReticle.fPosition := -26.65;
+    fbIM1L0.stReticle.bUseRawCounts := FALSE;
+    fbIM1L0.stReticle.stPMPS.sPmpsState := 'IM1K0-XTES-RETICLE';
+    fbIM1L0.stReticle.bValid := TRUE;
+    bInit := FALSE;
+END_IF
+
+fbIM1L0(
+    fbArbiter := GVL.fbArbiter,
+    fbFFHWO := GVL.fbFastFaultOutput1,
+    stYStage := M1,
+    stZoomStage := M2,
+    stFocusStage := M3,
+    stEl6In := stEL6In,
+    stEl6Out := stEl6Out,
+    sPmpsDeviceName := 'IM1K0-XTES',
+    sTransitionKey:='IM1K0-MOVING',
+);
+
+MOTION_GVL.fbStandardPMPSDB(
+    io_fbFFHWO:=GVL.fbFastFaultOutput1,
+    bEnable:=TRUE,
+    sPLCName:='tst-motion',
+);
+GVL.fbFastFaultOutput1.Execute();
+fbArbiterIO(
+    Arbiter:=GVL.fbArbiter,
+    fbFFHWO:=GVL.fbFastFaultOutput1);]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
