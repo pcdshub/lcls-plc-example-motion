@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="Main" Id="{7b41e58a-08f0-4959-90b4-af08ef5cbf10}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM Main
 VAR
@@ -26,8 +26,8 @@ VAR
     '}
     M3: DUT_MotionStage;
     fbMotion3: FB_MotionStage;
-    
-    
+
+
     {attribute 'pytmc' := '
         pv: PLC:TST:MOT:SIM:XPIM
         io: io
@@ -36,7 +36,7 @@ VAR
     stEL6In AT %I*: EL6InData22b;
     stEL6Out AT %Q*: EL6OutData22b;
     bInit: BOOL := TRUE;
-    
+
     fbArbiterIO: FB_SubSysToArbiter_IO;
 END_VAR]]></Declaration>
     <Implementation>
