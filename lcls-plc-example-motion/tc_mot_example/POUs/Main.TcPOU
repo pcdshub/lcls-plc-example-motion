@@ -132,19 +132,19 @@ IF bInit THEN
     // Simulated IM1L0 Positions and Parameters
     fbIM1L0.stOut.fPosition := 0;
     fbIM1L0.stOut.bUseRawCounts := FALSE;
-    fbIM1L0.stOut.stPMPS.sPmpsState := 'IM1K0-XTES-OUT';
+    fbIM1L0.stOut.stPMPS.sPmpsState := 'IM1K0:XTES-OUT';
     fbIM1L0.stOut.bValid := TRUE;
     fbIM1L0.stYag.fPosition := -86.65;
     fbIM1L0.stYag.bUseRawCounts := FALSE;
-    fbIM1L0.stYag.stPMPS.sPmpsState := 'IM1K0-XTES-YAG';
+    fbIM1L0.stYag.stPMPS.sPmpsState := 'IM1K0:XTES-YAG';
     fbIM1L0.stYag.bValid := TRUE;
     fbIM1L0.stDiamond.fPosition := -56.65;
     fbIM1L0.stDiamond.bUseRawCounts := FALSE;
-    fbIM1L0.stDiamond.stPMPS.sPmpsState := 'IM1K0-XTES-DIAMOND';
+    fbIM1L0.stDiamond.stPMPS.sPmpsState := 'IM1K0:XTES-DIAMOND';
     fbIM1L0.stDiamond.bValid := TRUE;
     fbIM1L0.stReticle.fPosition := -26.65;
     fbIM1L0.stReticle.bUseRawCounts := FALSE;
-    fbIM1L0.stReticle.stPMPS.sPmpsState := 'IM1K0-XTES-RETICLE';
+    fbIM1L0.stReticle.stPMPS.sPmpsState := 'IM1K0:XTES-RETICLE';
     fbIM1L0.stReticle.bValid := TRUE;
 
     // 3D with 3 states, select one lookup for each index
@@ -174,7 +174,7 @@ IF bInit THEN
 
     // Set up 3 states for M8 (part of 3d)
     astM8States[1].sName := 'OUT';
-    astM8States[1].fPosition := -15;
+    astM8States[1].fPosition := 15;
     astM8States[1].fDelta := 0.1;
     astM8States[1].fVelocity := 5;
     astM8States[1].bValid := TRUE;
@@ -186,7 +186,7 @@ IF bInit THEN
     astM8States[2].bValid := TRUE;
     astM8States[2].bMoveOk := TRUE;
     astM8States[3].sName := 'TARGET2';
-    astM8States[3].fPosition := 15;
+    astM8States[3].fPosition := -15;
     astM8States[3].fDelta := 0.1;
     astM8States[3].fVelocity := 5;
     astM8States[3].bValid := TRUE;
@@ -255,8 +255,8 @@ fbIM1L0(
     stFocusStage := M6,
     stEl6In := stEL6In,
     stEl6Out := stEl6Out,
-    sPmpsDeviceName := 'IM1K0-XTES',
-    sTransitionKey:='IM1K0-TRANSITION',
+    sPmpsDeviceName := 'IM1K0:XTES',
+    sTransitionKey:='IM1K0:XTES-TRANSITION',
 );
 
 // Run the 3D demo
@@ -328,7 +328,7 @@ fbM10States(
 MOTION_GVL.fbStandardPMPSDB(
     io_fbFFHWO:=GVL.fbFastFaultOutput1,
     bEnable:=TRUE,
-    sPLCName:='tst-motion',
+    sPLCName:='plc-tst-motion',
 );
 GVL.fbFastFaultOutput1.Execute();
 fbArbiterIO(
