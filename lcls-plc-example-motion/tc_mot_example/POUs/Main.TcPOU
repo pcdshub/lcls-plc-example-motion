@@ -117,7 +117,7 @@ VAR
     eL2LGet: ENUM_EpicsInOut;
 
     bInit: BOOL := TRUE;
-    fbArbiterIO: FB_SubSysToArbiter_IO;
+    fbArbiterIO: FB_DummyArbIO;
 END_VAR]]></Declaration>
     <Implementation>
       <ST><![CDATA[fbMotion1(stMotionStage := M1);
@@ -218,18 +218,18 @@ IF bInit THEN
     fb3D.bEnablePositionLimits := TRUE;
 
     // Set up fixed portion of L2L states
-    astM9States[1].sName := 'OUT';
-    astM9States[1].fPosition := 100;
-    astM9States[1].fDelta := 0.1;
-    astM9States[1].fVelocity := 10;
-    astM9States[1].bValid := TRUE;
-    astM9States[1].bMoveOk := TRUE;
-    astM9States[2].sName := 'IN';
-    astM9States[2].fPosition := 0;
-    astM9States[2].fDelta := 0.1;
-    astM9States[2].fVelocity := 5;
-    astM9States[2].bValid := TRUE;
-    astM9States[2].bMoveOk := TRUE;
+    astM10States[1].sName := 'OUT';
+    astM10States[1].fPosition := 100;
+    astM10States[1].fDelta := 0.1;
+    astM10States[1].fVelocity := 10;
+    astM10States[1].bValid := TRUE;
+    astM10States[1].bMoveOk := TRUE;
+    astM10States[2].sName := 'IN';
+    astM10States[2].fPosition := 0;
+    astM10States[2].fDelta := 0.1;
+    astM10States[2].fVelocity := 5;
+    astM10States[2].bValid := TRUE;
+    astM10States[2].bMoveOk := TRUE;
 
     bInit := FALSE;
 END_IF
@@ -256,7 +256,7 @@ fbIM1L0(
     stEl6In := stEL6In,
     stEl6Out := stEl6Out,
     sPmpsDeviceName := 'IM1K0-XTES',
-    sTransitionKey:='IM1K0-MOVING',
+    sTransitionKey:='IM1K0-TRANSITION',
 );
 
 // Run the 3D demo
@@ -300,19 +300,19 @@ fbMotion10(stMotionStage:=M10);
 // Notes: forward goes out, out is index 1 pos 100mm, in is index 2 pos 0mm
 IF NOT M10.Axis.Status.ControlLoopClosed THEN
     // Neither limit hit: assume both goals are 105 away
-    IF NOT M10.bLimitBackwardEnable AND NOT M10.bLimitForwardEnable THEN
+    IF M10.bLimitBackwardEnable AND M10.bLimitForwardEnable THEN
         astM10States[1].fPosition := M10.stAxisStatus.fActPosition + 105;
         astM10States[2].fPosition := M10.stAxisStatus.fActPosition - 105;
     // Both limits hit: reset positions, something is broken
-    ELSIF M10.bLimitBackwardEnable AND M10.bLimitForwardEnable THEN
+    ELSIF NOT M10.bLimitBackwardEnable AND NOT M10.bLimitForwardEnable THEN
         astM10States[1].fPosition := 100;
         astM10States[2].fPosition := 0;
     // Top hit: here is top, lower is 105 away
-    ELSIF M10.bLimitForwardEnable THEN
+    ELSIF NOT M10.bLimitForwardEnable THEN
         astM10States[1].fPosition := M10.stAxisStatus.fActPosition;
         astM10States[2].fPosition := M10.stAxisStatus.fActPosition - 105;
     // Bottom hit: here is bottom, upper is 105 away
-    ELSIF M10.bLimitBackwardEnable THEN
+    ELSIF NOT M10.bLimitBackwardEnable THEN
         astM10States[1].fPosition := M10.stAxisStatus.fActPosition + 105;
         astM10States[2].fPosition := M10.stAxisStatus.fActPosition;
     END_IF
@@ -332,8 +332,8 @@ MOTION_GVL.fbStandardPMPSDB(
 );
 GVL.fbFastFaultOutput1.Execute();
 fbArbiterIO(
-    Arbiter:=GVL.fbArbiter,
-    fbFFHWO:=GVL.fbFastFaultOutput1);]]></ST>
+    LA:=GVL.fbArbiter,
+    FFO:=GVL.fbFastFaultOutput1);]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
