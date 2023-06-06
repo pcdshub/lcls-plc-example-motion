@@ -235,6 +235,18 @@ IF bInit THEN
 END_IF
 
 // Run the fake IM1L0
+M4.bHardwareEnable := TRUE;
+M4.bPowerSelf := FALSE;
+M4.bLimitForwardEnable := TRUE;
+M4.bLimitBackwardEnable := TRUE;
+M5.bHardwareEnable := TRUE;
+M5.bPowerSelf := TRUE;
+M5.bLimitForwardEnable := TRUE;
+M5.bLimitBackwardEnable := TRUE;
+M6.bHardwareEnable := TRUE;
+M6.bPowerSelf := TRUE;
+M6.bLimitForwardEnable := TRUE;
+M6.bLimitBackwardEnable := TRUE;
 fbIM1L0(
     fbArbiter := GVL.fbArbiter,
     fbFFHWO := GVL.fbFastFaultOutput1,
@@ -248,6 +260,18 @@ fbIM1L0(
 );
 
 // Run the 3D demo
+M7.bHardwareEnable := TRUE;
+M7.bPowerSelf := FALSE;
+M7.bLimitForwardEnable := TRUE;
+M7.bLimitBackwardEnable := TRUE;
+M8.bHardwareEnable := TRUE;
+M8.bPowerSelf := FALSE;
+M8.bLimitForwardEnable := TRUE;
+M8.bLimitBackwardEnable := TRUE;
+M9.bHardwareEnable := TRUE;
+M9.bPowerSelf := FALSE;
+M9.bLimitForwardEnable := TRUE;
+M9.bLimitBackwardEnable := TRUE;
 fbMotion7(stMotionStage:=M7);
 fbMotion8(stMotionStage:=M8);
 fbMotion9(stMotionStage:=M9);
@@ -267,9 +291,11 @@ fb3D(
 );
 
 // Run the limit to limit demo
-fbMotion10(stMotionStage:=M10);
+M10.bHardwareEnable := TRUE;
+M10.bPowerSelf := TRUE;
 M10.bLimitForwardEnable := M10.Axis.NcToPlc.ActPos < 99.7;
 M10.bLimitBackwardEnable := M10.Axis.NcToPlc.ActPos > 0.2;
+fbMotion10(stMotionStage:=M10);
 // Dynamically adjust the states for our unencoded l2l move
 // Notes: forward goes out, out is index 1 pos 100mm, in is index 2 pos 0mm
 IF NOT M10.Axis.Status.ControlLoopClosed THEN
@@ -285,7 +311,7 @@ IF NOT M10.Axis.Status.ControlLoopClosed THEN
     ELSIF M10.bLimitForwardEnable THEN
         astM10States[1].fPosition := M10.stAxisStatus.fActPosition;
         astM10States[2].fPosition := M10.stAxisStatus.fActPosition - 105;
-    // Bottom hit: here is bottom, lower is 105 away
+    // Bottom hit: here is bottom, upper is 105 away
     ELSIF M10.bLimitBackwardEnable THEN
         astM10States[1].fPosition := M10.stAxisStatus.fActPosition + 105;
         astM10States[2].fPosition := M10.stAxisStatus.fActPosition;
