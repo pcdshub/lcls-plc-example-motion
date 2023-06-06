@@ -111,7 +111,7 @@ VAR
     '}
     eL2LSet: ENUM_EpicsInOut;
     {attribute 'pytmc' := '
-        pv: @PREFIX:SIM:L2L:SET
+        pv: @PREFIX:SIM:L2L:GET
         io: io
     '}
     eL2LGet: ENUM_EpicsInOut;
