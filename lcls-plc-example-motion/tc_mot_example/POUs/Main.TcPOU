@@ -5,15 +5,15 @@
 VAR
     // Simulated motor that is always allowed to move
     {attribute 'pytmc' := '
-        pv: PLC:TST:MOT:SIM:01
+        pv: @PREFIX:SIM:01
         field: DESC Simulated Working Motor
     '}
-    M1: DUT_MotionStage;
+    M1: ST_MotionStage;
     fbMotion1: FB_MotionStageSim;
 
     // Simulated motor that is never allowed to move
     {attribute 'pytmc' := '
-        pv: PLC:TST:MOT:SIM:02
+        pv: @PREFIX:SIM:02
         field: DESC Simulated Broken Motor
     '}
     M2: DUT_MotionStage;
@@ -21,34 +21,115 @@ VAR
 
     // Simulated motor with limits at 0 and 100
     {attribute 'pytmc' := '
-        pv: PLC:TST:MOT:SIM:03
+        pv: @PREFIX:SIM:03
         field: DESC Simulated Working Motor With Limits
     '}
-    M3: DUT_MotionStage;
+    M3: ST_MotionStage;
     fbMotion3: FB_MotionStage;
 
+    // Simulated motor xpim y
+    {attribute 'pytmc' := '
+        pv: @PREFIX:SIM:XPIM:Y
+        field: DESC Simulated XPIM Y
+    '}
+    M4: ST_MotionStage;
+    // Simulated motor xpim zoom
+    {attribute 'pytmc' := '
+        pv: @PREFIX:SIM:XPIM:ZOOM
+        field: DESC Simulated XPIM ZOOM
+    '}
+    M5: ST_MotionStage;
+    // Simulated motor xpim focus
+    {attribute 'pytmc' := '
+        pv: @PREFIX:SIM:XPIM:FOCUS
+        field: DESC Simulated XPIM FOCUS
+    '}
+    M6: ST_MotionStage;
 
     {attribute 'pytmc' := '
-        pv: PLC:TST:MOT:SIM:XPIM
+        pv: @PREFIX:SIM:XPIM
         io: io
     '}
     fbIM1L0: FB_XPIM;
     stEL6In AT %I*: EL6InData22b;
     stEL6Out AT %Q*: EL6OutData22b;
-    bInit: BOOL := TRUE;
 
+    // Simulated motor dimension X for 3d test
+    {attribute 'pytmc' := '
+        pv: @PREFIX:SIM:3D:X
+        field: DESC Simulated X motor for 3d move
+    '}
+    M7: ST_MotionStage;
+    fbMotion7: FB_MotionStage;
+    // Simulated motor dimension Y for 3d test
+    {attribute 'pytmc' := '
+        pv: @PREFIX:SIM:3D:Y
+        field: DESC Simulated Y motor for 3d move
+    '}
+    M8: ST_MotionStage;
+    fbMotion8: FB_MotionStage;
+    // Simulated motor dimension Z for 3d test
+    {attribute 'pytmc' := '
+        pv: @PREFIX:SIM:3D:Z
+        field: DESC Simulated Z motor for 3d move
+    '}
+    M9: ST_MotionStage;
+    fbMotion9: FB_MotionStage;
+    {attribute 'pytmc' := '
+        pv: @PREFIX:SIM:3D
+    '}
+    fb3D: FB_PositionStatePMPS3D;
+    astM7States: ARRAY[1..GeneralConstants.MAX_STATES] OF ST_PositionState;
+    astM8States: ARRAY[1..GeneralConstants.MAX_STATES] OF ST_PositionState;
+    astM9States: ARRAY[1..GeneralConstants.MAX_STATES] OF ST_PositionState;
+    {attribute 'pytmc' := '
+        pv: @PREFIX:SIM:3D:SET
+        io: io
+    '}
+    e3DSet: ENUM_TwoTargets;
+    {attribute 'pytmc' := '
+        pv: @PREFIX:SIM:3D:GET
+        io: i
+    '}
+    e3DGet: ENUM_TwoTargets;
+
+    // Simulated motor for limit to limit test
+    {attribute 'pytmc' := '
+        pv: @PREFIX:SIM:L2L:MOT
+        field: DESC Simulated motor for limit to limit state move
+    '}
+    M10: ST_MotionStage;
+    fbMotion10: FB_MotionStage;
+    {attribute 'pytmc' := '
+        pv: @PREFIX:SIM:L2L
+    '}
+    fbM10States: FB_PositionState1D;
+    astM10States: ARRAY[1..GeneralConstants.MAX_STATES] OF ST_PositionState;
+    {attribute 'pytmc' := '
+        pv: @PREFIX:SIM:L2L:SET
+        io: io
+    '}
+    eL2LSet: ENUM_EpicsInOut;
+    {attribute 'pytmc' := '
+        pv: @PREFIX:SIM:L2L:SET
+        io: io
+    '}
+    eL2LGet: ENUM_EpicsInOut;
+
+    bInit: BOOL := TRUE;
     fbArbiterIO: FB_SubSysToArbiter_IO;
 END_VAR]]></Declaration>
     <Implementation>
-      <ST><![CDATA[// fbMotion1(stMotionStage := M1);
-// fbMotion2(stMotionStage := M2);
-// fbMotion3(stMotionStage := M3);
-// M3.bHardwareEnable := TRUE;
-// M3.bPowerSelf := TRUE;
+      <ST><![CDATA[fbMotion1(stMotionStage := M1);
+fbMotion2(stMotionStage := M2);
+fbMotion3(stMotionStage := M3);
+M3.bHardwareEnable := TRUE;
+M3.bPowerSelf := TRUE;
 M3.bLimitForwardEnable := M3.Axis.NcToPlc.ActPos < 99.7;
 M3.bLimitBackwardEnable := M3.Axis.NcToPlc.ActPos > 0.2;
 
 IF bInit THEN
+    // Simulated IM1L0 Positions and Parameters
     fbIM1L0.stOut.fPosition := 0;
     fbIM1L0.stOut.bUseRawCounts := FALSE;
     fbIM1L0.stOut.stPMPS.sPmpsState := 'IM1K0-XTES-OUT';
@@ -65,19 +146,157 @@ IF bInit THEN
     fbIM1L0.stReticle.bUseRawCounts := FALSE;
     fbIM1L0.stReticle.stPMPS.sPmpsState := 'IM1K0-XTES-RETICLE';
     fbIM1L0.stReticle.bValid := TRUE;
+
+    // 3D with 3 states, select one lookup for each index
+    astM7States[1].stPMPS.sPmpsState := '3D-OUT';
+    astM7States[2].stPMPS.sPmpsState := '3D-TARGET1';
+    astM7States[3].stPMPS.sPmpsState := '3D-TARGET2';
+
+    // Set up 3 states for M7 (part of 3d)
+    astM7States[1].sName := 'OUT';
+    astM7States[1].fPosition := 0;
+    astM7States[1].fDelta := 0.1;
+    astM7States[1].fVelocity := 5;
+    astM7States[1].bValid := TRUE;
+    astM7States[1].bMoveOk := TRUE;
+    astM7States[2].sName := 'TARGET1';
+    astM7States[2].fPosition := 15;
+    astM7States[2].fDelta := 0.1;
+    astM7States[2].fVelocity := 5;
+    astM7States[2].bValid := TRUE;
+    astM7States[2].bMoveOk := TRUE;
+    astM7States[3].sName := 'TARGET2';
+    astM7States[3].fPosition := 30;
+    astM7States[3].fDelta := 0.1;
+    astM7States[3].fVelocity := 5;
+    astM7States[3].bValid := TRUE;
+    astM7States[3].bMoveOk := TRUE;
+
+    // Set up 3 states for M8 (part of 3d)
+    astM8States[1].sName := 'OUT';
+    astM8States[1].fPosition := -15;
+    astM8States[1].fDelta := 0.1;
+    astM8States[1].fVelocity := 5;
+    astM8States[1].bValid := TRUE;
+    astM8States[1].bMoveOk := TRUE;
+    astM8States[2].sName := 'TARGET1';
+    astM8States[2].fPosition := 0;
+    astM8States[2].fDelta := 0.1;
+    astM8States[2].fVelocity := 5;
+    astM8States[2].bValid := TRUE;
+    astM8States[2].bMoveOk := TRUE;
+    astM8States[3].sName := 'TARGET2';
+    astM8States[3].fPosition := 15;
+    astM8States[3].fDelta := 0.1;
+    astM8States[3].fVelocity := 5;
+    astM8States[3].bValid := TRUE;
+    astM8States[3].bMoveOk := TRUE;
+
+    // Set up 3 states for M9 (part of 3d)
+    astM9States[1].sName := 'OUT';
+    astM9States[1].fPosition := -30;
+    astM9States[1].fDelta := 0.1;
+    astM9States[1].fVelocity := 5;
+    astM9States[1].bValid := TRUE;
+    astM9States[1].bMoveOk := TRUE;
+    astM9States[2].sName := 'TARGET1';
+    astM9States[2].fPosition := -15;
+    astM9States[2].fDelta := 0.1;
+    astM9States[2].fVelocity := 5;
+    astM9States[2].bValid := TRUE;
+    astM9States[2].bMoveOk := TRUE;
+    astM9States[3].sName := 'TARGET2';
+    astM9States[3].fPosition := 0;
+    astM9States[3].fDelta := 0.1;
+    astM9States[3].fVelocity := 5;
+    astM9States[3].bValid := TRUE;
+    astM9States[3].bMoveOk := TRUE;
+
+    // Set 3D enables once so we can demo turning them off
+    fb3D.bEnableMotion := TRUE;
+    fb3D.bEnableBeamParams := TRUE;
+    fb3D.bEnablePositionLimits := TRUE;
+
+    // Set up fixed portion of L2L states
+    astM9States[1].sName := 'OUT';
+    astM9States[1].fPosition := 100;
+    astM9States[1].fDelta := 0.1;
+    astM9States[1].fVelocity := 10;
+    astM9States[1].bValid := TRUE;
+    astM9States[1].bMoveOk := TRUE;
+    astM9States[2].sName := 'IN';
+    astM9States[2].fPosition := 0;
+    astM9States[2].fDelta := 0.1;
+    astM9States[2].fVelocity := 5;
+    astM9States[2].bValid := TRUE;
+    astM9States[2].bMoveOk := TRUE;
+
     bInit := FALSE;
 END_IF
 
+// Run the fake IM1L0
 fbIM1L0(
     fbArbiter := GVL.fbArbiter,
     fbFFHWO := GVL.fbFastFaultOutput1,
-    stYStage := M1,
-    stZoomStage := M2,
-    stFocusStage := M3,
+    stYStage := M4,
+    stZoomStage := M5,
+    stFocusStage := M6,
     stEl6In := stEL6In,
     stEl6Out := stEl6Out,
     sPmpsDeviceName := 'IM1K0-XTES',
     sTransitionKey:='IM1K0-MOVING',
+);
+
+// Run the 3D demo
+fbMotion7(stMotionStage:=M7);
+fbMotion8(stMotionStage:=M8);
+fbMotion9(stMotionStage:=M9);
+fb3D(
+    stMotionStage1:=M7,
+    stMotionStage2:=M8,
+    stMotionStage3:=M9,
+    astPositionState1:=astM7States,
+    astPositionState2:=astM8States,
+    astPositionState3:=astM9States,
+    eEnumSet:=e3DSet,
+    eEnumGet:=e3DGet,
+    fbFFHWO:=GVL.fbFastFaultOutput1,
+    fbArbiter:=GVL.fbArbiter,
+    sDeviceName:='3D',
+    sTransitionKey:='3D-TRANS',
+);
+
+// Run the limit to limit demo
+fbMotion10(stMotionStage:=M10);
+M10.bLimitForwardEnable := M10.Axis.NcToPlc.ActPos < 99.7;
+M10.bLimitBackwardEnable := M10.Axis.NcToPlc.ActPos > 0.2;
+// Dynamically adjust the states for our unencoded l2l move
+// Notes: forward goes out, out is index 1 pos 100mm, in is index 2 pos 0mm
+IF NOT M10.Axis.Status.ControlLoopClosed THEN
+    // Neither limit hit: assume both goals are 105 away
+    IF NOT M10.bLimitBackwardEnable AND NOT M10.bLimitForwardEnable THEN
+        astM10States[1].fPosition := M10.stAxisStatus.fActPosition + 105;
+        astM10States[2].fPosition := M10.stAxisStatus.fActPosition - 105;
+    // Both limits hit: reset positions, something is broken
+    ELSIF M10.bLimitBackwardEnable AND M10.bLimitForwardEnable THEN
+        astM10States[1].fPosition := 100;
+        astM10States[2].fPosition := 0;
+    // Top hit: here is top, lower is 105 away
+    ELSIF M10.bLimitForwardEnable THEN
+        astM10States[1].fPosition := M10.stAxisStatus.fActPosition;
+        astM10States[2].fPosition := M10.stAxisStatus.fActPosition - 105;
+    // Bottom hit: here is bottom, lower is 105 away
+    ELSIF M10.bLimitBackwardEnable THEN
+        astM10States[1].fPosition := M10.stAxisStatus.fActPosition + 105;
+        astM10States[2].fPosition := M10.stAxisStatus.fActPosition;
+    END_IF
+END_IF
+fbM10States(
+    stMotionStage:=M10,
+    astPositionState:=astM10States,
+    eEnumSet:=eL2LSet,
+    eEnumGet:=eL2LGet,
+    bEnable:=TRUE,
 );
 
 MOTION_GVL.fbStandardPMPSDB(

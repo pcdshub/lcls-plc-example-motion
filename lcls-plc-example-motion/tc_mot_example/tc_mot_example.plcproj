@@ -17,6 +17,9 @@
     <WriteProductVersion>false</WriteProductVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="DUTs\ENUM_TwoTargets.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="GVLs\GVL.TcGVL">
       <SubType>Code</SubType>
       <LinkAlways>true</LinkAlways>
@@ -38,6 +41,12 @@
     <PlaceholderReference Include="LCLS General">
       <DefaultResolution>LCLS General, * (SLAC)</DefaultResolution>
       <Namespace>LCLS_General</Namespace>
+      <Parameters>
+        <Parameter ListName="GENERALCONSTANTS" xmlns="">
+          <Key>MAX_STATES</Key>
+          <Value>4</Value>
+        </Parameter>
+      </Parameters>
     </PlaceholderReference>
     <PlaceholderReference Include="lcls-twincat-motion">
       <DefaultResolution>lcls-twincat-motion, * (SLAC)</DefaultResolution>
