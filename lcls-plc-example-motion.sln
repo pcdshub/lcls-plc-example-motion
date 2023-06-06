@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# TcXaeShell Solution File, Format Version 11.00
+VisualStudioVersion = 15.0.28307.1300
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{B1E792BE-AA5F-4E3C-8C82-674BF9C0715B}") = "lcls-twincat-motion-example", "lcls-twincat-motion-example\lcls-twincat-motion-example.tsproj", "{F8B30057-EC89-40A8-9A36-8FCF329C20AB}"
+Project("{B1E792BE-AA5F-4E3C-8C82-674BF9C0715B}") = "lcls-plc-example-motion", "lcls-plc-example-motion\lcls-plc-example-motion.tsproj", "{F8B30057-EC89-40A8-9A36-8FCF329C20AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -52,5 +52,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {81E0F28E-2046-4236-9216-F33661E8AA97}
 	EndGlobalSection
 EndGlobal
