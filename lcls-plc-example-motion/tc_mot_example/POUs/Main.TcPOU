@@ -5,7 +5,7 @@
 VAR
     // Simulated motor that is always allowed to move
     {attribute 'pytmc' := '
-        pv: @PREFIX:SIM:01
+        pv: @(PREFIX):SIM:01
         field: DESC Simulated Working Motor
     '}
     M1: ST_MotionStage;
@@ -13,7 +13,7 @@ VAR
 
     // Simulated motor that is never allowed to move
     {attribute 'pytmc' := '
-        pv: @PREFIX:SIM:02
+        pv: @(PREFIX):SIM:02
         field: DESC Simulated Broken Motor
     '}
     M2: DUT_MotionStage;
@@ -21,7 +21,7 @@ VAR
 
     // Simulated motor with limits at 0 and 100
     {attribute 'pytmc' := '
-        pv: @PREFIX:SIM:03
+        pv: @(PREFIX):SIM:03
         field: DESC Simulated Working Motor With Limits
     '}
     M3: ST_MotionStage;
@@ -29,25 +29,25 @@ VAR
 
     // Simulated motor xpim y
     {attribute 'pytmc' := '
-        pv: @PREFIX:SIM:XPIM:Y
+        pv: @(PREFIX):SIM:XPIM:Y
         field: DESC Simulated XPIM Y
     '}
     M4: ST_MotionStage;
     // Simulated motor xpim zoom
     {attribute 'pytmc' := '
-        pv: @PREFIX:SIM:XPIM:ZOOM
+        pv: @(PREFIX):SIM:XPIM:ZOOM
         field: DESC Simulated XPIM ZOOM
     '}
     M5: ST_MotionStage;
     // Simulated motor xpim focus
     {attribute 'pytmc' := '
-        pv: @PREFIX:SIM:XPIM:FOCUS
+        pv: @(PREFIX):SIM:XPIM:FOCUS
         field: DESC Simulated XPIM FOCUS
     '}
     M6: ST_MotionStage;
 
     {attribute 'pytmc' := '
-        pv: @PREFIX:SIM:XPIM
+        pv: @(PREFIX):SIM:XPIM
         io: io
     '}
     fbIM1L0: FB_XPIM;
@@ -56,62 +56,62 @@ VAR
 
     // Simulated motor dimension X for 3d test
     {attribute 'pytmc' := '
-        pv: @PREFIX:SIM:3D:X
+        pv: @(PREFIX):SIM:3D:X
         field: DESC Simulated X motor for 3d move
     '}
     M7: ST_MotionStage;
     fbMotion7: FB_MotionStage;
     // Simulated motor dimension Y for 3d test
     {attribute 'pytmc' := '
-        pv: @PREFIX:SIM:3D:Y
+        pv: @(PREFIX):SIM:3D:Y
         field: DESC Simulated Y motor for 3d move
     '}
     M8: ST_MotionStage;
     fbMotion8: FB_MotionStage;
     // Simulated motor dimension Z for 3d test
     {attribute 'pytmc' := '
-        pv: @PREFIX:SIM:3D:Z
+        pv: @(PREFIX):SIM:3D:Z
         field: DESC Simulated Z motor for 3d move
     '}
     M9: ST_MotionStage;
     fbMotion9: FB_MotionStage;
     {attribute 'pytmc' := '
-        pv: @PREFIX:SIM:3D
+        pv: @(PREFIX):SIM:3D
     '}
     fb3D: FB_PositionStatePMPS3D;
     astM7States: ARRAY[1..GeneralConstants.MAX_STATES] OF ST_PositionState;
     astM8States: ARRAY[1..GeneralConstants.MAX_STATES] OF ST_PositionState;
     astM9States: ARRAY[1..GeneralConstants.MAX_STATES] OF ST_PositionState;
     {attribute 'pytmc' := '
-        pv: @PREFIX:SIM:3D:SET
+        pv: @(PREFIX):SIM:3D:SET
         io: io
     '}
     e3DSet: ENUM_TwoTargets;
     {attribute 'pytmc' := '
-        pv: @PREFIX:SIM:3D:GET
+        pv: @(PREFIX):SIM:3D:GET
         io: i
     '}
     e3DGet: ENUM_TwoTargets;
 
     // Simulated motor for limit to limit test
     {attribute 'pytmc' := '
-        pv: @PREFIX:SIM:L2L:MOT
+        pv: @(PREFIX):SIM:L2L:MOT
         field: DESC Simulated motor for limit to limit state move
     '}
     M10: ST_MotionStage;
     fbMotion10: FB_MotionStage;
     {attribute 'pytmc' := '
-        pv: @PREFIX:SIM:L2L
+        pv: @(PREFIX):SIM:L2L
     '}
     fbM10States: FB_PositionState1D;
     astM10States: ARRAY[1..GeneralConstants.MAX_STATES] OF ST_PositionState;
     {attribute 'pytmc' := '
-        pv: @PREFIX:SIM:L2L:SET
+        pv: @(PREFIX):SIM:L2L:SET
         io: io
     '}
     eL2LSet: ENUM_EpicsInOut;
     {attribute 'pytmc' := '
-        pv: @PREFIX:SIM:L2L:GET
+        pv: @(PREFIX):SIM:L2L:GET
         io: io
     '}
     eL2LGet: ENUM_EpicsInOut;

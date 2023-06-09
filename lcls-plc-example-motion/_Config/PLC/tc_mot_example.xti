@@ -1033,7 +1033,7 @@ External Setpoint Generation:
 		</DataType>
 	</DataTypes>
 	<Project GUID="{CA7AC114-7F2F-41DD-9644-D0667BBB7DBD}" Name="tc_mot_example" PrjFilePath="..\..\tc_mot_example\tc_mot_example.plcproj" TmcFilePath="..\..\tc_mot_example\tc_mot_example.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="tc_mot_example\tc_mot_example.tmc" TmcHash="{3B7A44B6-61AE-B9E4-96D9-84598AFCE26B}">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="tc_mot_example\tc_mot_example.tmc" TmcHash="{5D77472A-3169-57B9-C44A-48035A9BD6E8}">
 			<Name>tc_mot_example Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">
