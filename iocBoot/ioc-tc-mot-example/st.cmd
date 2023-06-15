@@ -4,8 +4,8 @@
 #         Project: lcls-plc-example-motion.tsproj
 #        PLC name: tc_mot_example (tc_mot_example Instance)
 # Generated using: pytmc 2.15.1.dev9+gecce58c
-# Project version: 94a1e71
-#    Project hash: 94a1e71716f75c13f956d8e5da051b3bdc45b6e4
+# Project version: 833b455
+#    Project hash: 833b4552f3c79c06a8f4ab9eb31a6dfb59ea9e74
 #     PLC IP/host: 172.21.148.148
 #      PLC Net ID: 172.21.148.148.1.1
 # ** DEVELOPMENT MODE IOC **
@@ -270,7 +270,7 @@ dbLoadRecords("caPutLog.db", "IOC=$(IOC)")
 dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:TST:MOT,IDX=1")
 dbLoadRecords("TwinCAT_AppInfo.db", "PORT=$(ASYN_PORT), PREFIX=PLC:TST:MOT")
 
-dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:TST:MOT,PROJECT=lcls-plc-example-motion.tsproj,HASH=94a1e71,VERSION=94a1e71,PYTMC=2.15.1.dev9+gecce58c,PLC_HOST=172.21.148.148")
+dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:TST:MOT,PROJECT=lcls-plc-example-motion.tsproj,HASH=833b455,VERSION=833b455,PYTMC=2.15.1.dev9+gecce58c,PLC_HOST=172.21.148.148")
 
 #   LCLS General: * -> 2.8.2 (SLAC)
 dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TST:MOT,DEPENDENCY=LCLS_General,VERSION=2.8.2,VENDOR=SLAC")
