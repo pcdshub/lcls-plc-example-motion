@@ -83,12 +83,12 @@ VAR
     astM8States: ARRAY[1..GeneralConstants.MAX_STATES] OF ST_PositionState;
     astM9States: ARRAY[1..GeneralConstants.MAX_STATES] OF ST_PositionState;
     {attribute 'pytmc' := '
-        pv: @(PREFIX)3D:SET
+        pv: @(PREFIX)3D:STATE:SET
         io: io
     '}
     e3DSet: ENUM_TwoTargets;
     {attribute 'pytmc' := '
-        pv: @(PREFIX)3D:GET
+        pv: @(PREFIX)3D:STATE:GET
         io: i
     '}
     e3DGet: ENUM_TwoTargets;
@@ -106,12 +106,12 @@ VAR
     fbM10States: FB_PositionState1D;
     astM10States: ARRAY[1..GeneralConstants.MAX_STATES] OF ST_PositionState;
     {attribute 'pytmc' := '
-        pv: @(PREFIX)L2L:SET
+        pv: @(PREFIX)L2L:STATE:SET
         io: io
     '}
     eL2LSet: ENUM_EpicsInOut;
     {attribute 'pytmc' := '
-        pv: @(PREFIX)L2L:GET
+        pv: @(PREFIX)L2L:STATE:GET
         io: io
     '}
     eL2LGet: ENUM_EpicsInOut;
