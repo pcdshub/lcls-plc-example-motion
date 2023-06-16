@@ -8,7 +8,7 @@ VAR
         pv: @(PREFIX)01
         field: DESC Simulated Working Motor
     '}
-    M1: ST_MotionStage;
+    M1: ST_MotionStage := (sName := 'SIM:01');
     fbMotion1: FB_MotionStageSim;
 
     // Simulated motor that is never allowed to move
@@ -16,7 +16,7 @@ VAR
         pv: @(PREFIX)02
         field: DESC Simulated Broken Motor
     '}
-    M2: DUT_MotionStage;
+    M2: DUT_MotionStage := (sName := 'SIM:02');
     fbMotion2: FB_MotionStage;
 
     // Simulated motor with limits at 0 and 100
@@ -24,7 +24,7 @@ VAR
         pv: @(PREFIX)03
         field: DESC Simulated Working Motor With Limits
     '}
-    M3: ST_MotionStage;
+    M3: ST_MotionStage := (sName := 'SIM:03');
     fbMotion3: FB_MotionStage;
 
     // Simulated motor xpim y
@@ -32,19 +32,19 @@ VAR
         pv: IMTST:XTES:MMS
         field: DESC Simulated XPIM Y
     '}
-    M4: ST_MotionStage;
+    M4: ST_MotionStage := (sName := 'IMTST:XTES:MMS');
     // Simulated motor xpim zoom
     {attribute 'pytmc' := '
         pv: IMTST:XTES:CLZ
         field: DESC Simulated XPIM ZOOM
     '}
-    M5: ST_MotionStage;
+    M5: ST_MotionStage := (sName := 'IMTST:XTES:CLZ');
     // Simulated motor xpim focus
     {attribute 'pytmc' := '
         pv: IMTST:XTES:CLF
         field: DESC Simulated XPIM FOCUS
     '}
-    M6: ST_MotionStage;
+    M6: ST_MotionStage := (sName := 'IMTST:XTES:CLF');
 
     {attribute 'pytmc' := '
         pv: IMTST:XTES
@@ -59,21 +59,21 @@ VAR
         pv: @(PREFIX)3D:X
         field: DESC Simulated X motor for 3d move
     '}
-    M7: ST_MotionStage;
+    M7: ST_MotionStage := (sName := '3D:X');
     fbMotion7: FB_MotionStage;
     // Simulated motor dimension Y for 3d test
     {attribute 'pytmc' := '
         pv: @(PREFIX)3D:Y
         field: DESC Simulated Y motor for 3d move
     '}
-    M8: ST_MotionStage;
+    M8: ST_MotionStage := (sName := '3D:Y');
     fbMotion8: FB_MotionStage;
     // Simulated motor dimension Z for 3d test
     {attribute 'pytmc' := '
         pv: @(PREFIX)3D:Z
         field: DESC Simulated Z motor for 3d move
     '}
-    M9: ST_MotionStage;
+    M9: ST_MotionStage := (sName := '3D:Z');
     fbMotion9: FB_MotionStage;
     {attribute 'pytmc' := '
         pv: @(PREFIX)3D
@@ -98,7 +98,7 @@ VAR
         pv: @(PREFIX)L2L:MOT
         field: DESC Simulated motor for limit to limit state move
     '}
-    M10: ST_MotionStage;
+    M10: ST_MotionStage := (sName := 'SIM:L2L');
     fbMotion10: FB_MotionStage;
     {attribute 'pytmc' := '
         pv: @(PREFIX)L2L
