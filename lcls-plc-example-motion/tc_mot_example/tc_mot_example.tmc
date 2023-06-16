@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{ED9C88D6-3C8B-1BDA-55D4-4C11364DC2A5}" GeneratedBy="TwinCAT XAE Plc">
+<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{02CE9717-DA5C-9E9D-6207-4F61692AE9EF}" GeneratedBy="TwinCAT XAE Plc">
   <DataTypes>
     <DataType>
       <Name Namespace="LCLS_General">ST_System</Name>
@@ -55632,6 +55632,10 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BaseType Namespace="PMPS">FB_Arbiter</BaseType>
             <Properties>
               <Property>
+                <Name>pytmc</Name>
+                <Value>pv: @(PREFIX)ARB</Value>
+              </Property>
+              <Property>
                 <Name>old_input_assignments</Name>
               </Property>
               <Property>
@@ -55655,6 +55659,10 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
               </SubItem>
             </Default>
             <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>pv: @(PREFIX)FFO:01</Value>
+              </Property>
               <Property>
                 <Name>TcVarGlobal</Name>
               </Property>
@@ -56041,7 +56049,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
         </Property>
         <Property>
           <Name>ChangeDate</Name>
-          <Value>2023-06-15T10:45:22</Value>
+          <Value>2023-06-16T10:57:56</Value>
         </Property>
         <Property>
           <Name>GeneratedCodeSize</Name>
