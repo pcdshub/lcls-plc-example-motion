@@ -118,12 +118,12 @@ VAR
         pv: @(PREFIX)L2L:STATE:SET
         io: io
     '}
-    eL2LSet: ENUM_EpicsInOut;
+    eL2LSet: E_EpicsInOut;
     {attribute 'pytmc' := '
         pv: @(PREFIX)L2L:STATE:GET
         io: io
     '}
-    eL2LGet: ENUM_EpicsInOut;
+    eL2LGet: E_EpicsInOut;
 
     bInit: BOOL := TRUE;
     fbArbiterIO: FB_DummyArbIO;

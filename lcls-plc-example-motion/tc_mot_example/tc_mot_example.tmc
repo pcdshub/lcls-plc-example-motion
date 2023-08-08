@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{7F45F500-A4C1-38B3-D41A-139974935138}" GeneratedBy="TwinCAT XAE Plc">
+<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{C0F57D91-FAF4-B4A1-6D6C-73173BF168A8}" GeneratedBy="TwinCAT XAE Plc">
   <DataTypes>
     <DataType>
       <Name Namespace="LCLS_General">ST_System</Name>
@@ -44476,17 +44476,6 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion">ENUM_EpicsInOut</Name>
-      <BitSize>16</BitSize>
-      <BaseType Namespace="lcls_twincat_motion">E_EpicsInOut</BaseType>
-      <Properties>
-        <Property>
-          <Name>obsolete</Name>
-          <Value>Use E_EpicsInOut</Value>
-        </Property>
-      </Properties>
-    </DataType>
-    <DataType>
       <Name Namespace="lcls_twincat_motion">FB_PositionState1D</Name>
       <BitSize>307136</BitSize>
       <SubItem>
@@ -55763,7 +55752,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
           <Symbol>
             <Name>Main.eL2LSet</Name>
             <BitSize>16</BitSize>
-            <BaseType Namespace="lcls_twincat_motion">ENUM_EpicsInOut</BaseType>
+            <BaseType Namespace="lcls_twincat_motion">E_EpicsInOut</BaseType>
             <Properties>
               <Property>
                 <Name>pytmc</Name>
@@ -55778,7 +55767,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
           <Symbol>
             <Name>Main.eL2LGet</Name>
             <BitSize>16</BitSize>
-            <BaseType Namespace="lcls_twincat_motion">ENUM_EpicsInOut</BaseType>
+            <BaseType Namespace="lcls_twincat_motion">E_EpicsInOut</BaseType>
             <Properties>
               <Property>
                 <Name>pytmc</Name>
@@ -56316,7 +56305,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
         </Property>
         <Property>
           <Name>ChangeDate</Name>
-          <Value>2023-08-08T09:59:32</Value>
+          <Value>2023-08-08T10:14:01</Value>
         </Property>
         <Property>
           <Name>GeneratedCodeSize</Name>
