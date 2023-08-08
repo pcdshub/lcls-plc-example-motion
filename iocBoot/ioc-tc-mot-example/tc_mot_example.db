@@ -22398,7 +22398,7 @@ record(waveform, "$(PREFIX)01:PLC:sName_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "$(PREFIX)01:PLC:stEPSBackwardEnable:nFlags_RBV") {
+record(longin, "$(PREFIX)01:PLC:stEPSB:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -22409,7 +22409,7 @@ record(longin, "$(PREFIX)01:PLC:stEPSBackwardEnable:nFlags_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "$(PREFIX)01:PLC:stEPSBackwardEnable:sFlagDesc_RBV") {
+record(waveform, "$(PREFIX)01:PLC:stEPSB:sFlagDesc_RBV") {
   field(DESC, "semicolon-delimited nFlag variable")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -22424,7 +22424,7 @@ record(waveform, "$(PREFIX)01:PLC:stEPSBackwardEnable:sFlagDesc_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "$(PREFIX)01:PLC:stEPSBackwardEnable:sMessage_RBV") {
+record(waveform, "$(PREFIX)01:PLC:stEPSB:sMessage_RBV") {
   field(DESC, "Message from EPS to usr")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -22439,7 +22439,7 @@ record(waveform, "$(PREFIX)01:PLC:stEPSBackwardEnable:sMessage_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "$(PREFIX)01:PLC:stEPSForwardEnable:nFlags_RBV") {
+record(longin, "$(PREFIX)01:PLC:stEPSF:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -22450,7 +22450,7 @@ record(longin, "$(PREFIX)01:PLC:stEPSForwardEnable:nFlags_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "$(PREFIX)01:PLC:stEPSForwardEnable:sFlagDesc_RBV") {
+record(waveform, "$(PREFIX)01:PLC:stEPSF:sFlagDesc_RBV") {
   field(DESC, "semicolon-delimited nFlag variable")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -22465,7 +22465,7 @@ record(waveform, "$(PREFIX)01:PLC:stEPSForwardEnable:sFlagDesc_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "$(PREFIX)01:PLC:stEPSForwardEnable:sMessage_RBV") {
+record(waveform, "$(PREFIX)01:PLC:stEPSF:sMessage_RBV") {
   field(DESC, "Message from EPS to usr")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -22480,7 +22480,7 @@ record(waveform, "$(PREFIX)01:PLC:stEPSForwardEnable:sMessage_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "$(PREFIX)01:PLC:stEPSPowerEnable:nFlags_RBV") {
+record(longin, "$(PREFIX)01:PLC:stEPSP:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -22491,7 +22491,7 @@ record(longin, "$(PREFIX)01:PLC:stEPSPowerEnable:nFlags_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "$(PREFIX)01:PLC:stEPSPowerEnable:sFlagDesc_RBV") {
+record(waveform, "$(PREFIX)01:PLC:stEPSP:sFlagDesc_RBV") {
   field(DESC, "semicolon-delimited nFlag variable")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -22506,7 +22506,7 @@ record(waveform, "$(PREFIX)01:PLC:stEPSPowerEnable:sFlagDesc_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "$(PREFIX)01:PLC:stEPSPowerEnable:sMessage_RBV") {
+record(waveform, "$(PREFIX)01:PLC:stEPSP:sMessage_RBV") {
   field(DESC, "Message from EPS to usr")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -23204,7 +23204,7 @@ record(waveform, "$(PREFIX)L2L:MOT:PLC:sName_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "$(PREFIX)L2L:MOT:PLC:stEPSBackwardEnable:nFlags_RBV") {
+record(longin, "$(PREFIX)L2L:MOT:PLC:stEPSB:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -23215,7 +23215,7 @@ record(longin, "$(PREFIX)L2L:MOT:PLC:stEPSBackwardEnable:nFlags_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "$(PREFIX)L2L:MOT:PLC:stEPSBackwardEnable:sFlagDesc_RBV") {
+record(waveform, "$(PREFIX)L2L:MOT:PLC:stEPSB:sFlagDesc_RBV") {
   field(DESC, "semicolon-delimited nFlag variable")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -23230,7 +23230,7 @@ record(waveform, "$(PREFIX)L2L:MOT:PLC:stEPSBackwardEnable:sFlagDesc_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "$(PREFIX)L2L:MOT:PLC:stEPSBackwardEnable:sMessage_RBV") {
+record(waveform, "$(PREFIX)L2L:MOT:PLC:stEPSB:sMessage_RBV") {
   field(DESC, "Message from EPS to usr")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -23245,7 +23245,7 @@ record(waveform, "$(PREFIX)L2L:MOT:PLC:stEPSBackwardEnable:sMessage_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "$(PREFIX)L2L:MOT:PLC:stEPSForwardEnable:nFlags_RBV") {
+record(longin, "$(PREFIX)L2L:MOT:PLC:stEPSF:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -23256,7 +23256,7 @@ record(longin, "$(PREFIX)L2L:MOT:PLC:stEPSForwardEnable:nFlags_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "$(PREFIX)L2L:MOT:PLC:stEPSForwardEnable:sFlagDesc_RBV") {
+record(waveform, "$(PREFIX)L2L:MOT:PLC:stEPSF:sFlagDesc_RBV") {
   field(DESC, "semicolon-delimited nFlag variable")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -23271,7 +23271,7 @@ record(waveform, "$(PREFIX)L2L:MOT:PLC:stEPSForwardEnable:sFlagDesc_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "$(PREFIX)L2L:MOT:PLC:stEPSForwardEnable:sMessage_RBV") {
+record(waveform, "$(PREFIX)L2L:MOT:PLC:stEPSF:sMessage_RBV") {
   field(DESC, "Message from EPS to usr")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -23286,7 +23286,7 @@ record(waveform, "$(PREFIX)L2L:MOT:PLC:stEPSForwardEnable:sMessage_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "$(PREFIX)L2L:MOT:PLC:stEPSPowerEnable:nFlags_RBV") {
+record(longin, "$(PREFIX)L2L:MOT:PLC:stEPSP:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -23297,7 +23297,7 @@ record(longin, "$(PREFIX)L2L:MOT:PLC:stEPSPowerEnable:nFlags_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "$(PREFIX)L2L:MOT:PLC:stEPSPowerEnable:sFlagDesc_RBV") {
+record(waveform, "$(PREFIX)L2L:MOT:PLC:stEPSP:sFlagDesc_RBV") {
   field(DESC, "semicolon-delimited nFlag variable")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -23312,7 +23312,7 @@ record(waveform, "$(PREFIX)L2L:MOT:PLC:stEPSPowerEnable:sFlagDesc_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "$(PREFIX)L2L:MOT:PLC:stEPSPowerEnable:sMessage_RBV") {
+record(waveform, "$(PREFIX)L2L:MOT:PLC:stEPSP:sMessage_RBV") {
   field(DESC, "Message from EPS to usr")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -24010,7 +24010,7 @@ record(waveform, "$(PREFIX)02:PLC:sName_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "$(PREFIX)02:PLC:stEPSBackwardEnable:nFlags_RBV") {
+record(longin, "$(PREFIX)02:PLC:stEPSB:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -24021,7 +24021,7 @@ record(longin, "$(PREFIX)02:PLC:stEPSBackwardEnable:nFlags_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "$(PREFIX)02:PLC:stEPSBackwardEnable:sFlagDesc_RBV") {
+record(waveform, "$(PREFIX)02:PLC:stEPSB:sFlagDesc_RBV") {
   field(DESC, "semicolon-delimited nFlag variable")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -24036,7 +24036,7 @@ record(waveform, "$(PREFIX)02:PLC:stEPSBackwardEnable:sFlagDesc_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "$(PREFIX)02:PLC:stEPSBackwardEnable:sMessage_RBV") {
+record(waveform, "$(PREFIX)02:PLC:stEPSB:sMessage_RBV") {
   field(DESC, "Message from EPS to usr")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -24051,7 +24051,7 @@ record(waveform, "$(PREFIX)02:PLC:stEPSBackwardEnable:sMessage_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "$(PREFIX)02:PLC:stEPSForwardEnable:nFlags_RBV") {
+record(longin, "$(PREFIX)02:PLC:stEPSF:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -24062,7 +24062,7 @@ record(longin, "$(PREFIX)02:PLC:stEPSForwardEnable:nFlags_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "$(PREFIX)02:PLC:stEPSForwardEnable:sFlagDesc_RBV") {
+record(waveform, "$(PREFIX)02:PLC:stEPSF:sFlagDesc_RBV") {
   field(DESC, "semicolon-delimited nFlag variable")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -24077,7 +24077,7 @@ record(waveform, "$(PREFIX)02:PLC:stEPSForwardEnable:sFlagDesc_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "$(PREFIX)02:PLC:stEPSForwardEnable:sMessage_RBV") {
+record(waveform, "$(PREFIX)02:PLC:stEPSF:sMessage_RBV") {
   field(DESC, "Message from EPS to usr")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -24092,7 +24092,7 @@ record(waveform, "$(PREFIX)02:PLC:stEPSForwardEnable:sMessage_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "$(PREFIX)02:PLC:stEPSPowerEnable:nFlags_RBV") {
+record(longin, "$(PREFIX)02:PLC:stEPSP:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -24103,7 +24103,7 @@ record(longin, "$(PREFIX)02:PLC:stEPSPowerEnable:nFlags_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "$(PREFIX)02:PLC:stEPSPowerEnable:sFlagDesc_RBV") {
+record(waveform, "$(PREFIX)02:PLC:stEPSP:sFlagDesc_RBV") {
   field(DESC, "semicolon-delimited nFlag variable")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -24118,7 +24118,7 @@ record(waveform, "$(PREFIX)02:PLC:stEPSPowerEnable:sFlagDesc_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "$(PREFIX)02:PLC:stEPSPowerEnable:sMessage_RBV") {
+record(waveform, "$(PREFIX)02:PLC:stEPSP:sMessage_RBV") {
   field(DESC, "Message from EPS to usr")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -24816,7 +24816,7 @@ record(waveform, "$(PREFIX)03:PLC:sName_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "$(PREFIX)03:PLC:stEPSBackwardEnable:nFlags_RBV") {
+record(longin, "$(PREFIX)03:PLC:stEPSB:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -24827,7 +24827,7 @@ record(longin, "$(PREFIX)03:PLC:stEPSBackwardEnable:nFlags_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "$(PREFIX)03:PLC:stEPSBackwardEnable:sFlagDesc_RBV") {
+record(waveform, "$(PREFIX)03:PLC:stEPSB:sFlagDesc_RBV") {
   field(DESC, "semicolon-delimited nFlag variable")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -24842,7 +24842,7 @@ record(waveform, "$(PREFIX)03:PLC:stEPSBackwardEnable:sFlagDesc_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "$(PREFIX)03:PLC:stEPSBackwardEnable:sMessage_RBV") {
+record(waveform, "$(PREFIX)03:PLC:stEPSB:sMessage_RBV") {
   field(DESC, "Message from EPS to usr")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -24857,7 +24857,7 @@ record(waveform, "$(PREFIX)03:PLC:stEPSBackwardEnable:sMessage_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "$(PREFIX)03:PLC:stEPSForwardEnable:nFlags_RBV") {
+record(longin, "$(PREFIX)03:PLC:stEPSF:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -24868,7 +24868,7 @@ record(longin, "$(PREFIX)03:PLC:stEPSForwardEnable:nFlags_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "$(PREFIX)03:PLC:stEPSForwardEnable:sFlagDesc_RBV") {
+record(waveform, "$(PREFIX)03:PLC:stEPSF:sFlagDesc_RBV") {
   field(DESC, "semicolon-delimited nFlag variable")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -24883,7 +24883,7 @@ record(waveform, "$(PREFIX)03:PLC:stEPSForwardEnable:sFlagDesc_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "$(PREFIX)03:PLC:stEPSForwardEnable:sMessage_RBV") {
+record(waveform, "$(PREFIX)03:PLC:stEPSF:sMessage_RBV") {
   field(DESC, "Message from EPS to usr")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -24898,7 +24898,7 @@ record(waveform, "$(PREFIX)03:PLC:stEPSForwardEnable:sMessage_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "$(PREFIX)03:PLC:stEPSPowerEnable:nFlags_RBV") {
+record(longin, "$(PREFIX)03:PLC:stEPSP:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -24909,7 +24909,7 @@ record(longin, "$(PREFIX)03:PLC:stEPSPowerEnable:nFlags_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "$(PREFIX)03:PLC:stEPSPowerEnable:sFlagDesc_RBV") {
+record(waveform, "$(PREFIX)03:PLC:stEPSP:sFlagDesc_RBV") {
   field(DESC, "semicolon-delimited nFlag variable")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -24924,7 +24924,7 @@ record(waveform, "$(PREFIX)03:PLC:stEPSPowerEnable:sFlagDesc_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "$(PREFIX)03:PLC:stEPSPowerEnable:sMessage_RBV") {
+record(waveform, "$(PREFIX)03:PLC:stEPSP:sMessage_RBV") {
   field(DESC, "Message from EPS to usr")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -25622,7 +25622,7 @@ record(waveform, "IMTST:XTES:MMS:PLC:sName_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "IMTST:XTES:MMS:PLC:stEPSBackwardEnable:nFlags_RBV") {
+record(longin, "IMTST:XTES:MMS:PLC:stEPSB:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -25633,7 +25633,7 @@ record(longin, "IMTST:XTES:MMS:PLC:stEPSBackwardEnable:nFlags_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "IMTST:XTES:MMS:PLC:stEPSBackwardEnable:sFlagDesc_RBV") {
+record(waveform, "IMTST:XTES:MMS:PLC:stEPSB:sFlagDesc_RBV") {
   field(DESC, "semicolon-delimited nFlag variable")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -25648,7 +25648,7 @@ record(waveform, "IMTST:XTES:MMS:PLC:stEPSBackwardEnable:sFlagDesc_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "IMTST:XTES:MMS:PLC:stEPSBackwardEnable:sMessage_RBV") {
+record(waveform, "IMTST:XTES:MMS:PLC:stEPSB:sMessage_RBV") {
   field(DESC, "Message from EPS to usr")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -25663,7 +25663,7 @@ record(waveform, "IMTST:XTES:MMS:PLC:stEPSBackwardEnable:sMessage_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "IMTST:XTES:MMS:PLC:stEPSForwardEnable:nFlags_RBV") {
+record(longin, "IMTST:XTES:MMS:PLC:stEPSF:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -25674,7 +25674,7 @@ record(longin, "IMTST:XTES:MMS:PLC:stEPSForwardEnable:nFlags_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "IMTST:XTES:MMS:PLC:stEPSForwardEnable:sFlagDesc_RBV") {
+record(waveform, "IMTST:XTES:MMS:PLC:stEPSF:sFlagDesc_RBV") {
   field(DESC, "semicolon-delimited nFlag variable")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -25689,7 +25689,7 @@ record(waveform, "IMTST:XTES:MMS:PLC:stEPSForwardEnable:sFlagDesc_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "IMTST:XTES:MMS:PLC:stEPSForwardEnable:sMessage_RBV") {
+record(waveform, "IMTST:XTES:MMS:PLC:stEPSF:sMessage_RBV") {
   field(DESC, "Message from EPS to usr")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -25704,7 +25704,7 @@ record(waveform, "IMTST:XTES:MMS:PLC:stEPSForwardEnable:sMessage_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "IMTST:XTES:MMS:PLC:stEPSPowerEnable:nFlags_RBV") {
+record(longin, "IMTST:XTES:MMS:PLC:stEPSP:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -25715,7 +25715,7 @@ record(longin, "IMTST:XTES:MMS:PLC:stEPSPowerEnable:nFlags_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "IMTST:XTES:MMS:PLC:stEPSPowerEnable:sFlagDesc_RBV") {
+record(waveform, "IMTST:XTES:MMS:PLC:stEPSP:sFlagDesc_RBV") {
   field(DESC, "semicolon-delimited nFlag variable")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -25730,7 +25730,7 @@ record(waveform, "IMTST:XTES:MMS:PLC:stEPSPowerEnable:sFlagDesc_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "IMTST:XTES:MMS:PLC:stEPSPowerEnable:sMessage_RBV") {
+record(waveform, "IMTST:XTES:MMS:PLC:stEPSP:sMessage_RBV") {
   field(DESC, "Message from EPS to usr")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -26428,7 +26428,7 @@ record(waveform, "IMTST:XTES:CLZ:PLC:sName_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "IMTST:XTES:CLZ:PLC:stEPSBackwardEnable:nFlags_RBV") {
+record(longin, "IMTST:XTES:CLZ:PLC:stEPSB:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -26439,7 +26439,7 @@ record(longin, "IMTST:XTES:CLZ:PLC:stEPSBackwardEnable:nFlags_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "IMTST:XTES:CLZ:PLC:stEPSBackwardEnable:sFlagDesc_RBV") {
+record(waveform, "IMTST:XTES:CLZ:PLC:stEPSB:sFlagDesc_RBV") {
   field(DESC, "semicolon-delimited nFlag variable")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -26454,7 +26454,7 @@ record(waveform, "IMTST:XTES:CLZ:PLC:stEPSBackwardEnable:sFlagDesc_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "IMTST:XTES:CLZ:PLC:stEPSBackwardEnable:sMessage_RBV") {
+record(waveform, "IMTST:XTES:CLZ:PLC:stEPSB:sMessage_RBV") {
   field(DESC, "Message from EPS to usr")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -26469,7 +26469,7 @@ record(waveform, "IMTST:XTES:CLZ:PLC:stEPSBackwardEnable:sMessage_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "IMTST:XTES:CLZ:PLC:stEPSForwardEnable:nFlags_RBV") {
+record(longin, "IMTST:XTES:CLZ:PLC:stEPSF:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -26480,7 +26480,7 @@ record(longin, "IMTST:XTES:CLZ:PLC:stEPSForwardEnable:nFlags_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "IMTST:XTES:CLZ:PLC:stEPSForwardEnable:sFlagDesc_RBV") {
+record(waveform, "IMTST:XTES:CLZ:PLC:stEPSF:sFlagDesc_RBV") {
   field(DESC, "semicolon-delimited nFlag variable")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -26495,7 +26495,7 @@ record(waveform, "IMTST:XTES:CLZ:PLC:stEPSForwardEnable:sFlagDesc_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "IMTST:XTES:CLZ:PLC:stEPSForwardEnable:sMessage_RBV") {
+record(waveform, "IMTST:XTES:CLZ:PLC:stEPSF:sMessage_RBV") {
   field(DESC, "Message from EPS to usr")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -26510,7 +26510,7 @@ record(waveform, "IMTST:XTES:CLZ:PLC:stEPSForwardEnable:sMessage_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "IMTST:XTES:CLZ:PLC:stEPSPowerEnable:nFlags_RBV") {
+record(longin, "IMTST:XTES:CLZ:PLC:stEPSP:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -26521,7 +26521,7 @@ record(longin, "IMTST:XTES:CLZ:PLC:stEPSPowerEnable:nFlags_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "IMTST:XTES:CLZ:PLC:stEPSPowerEnable:sFlagDesc_RBV") {
+record(waveform, "IMTST:XTES:CLZ:PLC:stEPSP:sFlagDesc_RBV") {
   field(DESC, "semicolon-delimited nFlag variable")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -26536,7 +26536,7 @@ record(waveform, "IMTST:XTES:CLZ:PLC:stEPSPowerEnable:sFlagDesc_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "IMTST:XTES:CLZ:PLC:stEPSPowerEnable:sMessage_RBV") {
+record(waveform, "IMTST:XTES:CLZ:PLC:stEPSP:sMessage_RBV") {
   field(DESC, "Message from EPS to usr")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -27234,7 +27234,7 @@ record(waveform, "IMTST:XTES:CLF:PLC:sName_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "IMTST:XTES:CLF:PLC:stEPSBackwardEnable:nFlags_RBV") {
+record(longin, "IMTST:XTES:CLF:PLC:stEPSB:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -27245,7 +27245,7 @@ record(longin, "IMTST:XTES:CLF:PLC:stEPSBackwardEnable:nFlags_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "IMTST:XTES:CLF:PLC:stEPSBackwardEnable:sFlagDesc_RBV") {
+record(waveform, "IMTST:XTES:CLF:PLC:stEPSB:sFlagDesc_RBV") {
   field(DESC, "semicolon-delimited nFlag variable")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -27260,7 +27260,7 @@ record(waveform, "IMTST:XTES:CLF:PLC:stEPSBackwardEnable:sFlagDesc_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "IMTST:XTES:CLF:PLC:stEPSBackwardEnable:sMessage_RBV") {
+record(waveform, "IMTST:XTES:CLF:PLC:stEPSB:sMessage_RBV") {
   field(DESC, "Message from EPS to usr")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -27275,7 +27275,7 @@ record(waveform, "IMTST:XTES:CLF:PLC:stEPSBackwardEnable:sMessage_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "IMTST:XTES:CLF:PLC:stEPSForwardEnable:nFlags_RBV") {
+record(longin, "IMTST:XTES:CLF:PLC:stEPSF:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -27286,7 +27286,7 @@ record(longin, "IMTST:XTES:CLF:PLC:stEPSForwardEnable:nFlags_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "IMTST:XTES:CLF:PLC:stEPSForwardEnable:sFlagDesc_RBV") {
+record(waveform, "IMTST:XTES:CLF:PLC:stEPSF:sFlagDesc_RBV") {
   field(DESC, "semicolon-delimited nFlag variable")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -27301,7 +27301,7 @@ record(waveform, "IMTST:XTES:CLF:PLC:stEPSForwardEnable:sFlagDesc_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "IMTST:XTES:CLF:PLC:stEPSForwardEnable:sMessage_RBV") {
+record(waveform, "IMTST:XTES:CLF:PLC:stEPSF:sMessage_RBV") {
   field(DESC, "Message from EPS to usr")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -27316,7 +27316,7 @@ record(waveform, "IMTST:XTES:CLF:PLC:stEPSForwardEnable:sMessage_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "IMTST:XTES:CLF:PLC:stEPSPowerEnable:nFlags_RBV") {
+record(longin, "IMTST:XTES:CLF:PLC:stEPSP:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -27327,7 +27327,7 @@ record(longin, "IMTST:XTES:CLF:PLC:stEPSPowerEnable:nFlags_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "IMTST:XTES:CLF:PLC:stEPSPowerEnable:sFlagDesc_RBV") {
+record(waveform, "IMTST:XTES:CLF:PLC:stEPSP:sFlagDesc_RBV") {
   field(DESC, "semicolon-delimited nFlag variable")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -27342,7 +27342,7 @@ record(waveform, "IMTST:XTES:CLF:PLC:stEPSPowerEnable:sFlagDesc_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "IMTST:XTES:CLF:PLC:stEPSPowerEnable:sMessage_RBV") {
+record(waveform, "IMTST:XTES:CLF:PLC:stEPSP:sMessage_RBV") {
   field(DESC, "Message from EPS to usr")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -28040,7 +28040,7 @@ record(waveform, "$(PREFIX)3D:X:PLC:sName_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "$(PREFIX)3D:X:PLC:stEPSBackwardEnable:nFlags_RBV") {
+record(longin, "$(PREFIX)3D:X:PLC:stEPSB:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -28051,7 +28051,7 @@ record(longin, "$(PREFIX)3D:X:PLC:stEPSBackwardEnable:nFlags_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "$(PREFIX)3D:X:PLC:stEPSBackwardEnable:sFlagDesc_RBV") {
+record(waveform, "$(PREFIX)3D:X:PLC:stEPSB:sFlagDesc_RBV") {
   field(DESC, "semicolon-delimited nFlag variable")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -28066,7 +28066,7 @@ record(waveform, "$(PREFIX)3D:X:PLC:stEPSBackwardEnable:sFlagDesc_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "$(PREFIX)3D:X:PLC:stEPSBackwardEnable:sMessage_RBV") {
+record(waveform, "$(PREFIX)3D:X:PLC:stEPSB:sMessage_RBV") {
   field(DESC, "Message from EPS to usr")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -28081,7 +28081,7 @@ record(waveform, "$(PREFIX)3D:X:PLC:stEPSBackwardEnable:sMessage_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "$(PREFIX)3D:X:PLC:stEPSForwardEnable:nFlags_RBV") {
+record(longin, "$(PREFIX)3D:X:PLC:stEPSF:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -28092,7 +28092,7 @@ record(longin, "$(PREFIX)3D:X:PLC:stEPSForwardEnable:nFlags_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "$(PREFIX)3D:X:PLC:stEPSForwardEnable:sFlagDesc_RBV") {
+record(waveform, "$(PREFIX)3D:X:PLC:stEPSF:sFlagDesc_RBV") {
   field(DESC, "semicolon-delimited nFlag variable")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -28107,7 +28107,7 @@ record(waveform, "$(PREFIX)3D:X:PLC:stEPSForwardEnable:sFlagDesc_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "$(PREFIX)3D:X:PLC:stEPSForwardEnable:sMessage_RBV") {
+record(waveform, "$(PREFIX)3D:X:PLC:stEPSF:sMessage_RBV") {
   field(DESC, "Message from EPS to usr")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -28122,7 +28122,7 @@ record(waveform, "$(PREFIX)3D:X:PLC:stEPSForwardEnable:sMessage_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "$(PREFIX)3D:X:PLC:stEPSPowerEnable:nFlags_RBV") {
+record(longin, "$(PREFIX)3D:X:PLC:stEPSP:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -28133,7 +28133,7 @@ record(longin, "$(PREFIX)3D:X:PLC:stEPSPowerEnable:nFlags_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "$(PREFIX)3D:X:PLC:stEPSPowerEnable:sFlagDesc_RBV") {
+record(waveform, "$(PREFIX)3D:X:PLC:stEPSP:sFlagDesc_RBV") {
   field(DESC, "semicolon-delimited nFlag variable")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -28148,7 +28148,7 @@ record(waveform, "$(PREFIX)3D:X:PLC:stEPSPowerEnable:sFlagDesc_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "$(PREFIX)3D:X:PLC:stEPSPowerEnable:sMessage_RBV") {
+record(waveform, "$(PREFIX)3D:X:PLC:stEPSP:sMessage_RBV") {
   field(DESC, "Message from EPS to usr")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -28846,7 +28846,7 @@ record(waveform, "$(PREFIX)3D:Y:PLC:sName_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "$(PREFIX)3D:Y:PLC:stEPSBackwardEnable:nFlags_RBV") {
+record(longin, "$(PREFIX)3D:Y:PLC:stEPSB:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -28857,7 +28857,7 @@ record(longin, "$(PREFIX)3D:Y:PLC:stEPSBackwardEnable:nFlags_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "$(PREFIX)3D:Y:PLC:stEPSBackwardEnable:sFlagDesc_RBV") {
+record(waveform, "$(PREFIX)3D:Y:PLC:stEPSB:sFlagDesc_RBV") {
   field(DESC, "semicolon-delimited nFlag variable")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -28872,7 +28872,7 @@ record(waveform, "$(PREFIX)3D:Y:PLC:stEPSBackwardEnable:sFlagDesc_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "$(PREFIX)3D:Y:PLC:stEPSBackwardEnable:sMessage_RBV") {
+record(waveform, "$(PREFIX)3D:Y:PLC:stEPSB:sMessage_RBV") {
   field(DESC, "Message from EPS to usr")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -28887,7 +28887,7 @@ record(waveform, "$(PREFIX)3D:Y:PLC:stEPSBackwardEnable:sMessage_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "$(PREFIX)3D:Y:PLC:stEPSForwardEnable:nFlags_RBV") {
+record(longin, "$(PREFIX)3D:Y:PLC:stEPSF:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -28898,7 +28898,7 @@ record(longin, "$(PREFIX)3D:Y:PLC:stEPSForwardEnable:nFlags_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "$(PREFIX)3D:Y:PLC:stEPSForwardEnable:sFlagDesc_RBV") {
+record(waveform, "$(PREFIX)3D:Y:PLC:stEPSF:sFlagDesc_RBV") {
   field(DESC, "semicolon-delimited nFlag variable")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -28913,7 +28913,7 @@ record(waveform, "$(PREFIX)3D:Y:PLC:stEPSForwardEnable:sFlagDesc_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "$(PREFIX)3D:Y:PLC:stEPSForwardEnable:sMessage_RBV") {
+record(waveform, "$(PREFIX)3D:Y:PLC:stEPSF:sMessage_RBV") {
   field(DESC, "Message from EPS to usr")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -28928,7 +28928,7 @@ record(waveform, "$(PREFIX)3D:Y:PLC:stEPSForwardEnable:sMessage_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "$(PREFIX)3D:Y:PLC:stEPSPowerEnable:nFlags_RBV") {
+record(longin, "$(PREFIX)3D:Y:PLC:stEPSP:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -28939,7 +28939,7 @@ record(longin, "$(PREFIX)3D:Y:PLC:stEPSPowerEnable:nFlags_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "$(PREFIX)3D:Y:PLC:stEPSPowerEnable:sFlagDesc_RBV") {
+record(waveform, "$(PREFIX)3D:Y:PLC:stEPSP:sFlagDesc_RBV") {
   field(DESC, "semicolon-delimited nFlag variable")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -28954,7 +28954,7 @@ record(waveform, "$(PREFIX)3D:Y:PLC:stEPSPowerEnable:sFlagDesc_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "$(PREFIX)3D:Y:PLC:stEPSPowerEnable:sMessage_RBV") {
+record(waveform, "$(PREFIX)3D:Y:PLC:stEPSP:sMessage_RBV") {
   field(DESC, "Message from EPS to usr")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -29652,7 +29652,7 @@ record(waveform, "$(PREFIX)3D:Z:PLC:sName_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "$(PREFIX)3D:Z:PLC:stEPSBackwardEnable:nFlags_RBV") {
+record(longin, "$(PREFIX)3D:Z:PLC:stEPSB:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -29663,7 +29663,7 @@ record(longin, "$(PREFIX)3D:Z:PLC:stEPSBackwardEnable:nFlags_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "$(PREFIX)3D:Z:PLC:stEPSBackwardEnable:sFlagDesc_RBV") {
+record(waveform, "$(PREFIX)3D:Z:PLC:stEPSB:sFlagDesc_RBV") {
   field(DESC, "semicolon-delimited nFlag variable")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -29678,7 +29678,7 @@ record(waveform, "$(PREFIX)3D:Z:PLC:stEPSBackwardEnable:sFlagDesc_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "$(PREFIX)3D:Z:PLC:stEPSBackwardEnable:sMessage_RBV") {
+record(waveform, "$(PREFIX)3D:Z:PLC:stEPSB:sMessage_RBV") {
   field(DESC, "Message from EPS to usr")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -29693,7 +29693,7 @@ record(waveform, "$(PREFIX)3D:Z:PLC:stEPSBackwardEnable:sMessage_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "$(PREFIX)3D:Z:PLC:stEPSForwardEnable:nFlags_RBV") {
+record(longin, "$(PREFIX)3D:Z:PLC:stEPSF:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -29704,7 +29704,7 @@ record(longin, "$(PREFIX)3D:Z:PLC:stEPSForwardEnable:nFlags_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "$(PREFIX)3D:Z:PLC:stEPSForwardEnable:sFlagDesc_RBV") {
+record(waveform, "$(PREFIX)3D:Z:PLC:stEPSF:sFlagDesc_RBV") {
   field(DESC, "semicolon-delimited nFlag variable")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -29719,7 +29719,7 @@ record(waveform, "$(PREFIX)3D:Z:PLC:stEPSForwardEnable:sFlagDesc_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "$(PREFIX)3D:Z:PLC:stEPSForwardEnable:sMessage_RBV") {
+record(waveform, "$(PREFIX)3D:Z:PLC:stEPSF:sMessage_RBV") {
   field(DESC, "Message from EPS to usr")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -29734,7 +29734,7 @@ record(waveform, "$(PREFIX)3D:Z:PLC:stEPSForwardEnable:sMessage_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "$(PREFIX)3D:Z:PLC:stEPSPowerEnable:nFlags_RBV") {
+record(longin, "$(PREFIX)3D:Z:PLC:stEPSP:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -29745,7 +29745,7 @@ record(longin, "$(PREFIX)3D:Z:PLC:stEPSPowerEnable:nFlags_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "$(PREFIX)3D:Z:PLC:stEPSPowerEnable:sFlagDesc_RBV") {
+record(waveform, "$(PREFIX)3D:Z:PLC:stEPSP:sFlagDesc_RBV") {
   field(DESC, "semicolon-delimited nFlag variable")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -29760,7 +29760,7 @@ record(waveform, "$(PREFIX)3D:Z:PLC:stEPSPowerEnable:sFlagDesc_RBV") {
   info(archive, "VAL")
 }
 
-record(waveform, "$(PREFIX)3D:Z:PLC:stEPSPowerEnable:sMessage_RBV") {
+record(waveform, "$(PREFIX)3D:Z:PLC:stEPSP:sMessage_RBV") {
   field(DESC, "Message from EPS to usr")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -36159,12 +36159,12 @@ record(bi, "$(PREFIX)3D:STATE:M3:04:BP:Valid_RBV") {
 }
 
 record(bi, "$(PREFIX)3D:STATE:RESET_RBV") {
-  field(DESC, "Main.fb3D.stEpicsInput.bReset")
+  field(DESC, "Main.fb3D.stEpicsToPlc.bReset")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stEpicsInput.bReset?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stEpicsToPlc.bReset?")
   field(ZNAM, "False")
   field(ONAM, "True")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
@@ -36172,89 +36172,24 @@ record(bi, "$(PREFIX)3D:STATE:RESET_RBV") {
 }
 
 record(bo, "$(PREFIX)3D:STATE:RESET") {
-  field(DESC, "Main.fb3D.stEpicsInput.bReset")
+  field(DESC, "Main.fb3D.stEpicsToPlc.bReset")
   field(DTYP, "asynInt32")
   field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/Main.fb3D.stEpicsInput.bReset=")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/Main.fb3D.stEpicsToPlc.bReset=")
   field(ZNAM, "False")
   field(ONAM, "True")
   info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
   info(archive, "VAL")
 }
 
-record(bi, "$(PREFIX)3D:STATE:BUSY_RBV") {
-  field(DESC, "Main.fb3D.stEpicsOutput.bBusy")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stEpicsOutput.bBusy?")
-  field(ZNAM, "False")
-  field(ONAM, "True")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "$(PREFIX)3D:STATE:DONE_RBV") {
-  field(DESC, "Main.fb3D.stEpicsOutput.bDone")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stEpicsOutput.bDone?")
-  field(ZNAM, "False")
-  field(ONAM, "True")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "$(PREFIX)3D:STATE:ERR_RBV") {
-  field(DESC, "Main.fb3D.stEpicsOutput.bError")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stEpicsOutput.bError?")
-  field(ZNAM, "False")
-  field(ONAM, "True")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(longin, "$(PREFIX)3D:STATE:ERRID_RBV") {
-  field(DESC, "Main.fb3D.stEpicsOutput.nErrorID")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stEpicsOutput.nErrorID?")
-  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
-  info(archive, "VAL")
-}
-
-record(waveform, "$(PREFIX)3D:STATE:ERRMSG_RBV") {
-  field(DESC, "Main.fb3D.stEpicsOutput.sErrorMsg")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stEpicsOutput.sErrorMsg?")
-  field(FTVL, "CHAR")
-  field(NELM, "80")
-  field(MPST, "On Change")
-  field(APST, "On Change")
-  info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
-  info(archive, "VAL")
-}
-
 record(bi, "$(PREFIX)3D:STATE:PMPS:ARB:ENABLE_RBV") {
-  # Main.fb3D.stPMPSEpicsInput.bArbiterEnabled
-  field(DESC, "Main.fb3D.stPMPSEpic...t.bArbiterEnabled")
+  # Main.fb3D.stPMPSEpicsToPlc.bArbiterEnabled
+  field(DESC, "Main.fb3D.stPMPSEpic...c.bArbiterEnabled")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSEpicsInput.bArbiterEnabled?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSEpicsToPlc.bArbiterEnabled?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
@@ -36262,11 +36197,11 @@ record(bi, "$(PREFIX)3D:STATE:PMPS:ARB:ENABLE_RBV") {
 }
 
 record(bo, "$(PREFIX)3D:STATE:PMPS:ARB:ENABLE") {
-  # Main.fb3D.stPMPSEpicsInput.bArbiterEnabled
-  field(DESC, "Main.fb3D.stPMPSEpic...t.bArbiterEnabled")
+  # Main.fb3D.stPMPSEpicsToPlc.bArbiterEnabled
+  field(DESC, "Main.fb3D.stPMPSEpic...c.bArbiterEnabled")
   field(DTYP, "asynInt32")
   field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/Main.fb3D.stPMPSEpicsInput.bArbiterEnabled=")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/Main.fb3D.stPMPSEpicsToPlc.bArbiterEnabled=")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
@@ -36274,12 +36209,12 @@ record(bo, "$(PREFIX)3D:STATE:PMPS:ARB:ENABLE") {
 }
 
 record(bi, "$(PREFIX)3D:STATE:PMPS:MAINT_RBV") {
-  field(DESC, "Main.fb3D.stPMPSEpicsInput.bMaintMode")
+  field(DESC, "Main.fb3D.stPMPSEpicsToPlc.bMaintMode")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSEpicsInput.bMaintMode?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSEpicsToPlc.bMaintMode?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
@@ -36287,10 +36222,10 @@ record(bi, "$(PREFIX)3D:STATE:PMPS:MAINT_RBV") {
 }
 
 record(bo, "$(PREFIX)3D:STATE:PMPS:MAINT") {
-  field(DESC, "Main.fb3D.stPMPSEpicsInput.bMaintMode")
+  field(DESC, "Main.fb3D.stPMPSEpicsToPlc.bMaintMode")
   field(DTYP, "asynInt32")
   field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/Main.fb3D.stPMPSEpicsInput.bMaintMode=")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/Main.fb3D.stPMPSEpicsToPlc.bMaintMode=")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
@@ -36304,7 +36239,7 @@ record(bi, "$(PREFIX)3D:STATE:PMPS:TRANS:PMPS_LOADED_RBV") {
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSEpicsOutput.stTransitionDb.bBeamParamsLoaded?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSPlcToEpics.stTransitionDb.bBeamParamsLoaded?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
@@ -36317,7 +36252,7 @@ record(longin, "$(PREFIX)3D:STATE:PMPS:TRANS:PMPS_ID_RBV") {
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSEpicsOutput.stTransitionDb.nRequestAssertionID?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSPlcToEpics.stTransitionDb.nRequestAssertionID?")
   info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
   info(archive, "VAL")
 }
@@ -36328,7 +36263,7 @@ record(waveform, "$(PREFIX)3D:STATE:PMPS:TRANS:PMPS_STATE_RBV") {
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSEpicsOutput.stTransitionDb.sPmpsState?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSPlcToEpics.stTransitionDb.sPmpsState?")
   field(FTVL, "CHAR")
   field(NELM, "80")
   field(MPST, "On Change")
@@ -36338,13 +36273,13 @@ record(waveform, "$(PREFIX)3D:STATE:PMPS:TRANS:PMPS_STATE_RBV") {
 }
 
 record(waveform, "$(PREFIX)3D:STATE:PMPS:TRANS:BP:Veto_RBV") {
-  # Main.fb3D.stPMPSEpicsOutput.stTransitionDb.stBeamParams.aVetoDevices
-  field(DESC, "Main.fb3D.stPMPSEpic...rams.aVetoDevices")
+  # Main.fb3D.stPMPSPlcToEpics.stTransitionDb.stBeamParams.aVetoDevices
+  field(DESC, "Main.fb3D.stPMPSPlcT...rams.aVetoDevices")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSEpicsOutput.stTransitionDb.stBeamParams.aVetoDevices?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSPlcToEpics.stTransitionDb.stBeamParams.aVetoDevices?")
   field(FTVL, "CHAR")
   field(NELM, "16")
   field(MPST, "On Change")
@@ -36354,13 +36289,13 @@ record(waveform, "$(PREFIX)3D:STATE:PMPS:TRANS:BP:Veto_RBV") {
 }
 
 record(ai, "$(PREFIX)3D:STATE:PMPS:TRANS:BP:Apt:01:Height_RBV") {
-  # Main.fb3D.stPMPSEpicsOutput.stTransitionDb.stBeamParams.astApertures[1].Height
-  field(DESC, "Main.fb3D.stPMPSEpic...ertures[1].Height")
+  # Main.fb3D.stPMPSPlcToEpics.stTransitionDb.stBeamParams.astApertures[1].Height
+  field(DESC, "Main.fb3D.stPMPSPlcT...ertures[1].Height")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSEpicsOutput.stTransitionDb.stBeamParams.astApertures[1].Height?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSPlcToEpics.stTransitionDb.stBeamParams.astApertures[1].Height?")
   field(PREC, "3")
   field(EGU, "mm")
   info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
@@ -36368,13 +36303,13 @@ record(ai, "$(PREFIX)3D:STATE:PMPS:TRANS:BP:Apt:01:Height_RBV") {
 }
 
 record(ai, "$(PREFIX)3D:STATE:PMPS:TRANS:BP:Apt:01:Width_RBV") {
-  # Main.fb3D.stPMPSEpicsOutput.stTransitionDb.stBeamParams.astApertures[1].Width
-  field(DESC, "Main.fb3D.stPMPSEpic...pertures[1].Width")
+  # Main.fb3D.stPMPSPlcToEpics.stTransitionDb.stBeamParams.astApertures[1].Width
+  field(DESC, "Main.fb3D.stPMPSPlcT...pertures[1].Width")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSEpicsOutput.stTransitionDb.stBeamParams.astApertures[1].Width?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSPlcToEpics.stTransitionDb.stBeamParams.astApertures[1].Width?")
   field(PREC, "3")
   field(EGU, "mm")
   info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
@@ -36382,13 +36317,13 @@ record(ai, "$(PREFIX)3D:STATE:PMPS:TRANS:BP:Apt:01:Width_RBV") {
 }
 
 record(bi, "$(PREFIX)3D:STATE:PMPS:TRANS:BP:Apt:01:OK_RBV") {
-  # Main.fb3D.stPMPSEpicsOutput.stTransitionDb.stBeamParams.astApertures[1].xOK
-  field(DESC, "Main.fb3D.stPMPSEpic...tApertures[1].xOK")
+  # Main.fb3D.stPMPSPlcToEpics.stTransitionDb.stBeamParams.astApertures[1].xOK
+  field(DESC, "Main.fb3D.stPMPSPlcT...tApertures[1].xOK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSEpicsOutput.stTransitionDb.stBeamParams.astApertures[1].xOK?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSPlcToEpics.stTransitionDb.stBeamParams.astApertures[1].xOK?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
@@ -36396,13 +36331,13 @@ record(bi, "$(PREFIX)3D:STATE:PMPS:TRANS:BP:Apt:01:OK_RBV") {
 }
 
 record(ai, "$(PREFIX)3D:STATE:PMPS:TRANS:BP:Apt:02:Height_RBV") {
-  # Main.fb3D.stPMPSEpicsOutput.stTransitionDb.stBeamParams.astApertures[2].Height
-  field(DESC, "Main.fb3D.stPMPSEpic...ertures[2].Height")
+  # Main.fb3D.stPMPSPlcToEpics.stTransitionDb.stBeamParams.astApertures[2].Height
+  field(DESC, "Main.fb3D.stPMPSPlcT...ertures[2].Height")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSEpicsOutput.stTransitionDb.stBeamParams.astApertures[2].Height?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSPlcToEpics.stTransitionDb.stBeamParams.astApertures[2].Height?")
   field(PREC, "3")
   field(EGU, "mm")
   info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
@@ -36410,13 +36345,13 @@ record(ai, "$(PREFIX)3D:STATE:PMPS:TRANS:BP:Apt:02:Height_RBV") {
 }
 
 record(ai, "$(PREFIX)3D:STATE:PMPS:TRANS:BP:Apt:02:Width_RBV") {
-  # Main.fb3D.stPMPSEpicsOutput.stTransitionDb.stBeamParams.astApertures[2].Width
-  field(DESC, "Main.fb3D.stPMPSEpic...pertures[2].Width")
+  # Main.fb3D.stPMPSPlcToEpics.stTransitionDb.stBeamParams.astApertures[2].Width
+  field(DESC, "Main.fb3D.stPMPSPlcT...pertures[2].Width")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSEpicsOutput.stTransitionDb.stBeamParams.astApertures[2].Width?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSPlcToEpics.stTransitionDb.stBeamParams.astApertures[2].Width?")
   field(PREC, "3")
   field(EGU, "mm")
   info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
@@ -36424,13 +36359,13 @@ record(ai, "$(PREFIX)3D:STATE:PMPS:TRANS:BP:Apt:02:Width_RBV") {
 }
 
 record(bi, "$(PREFIX)3D:STATE:PMPS:TRANS:BP:Apt:02:OK_RBV") {
-  # Main.fb3D.stPMPSEpicsOutput.stTransitionDb.stBeamParams.astApertures[2].xOK
-  field(DESC, "Main.fb3D.stPMPSEpic...tApertures[2].xOK")
+  # Main.fb3D.stPMPSPlcToEpics.stTransitionDb.stBeamParams.astApertures[2].xOK
+  field(DESC, "Main.fb3D.stPMPSPlcT...tApertures[2].xOK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSEpicsOutput.stTransitionDb.stBeamParams.astApertures[2].xOK?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSPlcToEpics.stTransitionDb.stBeamParams.astApertures[2].xOK?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
@@ -36438,13 +36373,13 @@ record(bi, "$(PREFIX)3D:STATE:PMPS:TRANS:BP:Apt:02:OK_RBV") {
 }
 
 record(ai, "$(PREFIX)3D:STATE:PMPS:TRANS:BP:Apt:03:Height_RBV") {
-  # Main.fb3D.stPMPSEpicsOutput.stTransitionDb.stBeamParams.astApertures[3].Height
-  field(DESC, "Main.fb3D.stPMPSEpic...ertures[3].Height")
+  # Main.fb3D.stPMPSPlcToEpics.stTransitionDb.stBeamParams.astApertures[3].Height
+  field(DESC, "Main.fb3D.stPMPSPlcT...ertures[3].Height")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSEpicsOutput.stTransitionDb.stBeamParams.astApertures[3].Height?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSPlcToEpics.stTransitionDb.stBeamParams.astApertures[3].Height?")
   field(PREC, "3")
   field(EGU, "mm")
   info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
@@ -36452,13 +36387,13 @@ record(ai, "$(PREFIX)3D:STATE:PMPS:TRANS:BP:Apt:03:Height_RBV") {
 }
 
 record(ai, "$(PREFIX)3D:STATE:PMPS:TRANS:BP:Apt:03:Width_RBV") {
-  # Main.fb3D.stPMPSEpicsOutput.stTransitionDb.stBeamParams.astApertures[3].Width
-  field(DESC, "Main.fb3D.stPMPSEpic...pertures[3].Width")
+  # Main.fb3D.stPMPSPlcToEpics.stTransitionDb.stBeamParams.astApertures[3].Width
+  field(DESC, "Main.fb3D.stPMPSPlcT...pertures[3].Width")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSEpicsOutput.stTransitionDb.stBeamParams.astApertures[3].Width?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSPlcToEpics.stTransitionDb.stBeamParams.astApertures[3].Width?")
   field(PREC, "3")
   field(EGU, "mm")
   info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
@@ -36466,13 +36401,13 @@ record(ai, "$(PREFIX)3D:STATE:PMPS:TRANS:BP:Apt:03:Width_RBV") {
 }
 
 record(bi, "$(PREFIX)3D:STATE:PMPS:TRANS:BP:Apt:03:OK_RBV") {
-  # Main.fb3D.stPMPSEpicsOutput.stTransitionDb.stBeamParams.astApertures[3].xOK
-  field(DESC, "Main.fb3D.stPMPSEpic...tApertures[3].xOK")
+  # Main.fb3D.stPMPSPlcToEpics.stTransitionDb.stBeamParams.astApertures[3].xOK
+  field(DESC, "Main.fb3D.stPMPSPlcT...tApertures[3].xOK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSEpicsOutput.stTransitionDb.stBeamParams.astApertures[3].xOK?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSPlcToEpics.stTransitionDb.stBeamParams.astApertures[3].xOK?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
@@ -36480,13 +36415,13 @@ record(bi, "$(PREFIX)3D:STATE:PMPS:TRANS:BP:Apt:03:OK_RBV") {
 }
 
 record(ai, "$(PREFIX)3D:STATE:PMPS:TRANS:BP:Apt:04:Height_RBV") {
-  # Main.fb3D.stPMPSEpicsOutput.stTransitionDb.stBeamParams.astApertures[4].Height
-  field(DESC, "Main.fb3D.stPMPSEpic...ertures[4].Height")
+  # Main.fb3D.stPMPSPlcToEpics.stTransitionDb.stBeamParams.astApertures[4].Height
+  field(DESC, "Main.fb3D.stPMPSPlcT...ertures[4].Height")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSEpicsOutput.stTransitionDb.stBeamParams.astApertures[4].Height?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSPlcToEpics.stTransitionDb.stBeamParams.astApertures[4].Height?")
   field(PREC, "3")
   field(EGU, "mm")
   info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
@@ -36494,13 +36429,13 @@ record(ai, "$(PREFIX)3D:STATE:PMPS:TRANS:BP:Apt:04:Height_RBV") {
 }
 
 record(ai, "$(PREFIX)3D:STATE:PMPS:TRANS:BP:Apt:04:Width_RBV") {
-  # Main.fb3D.stPMPSEpicsOutput.stTransitionDb.stBeamParams.astApertures[4].Width
-  field(DESC, "Main.fb3D.stPMPSEpic...pertures[4].Width")
+  # Main.fb3D.stPMPSPlcToEpics.stTransitionDb.stBeamParams.astApertures[4].Width
+  field(DESC, "Main.fb3D.stPMPSPlcT...pertures[4].Width")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSEpicsOutput.stTransitionDb.stBeamParams.astApertures[4].Width?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSPlcToEpics.stTransitionDb.stBeamParams.astApertures[4].Width?")
   field(PREC, "3")
   field(EGU, "mm")
   info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
@@ -36508,13 +36443,13 @@ record(ai, "$(PREFIX)3D:STATE:PMPS:TRANS:BP:Apt:04:Width_RBV") {
 }
 
 record(bi, "$(PREFIX)3D:STATE:PMPS:TRANS:BP:Apt:04:OK_RBV") {
-  # Main.fb3D.stPMPSEpicsOutput.stTransitionDb.stBeamParams.astApertures[4].xOK
-  field(DESC, "Main.fb3D.stPMPSEpic...tApertures[4].xOK")
+  # Main.fb3D.stPMPSPlcToEpics.stTransitionDb.stBeamParams.astApertures[4].xOK
+  field(DESC, "Main.fb3D.stPMPSPlcT...tApertures[4].xOK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSEpicsOutput.stTransitionDb.stBeamParams.astApertures[4].xOK?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSPlcToEpics.stTransitionDb.stBeamParams.astApertures[4].xOK?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
@@ -36522,25 +36457,25 @@ record(bi, "$(PREFIX)3D:STATE:PMPS:TRANS:BP:Apt:04:OK_RBV") {
 }
 
 record(longin, "$(PREFIX)3D:STATE:PMPS:TRANS:BP:BeamClassRanges_RBV") {
-  # Main.fb3D.stPMPSEpicsOutput.stTransitionDb.stBeamParams.nBCRange
-  field(DESC, "Main.fb3D.stPMPSEpic...amParams.nBCRange")
+  # Main.fb3D.stPMPSPlcToEpics.stTransitionDb.stBeamParams.nBCRange
+  field(DESC, "Main.fb3D.stPMPSPlcT...amParams.nBCRange")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSEpicsOutput.stTransitionDb.stBeamParams.nBCRange?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSPlcToEpics.stTransitionDb.stBeamParams.nBCRange?")
   info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
   info(archive, "VAL")
 }
 
 record(longin, "$(PREFIX)3D:STATE:PMPS:TRANS:BP:BeamClass_RBV") {
-  # Main.fb3D.stPMPSEpicsOutput.stTransitionDb.stBeamParams.nBeamClass
-  field(DESC, "Main.fb3D.stPMPSEpic...Params.nBeamClass")
+  # Main.fb3D.stPMPSPlcToEpics.stTransitionDb.stBeamParams.nBeamClass
+  field(DESC, "Main.fb3D.stPMPSPlcT...Params.nBeamClass")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSEpicsOutput.stTransitionDb.stBeamParams.nBeamClass?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSPlcToEpics.stTransitionDb.stBeamParams.nBeamClass?")
   info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
   info(archive, "VAL")
 }
@@ -36551,44 +36486,44 @@ record(longin, "$(PREFIX)3D:STATE:PMPS:TRANS:BP:Cohort_RBV") {
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSEpicsOutput.stTransitionDb.stBeamParams.nCohortInt?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSPlcToEpics.stTransitionDb.stBeamParams.nCohortInt?")
   info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
   info(archive, "VAL")
 }
 
 record(longin, "$(PREFIX)3D:STATE:PMPS:TRANS:BP:MachineMode_RBV") {
-  # Main.fb3D.stPMPSEpicsOutput.stTransitionDb.stBeamParams.nMachineMode
-  field(DESC, "Main.fb3D.stPMPSEpic...rams.nMachineMode")
+  # Main.fb3D.stPMPSPlcToEpics.stTransitionDb.stBeamParams.nMachineMode
+  field(DESC, "Main.fb3D.stPMPSPlcT...rams.nMachineMode")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSEpicsOutput.stTransitionDb.stBeamParams.nMachineMode?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSPlcToEpics.stTransitionDb.stBeamParams.nMachineMode?")
   info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
   info(archive, "VAL")
 }
 
 record(longin, "$(PREFIX)3D:STATE:PMPS:TRANS:BP:Rate_RBV") {
-  # Main.fb3D.stPMPSEpicsOutput.stTransitionDb.stBeamParams.nRate
-  field(DESC, "Main.fb3D.stPMPSEpic...tBeamParams.nRate")
+  # Main.fb3D.stPMPSPlcToEpics.stTransitionDb.stBeamParams.nRate
+  field(DESC, "Main.fb3D.stPMPSPlcT...tBeamParams.nRate")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSEpicsOutput.stTransitionDb.stBeamParams.nRate?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSPlcToEpics.stTransitionDb.stBeamParams.nRate?")
   field(EGU, "Hz")
   info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
   info(archive, "VAL")
 }
 
 record(ai, "$(PREFIX)3D:STATE:PMPS:TRANS:BP:Transmission_RBV") {
-  # Main.fb3D.stPMPSEpicsOutput.stTransitionDb.stBeamParams.nTran
-  field(DESC, "Main.fb3D.stPMPSEpic...tBeamParams.nTran")
+  # Main.fb3D.stPMPSPlcToEpics.stTransitionDb.stBeamParams.nTran
+  field(DESC, "Main.fb3D.stPMPSPlcT...tBeamParams.nTran")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSEpicsOutput.stTransitionDb.stBeamParams.nTran?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSPlcToEpics.stTransitionDb.stBeamParams.nTran?")
   field(PREC, "2")
   field(HOPR, "1")
   field(LOPR, "0")
@@ -36597,13 +36532,13 @@ record(ai, "$(PREFIX)3D:STATE:PMPS:TRANS:BP:Transmission_RBV") {
 }
 
 record(ai, "$(PREFIX)3D:STATE:PMPS:TRANS:BP:PhotonEnergy_RBV") {
-  # Main.fb3D.stPMPSEpicsOutput.stTransitionDb.stBeamParams.neV
-  field(DESC, "Main.fb3D.stPMPSEpic....stBeamParams.neV")
+  # Main.fb3D.stPMPSPlcToEpics.stTransitionDb.stBeamParams.neV
+  field(DESC, "Main.fb3D.stPMPSPlcT....stBeamParams.neV")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSEpicsOutput.stTransitionDb.stBeamParams.neV?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSPlcToEpics.stTransitionDb.stBeamParams.neV?")
   field(PREC, "3")
   field(EGU, "eV")
   info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
@@ -36611,29 +36546,94 @@ record(ai, "$(PREFIX)3D:STATE:PMPS:TRANS:BP:PhotonEnergy_RBV") {
 }
 
 record(longin, "$(PREFIX)3D:STATE:PMPS:TRANS:BP:eVRanges_RBV") {
-  # Main.fb3D.stPMPSEpicsOutput.stTransitionDb.stBeamParams.neVRange
-  field(DESC, "Main.fb3D.stPMPSEpic...amParams.neVRange")
+  # Main.fb3D.stPMPSPlcToEpics.stTransitionDb.stBeamParams.neVRange
+  field(DESC, "Main.fb3D.stPMPSPlcT...amParams.neVRange")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSEpicsOutput.stTransitionDb.stBeamParams.neVRange?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSPlcToEpics.stTransitionDb.stBeamParams.neVRange?")
   field(EGU, "eV")
   info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
   info(archive, "VAL")
 }
 
 record(bi, "$(PREFIX)3D:STATE:PMPS:TRANS:BP:Valid_RBV") {
-  # Main.fb3D.stPMPSEpicsOutput.stTransitionDb.stBeamParams.xValid
-  field(DESC, "Main.fb3D.stPMPSEpic...BeamParams.xValid")
+  # Main.fb3D.stPMPSPlcToEpics.stTransitionDb.stBeamParams.xValid
+  field(DESC, "Main.fb3D.stPMPSPlcT...BeamParams.xValid")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSEpicsOutput.stTransitionDb.stBeamParams.xValid?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPMPSPlcToEpics.stTransitionDb.stBeamParams.xValid?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "$(PREFIX)3D:STATE:BUSY_RBV") {
+  field(DESC, "Main.fb3D.stPlcToEpics.bBusy")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPlcToEpics.bBusy?")
+  field(ZNAM, "False")
+  field(ONAM, "True")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "$(PREFIX)3D:STATE:DONE_RBV") {
+  field(DESC, "Main.fb3D.stPlcToEpics.bDone")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPlcToEpics.bDone?")
+  field(ZNAM, "False")
+  field(ONAM, "True")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "$(PREFIX)3D:STATE:ERR_RBV") {
+  field(DESC, "Main.fb3D.stPlcToEpics.bError")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPlcToEpics.bError?")
+  field(ZNAM, "False")
+  field(ONAM, "True")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(longin, "$(PREFIX)3D:STATE:ERRID_RBV") {
+  field(DESC, "Main.fb3D.stPlcToEpics.nErrorID")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPlcToEpics.nErrorID?")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(waveform, "$(PREFIX)3D:STATE:ERRMSG_RBV") {
+  field(DESC, "Main.fb3D.stPlcToEpics.sErrorMsg")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fb3D.stPlcToEpics.sErrorMsg?")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+  field(MPST, "On Change")
+  field(APST, "On Change")
+  info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
   info(archive, "VAL")
 }
 
@@ -41871,12 +41871,12 @@ record(bi, "$(PREFIX)L2L:STATE:04:BP:Valid_RBV") {
 }
 
 record(bi, "$(PREFIX)L2L:STATE:RESET_RBV") {
-  field(DESC, "Main.fbM10States.stEpicsInput.bReset")
+  field(DESC, "Main.fbM10States.stEpicsToPlc.bReset")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbM10States.stEpicsInput.bReset?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbM10States.stEpicsToPlc.bReset?")
   field(ZNAM, "False")
   field(ONAM, "True")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
@@ -41884,10 +41884,10 @@ record(bi, "$(PREFIX)L2L:STATE:RESET_RBV") {
 }
 
 record(bo, "$(PREFIX)L2L:STATE:RESET") {
-  field(DESC, "Main.fbM10States.stEpicsInput.bReset")
+  field(DESC, "Main.fbM10States.stEpicsToPlc.bReset")
   field(DTYP, "asynInt32")
   field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/Main.fbM10States.stEpicsInput.bReset=")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/Main.fbM10States.stEpicsToPlc.bReset=")
   field(ZNAM, "False")
   field(ONAM, "True")
   info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
@@ -41895,12 +41895,12 @@ record(bo, "$(PREFIX)L2L:STATE:RESET") {
 }
 
 record(bi, "$(PREFIX)L2L:STATE:BUSY_RBV") {
-  field(DESC, "Main.fbM10States.stEpicsOutput.bBusy")
+  field(DESC, "Main.fbM10States.stPlcToEpics.bBusy")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbM10States.stEpicsOutput.bBusy?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbM10States.stPlcToEpics.bBusy?")
   field(ZNAM, "False")
   field(ONAM, "True")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
@@ -41908,12 +41908,12 @@ record(bi, "$(PREFIX)L2L:STATE:BUSY_RBV") {
 }
 
 record(bi, "$(PREFIX)L2L:STATE:DONE_RBV") {
-  field(DESC, "Main.fbM10States.stEpicsOutput.bDone")
+  field(DESC, "Main.fbM10States.stPlcToEpics.bDone")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbM10States.stEpicsOutput.bDone?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbM10States.stPlcToEpics.bDone?")
   field(ZNAM, "False")
   field(ONAM, "True")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
@@ -41921,12 +41921,12 @@ record(bi, "$(PREFIX)L2L:STATE:DONE_RBV") {
 }
 
 record(bi, "$(PREFIX)L2L:STATE:ERR_RBV") {
-  field(DESC, "Main.fbM10States.stEpicsOutput.bError")
+  field(DESC, "Main.fbM10States.stPlcToEpics.bError")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbM10States.stEpicsOutput.bError?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbM10States.stPlcToEpics.bError?")
   field(ZNAM, "False")
   field(ONAM, "True")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
@@ -41934,23 +41934,23 @@ record(bi, "$(PREFIX)L2L:STATE:ERR_RBV") {
 }
 
 record(longin, "$(PREFIX)L2L:STATE:ERRID_RBV") {
-  field(DESC, "Main.fbM10States.stEpicsOutput.nErrorID")
+  field(DESC, "Main.fbM10States.stPlcToEpics.nErrorID")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbM10States.stEpicsOutput.nErrorID?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbM10States.stPlcToEpics.nErrorID?")
   info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
   info(archive, "VAL")
 }
 
 record(waveform, "$(PREFIX)L2L:STATE:ERRMSG_RBV") {
-  field(DESC, "Main.fbM10States.stEpicsOutput.sErrorMsg")
+  field(DESC, "Main.fbM10States.stPlcToEpics.sErrorMsg")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbM10States.stEpicsOutput.sErrorMsg?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.fbM10States.stPlcToEpics.sErrorMsg?")
   field(FTVL, "CHAR")
   field(NELM, "80")
   field(MPST, "On Change")
