@@ -2,7 +2,7 @@
   "plc-tst-motion": {
     "IM1K0:XTES": {
       "IM1K0:XTES-OUT": {
-        "id": 9010,
+        "id": 90010,
         "beamline": "TST",
         "neVRange": "11111111111111111111111111111111",
         "nRate": "120",
@@ -22,7 +22,7 @@
         "special": null
       },
       "IM1K0:XTES-TRANSITION": {
-        "id": 9011,
+        "id": 90011,
         "beamline": "TST",
         "neVRange": "11111111111111111111111111111111",
         "nRate": "0",
@@ -42,7 +42,7 @@
         "special": null
       },
       "IM1K0:XTES-YAG": {
-        "id": 9012,
+        "id": 90012,
         "beamline": "TST",
         "neVRange": "11111111111111111111111111111111",
         "nRate": "120",
@@ -62,7 +62,7 @@
         "special": null
       },
       "IM1K0:XTES-DIAMOND": {
-        "id": 9013,
+        "id": 90013,
         "beamline": "TST",
         "neVRange": "11111111111111111111111111111111",
         "nRate": "120",
@@ -82,7 +82,7 @@
         "special": null
       },
       "IM1K0:XTES-RETICLE": {
-        "id": 9014,
+        "id": 90014,
         "beamline": "TST",
         "neVRange": "11111111111111111111111111111111",
         "nRate": "0",
@@ -104,7 +104,7 @@
     },
     "3D": {
       "3D-OUT": {
-        "id": 9213,
+        "id": 90213,
         "beamline": "TST",
         "neVRange": "11111111111111111111111111111111",
         "nRate": "120",
@@ -124,7 +124,7 @@
         "special": null
       },
       "3D-TRANS": {
-        "id": 9214,
+        "id": 90214,
         "beamline": "TST",
         "neVRange": "11111111111111111111111111111111",
         "nRate": "0",
@@ -144,7 +144,7 @@
         "special": null
       },
       "3D-TARGET1": {
-        "id": 9215,
+        "id": 90215,
         "beamline": "TST",
         "neVRange": "11111111111111111111111111111111",
         "nRate": "120",
@@ -154,7 +154,7 @@
         "notes": "",
         "reactive_temp": "",
         "reactive_pressure": "",
-        "nBeamClassRange": "000000000111111",
+        "nBeamClassRange": "000000001111111",
         "name": "IM1K3:PPM-YAG1",
         "nTran": "0.1",
         "ap_name": "--",
@@ -164,7 +164,7 @@
         "special": false
       },
       "3D-TARGET2": {
-        "id": 9216,
+        "id": 90216,
         "beamline": "TST",
         "neVRange": "11111111111111111111111111111111",
         "nRate": "120",
@@ -174,9 +174,9 @@
         "notes": "",
         "reactive_temp": "",
         "reactive_pressure": "",
-        "nBeamClassRange": "000000000111111",
+        "nBeamClassRange": "000000011111111",
         "name": "IM1K3:PPM-YAG2",
-        "nTran": "0.1",
+        "nTran": "0.2",
         "ap_name": "--",
         "ap_ycenter": "",
         "ap_xcenter": "",
