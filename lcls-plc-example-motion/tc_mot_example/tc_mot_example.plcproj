@@ -42,9 +42,9 @@
       <DefaultResolution>LCLS General, * (SLAC)</DefaultResolution>
       <Namespace>LCLS_General</Namespace>
       <Parameters>
-        <Parameter ListName="GENERALCONSTANTS" xmlns="">
+        <Parameter ListName="GENERALCONSTANTS">
           <Key>MAX_STATES</Key>
-          <Value>4</Value>
+          <Value>6</Value>
         </Parameter>
       </Parameters>
     </PlaceholderReference>

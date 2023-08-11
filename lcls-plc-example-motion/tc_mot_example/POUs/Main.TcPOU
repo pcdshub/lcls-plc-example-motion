@@ -48,7 +48,6 @@ VAR
 
     {attribute 'pytmc' := '
         pv: IMTST:XTES
-        io: io
     '}
     fbIM1L0: FB_XPIM;
     stEL6In AT %I*: EL6InData22b;
@@ -77,6 +76,9 @@ VAR
     fbMotion9: FB_MotionStage;
     {attribute 'pytmc' := '
         pv: @(PREFIX)3D
+        astPositionState1.array: 1..3
+        astPositionState2.array: 1..3
+        astPositionState3.array: 1..3
     '}
     fb3D: FB_PositionStatePMPS3D;
 
@@ -111,6 +113,7 @@ VAR
     fbMotion10: FB_MotionStage;
     {attribute 'pytmc' := '
         pv: @(PREFIX)L2L
+        astPositionState.array: 1..2
     '}
     fbM10States: FB_PositionState1D;
     astM10States: ARRAY[1..GeneralConstants.MAX_STATES] OF ST_PositionState;
