@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{A4BEE418-1416-6B89-BD0B-184E128DCCC3}" GeneratedBy="TwinCAT XAE Plc">
+<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{484AD7E8-00A9-6D9E-8CDA-7E76B34DFDC1}" GeneratedBy="TwinCAT XAE Plc">
   <DataTypes>
     <DataType>
       <Name Namespace="LCLS_General">ST_System</Name>
@@ -19496,7 +19496,7 @@ contributing fast faults, unless the FFO is currently vetoed.
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">_ST_NCADS_IDXOFFS_AxisParameter</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_ST_NCADS_IDXOFFS_AxisParameter</Name>
       <BitSize>1632</BitSize>
       <SubItem>
         <Name>PARAMSTRUCT</Name>
@@ -19965,7 +19965,7 @@ contributing fast faults, unless the FFO is currently vetoed.
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">_ST_NCADS_AxisParameter</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_ST_NCADS_AxisParameter</Name>
       <BitSize>1664</BitSize>
       <SubItem>
         <Name>IDXGRP</Name>
@@ -19978,7 +19978,7 @@ contributing fast faults, unless the FFO is currently vetoed.
       </SubItem>
       <SubItem>
         <Name>IDXOFFS</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">_ST_NCADS_IDXOFFS_AxisParameter</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_ST_NCADS_IDXOFFS_AxisParameter</Type>
         <BitSize>1632</BitSize>
         <BitOffs>32</BitOffs>
       </SubItem>
@@ -19989,7 +19989,7 @@ contributing fast faults, unless the FFO is currently vetoed.
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">_ST_NCADS_IDXOFFS_AxisState</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_ST_NCADS_IDXOFFS_AxisState</Name>
       <BitSize>800</BitSize>
       <SubItem>
         <Name>ONLINESTRUCT</Name>
@@ -20232,7 +20232,7 @@ contributing fast faults, unless the FFO is currently vetoed.
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">_ST_NCADS_AxisState</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_ST_NCADS_AxisState</Name>
       <BitSize>832</BitSize>
       <SubItem>
         <Name>IDXGRP</Name>
@@ -20245,7 +20245,7 @@ contributing fast faults, unless the FFO is currently vetoed.
       </SubItem>
       <SubItem>
         <Name>IDXOFFS</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">_ST_NCADS_IDXOFFS_AxisState</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_ST_NCADS_IDXOFFS_AxisState</Type>
         <BitSize>800</BitSize>
         <BitOffs>32</BitOffs>
       </SubItem>
@@ -20256,7 +20256,7 @@ contributing fast faults, unless the FFO is currently vetoed.
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">_ST_NCADS_IDXOFFS_AxisFunctions</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_ST_NCADS_IDXOFFS_AxisFunctions</Name>
       <BitSize>1792</BitSize>
       <SubItem>
         <Name>RESET</Name>
@@ -20810,7 +20810,7 @@ contributing fast faults, unless the FFO is currently vetoed.
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">_ST_NCADS_AxisFunctions</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_ST_NCADS_AxisFunctions</Name>
       <BitSize>1824</BitSize>
       <SubItem>
         <Name>IDXGRP</Name>
@@ -20823,7 +20823,7 @@ contributing fast faults, unless the FFO is currently vetoed.
       </SubItem>
       <SubItem>
         <Name>IDXOFFS</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">_ST_NCADS_IDXOFFS_AxisFunctions</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_ST_NCADS_IDXOFFS_AxisFunctions</Type>
         <BitSize>1792</BitSize>
         <BitOffs>32</BitOffs>
       </SubItem>
@@ -20834,23 +20834,23 @@ contributing fast faults, unless the FFO is currently vetoed.
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">_ST_NCADS_Axis</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_ST_NCADS_Axis</Name>
       <BitSize>4320</BitSize>
       <SubItem>
         <Name>Parameter</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">_ST_NCADS_AxisParameter</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_ST_NCADS_AxisParameter</Type>
         <BitSize>1664</BitSize>
         <BitOffs>0</BitOffs>
       </SubItem>
       <SubItem>
         <Name>State</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">_ST_NCADS_AxisState</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_ST_NCADS_AxisState</Type>
         <BitSize>832</BitSize>
         <BitOffs>1664</BitOffs>
       </SubItem>
       <SubItem>
         <Name>Functions</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">_ST_NCADS_AxisFunctions</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_ST_NCADS_AxisFunctions</Type>
         <BitSize>1824</BitSize>
         <BitOffs>2496</BitOffs>
       </SubItem>
@@ -20861,7 +20861,7 @@ contributing fast faults, unless the FFO is currently vetoed.
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">_ST_NCADS_IDXOFFS_TableParameter</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_ST_NCADS_IDXOFFS_TableParameter</Name>
       <BitSize>192</BitSize>
       <SubItem>
         <Name>MFREADCHARACVALUES</Name>
@@ -20930,7 +20930,7 @@ contributing fast faults, unless the FFO is currently vetoed.
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">_ST_NCADS_TableParameter</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_ST_NCADS_TableParameter</Name>
       <BitSize>224</BitSize>
       <SubItem>
         <Name>IDXGRP</Name>
@@ -20943,7 +20943,7 @@ contributing fast faults, unless the FFO is currently vetoed.
       </SubItem>
       <SubItem>
         <Name>IDXOFFS</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">_ST_NCADS_IDXOFFS_TableParameter</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_ST_NCADS_IDXOFFS_TableParameter</Type>
         <BitSize>192</BitSize>
         <BitOffs>32</BitOffs>
       </SubItem>
@@ -20954,7 +20954,7 @@ contributing fast faults, unless the FFO is currently vetoed.
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">_ST_NCADS_IDXOFFS_TableFunctions</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_ST_NCADS_IDXOFFS_TableFunctions</Name>
       <BitSize>96</BitSize>
       <SubItem>
         <Name>CREATETAB</Name>
@@ -20993,7 +20993,7 @@ contributing fast faults, unless the FFO is currently vetoed.
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">_ST_NCADS_TableFunctions</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_ST_NCADS_TableFunctions</Name>
       <BitSize>128</BitSize>
       <SubItem>
         <Name>IDXGRP</Name>
@@ -21006,7 +21006,7 @@ contributing fast faults, unless the FFO is currently vetoed.
       </SubItem>
       <SubItem>
         <Name>IDXOFFS</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">_ST_NCADS_IDXOFFS_TableFunctions</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_ST_NCADS_IDXOFFS_TableFunctions</Type>
         <BitSize>96</BitSize>
         <BitOffs>32</BitOffs>
       </SubItem>
@@ -21017,17 +21017,17 @@ contributing fast faults, unless the FFO is currently vetoed.
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">_ST_NCADS_Table</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_ST_NCADS_Table</Name>
       <BitSize>352</BitSize>
       <SubItem>
         <Name>Parameter</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">_ST_NCADS_TableParameter</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_ST_NCADS_TableParameter</Type>
         <BitSize>224</BitSize>
         <BitOffs>0</BitOffs>
       </SubItem>
       <SubItem>
         <Name>Functions</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">_ST_NCADS_TableFunctions</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_ST_NCADS_TableFunctions</Type>
         <BitSize>128</BitSize>
         <BitOffs>224</BitOffs>
       </SubItem>
@@ -21172,7 +21172,7 @@ contributing fast faults, unless the FFO is currently vetoed.
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">_TCMCGLOBAL</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_TCMCGLOBAL</Name>
       <Comment>	Global constants and parameters </Comment>
       <BitSize>6976</BitSize>
       <SubItem>
@@ -21363,7 +21363,7 @@ contributing fast faults, unless the FFO is currently vetoed.
       </SubItem>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">_ST_NCADS_Axis</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_ST_NCADS_Axis</Type>
         <Comment> IDXGRP and IDXOFFS constants of axis parameter/status/functions </Comment>
         <BitSize>4320</BitSize>
         <BitOffs>800</BitOffs>
@@ -21380,7 +21380,7 @@ contributing fast faults, unless the FFO is currently vetoed.
       </SubItem>
       <SubItem>
         <Name>Table</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">_ST_NCADS_Table</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_ST_NCADS_Table</Type>
         <Comment> IDXGRP and IDXOFFS constants of table parameter/status/functions </Comment>
         <BitSize>352</BitSize>
         <BitOffs>5120</BitOffs>
@@ -22469,7 +22469,7 @@ External Setpoint Generation:
       </Relations>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">ST_AdsAddress</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">ST_AdsAddress</Name>
       <BitSize>224</BitSize>
       <SubItem>
         <Name>NetId</Name>
@@ -22491,7 +22491,7 @@ External Setpoint Generation:
       </SubItem>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">MC_AxisStates</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_AxisStates</Name>
       <Comment> 	PLCopen axis states
 	The axis states are defined in the PLCopen state diagram
 </Comment>
@@ -22535,7 +22535,7 @@ External Setpoint Generation:
       </EnumInfo>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">ST_AxisOpModes</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">ST_AxisOpModes</Name>
       <Comment> axis operation mode feedback from NcToPlc. </Comment>
       <BitSize>136</BitSize>
       <SubItem>
@@ -22659,7 +22659,7 @@ External Setpoint Generation:
       </SubItem>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">ST_AxisStatus</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">ST_AxisStatus</Name>
       <BitSize>768</BitSize>
       <SubItem>
         <Name>UpdateTaskIndex</Name>
@@ -22691,7 +22691,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>MotionState</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">MC_AxisStates</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_AxisStates</Type>
         <Comment> motion state in the PLCopen state diagram </Comment>
         <BitSize>16</BitSize>
         <BitOffs>192</BitOffs>
@@ -23004,7 +23004,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>OpMode</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">ST_AxisOpModes</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">ST_AxisOpModes</Type>
         <Comment> axis operation mode feedback from NcToPlc </Comment>
         <BitSize>136</BitSize>
         <BitOffs>592</BitOffs>
@@ -23018,7 +23018,7 @@ External Setpoint Generation:
       </SubItem>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">E_NcDriveType</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">E_NcDriveType</Name>
       <BitSize>32</BitSize>
       <BaseType>DWORD</BaseType>
       <EnumInfo>
@@ -23130,7 +23130,7 @@ External Setpoint Generation:
       </EnumInfo>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">E_NcEncoderType</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">E_NcEncoderType</Name>
       <BitSize>32</BitSize>
       <BaseType>DWORD</BaseType>
       <EnumInfo>
@@ -23278,7 +23278,7 @@ External Setpoint Generation:
       </EnumInfo>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">E_NcAxisType</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">E_NcAxisType</Name>
       <BitSize>32</BitSize>
       <BaseType>DWORD</BaseType>
       <EnumInfo>
@@ -23321,7 +23321,7 @@ External Setpoint Generation:
       </EnumInfo>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">ST_DriveAddress</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">ST_DriveAddress</Name>
       <BitSize>672</BitSize>
       <SubItem>
         <Name>NetID</Name>
@@ -23367,7 +23367,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>NcDriveType</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">E_NcDriveType</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">E_NcDriveType</Type>
         <Comment> type enumeration of the NC software drive of an axis </Comment>
         <BitSize>32</BitSize>
         <BitOffs>352</BitOffs>
@@ -23388,7 +23388,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>NcEncoderType</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">E_NcEncoderType</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">E_NcEncoderType</Type>
         <Comment> type enumeration of the NC encoder drive of an axis </Comment>
         <BitSize>32</BitSize>
         <BitOffs>448</BitOffs>
@@ -23402,7 +23402,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>NcAxisType</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">E_NcAxisType</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">E_NcAxisType</Type>
         <Comment> type enumeration of the NC axis </Comment>
         <BitSize>32</BitSize>
         <BitOffs>512</BitOffs>
@@ -23439,7 +23439,7 @@ External Setpoint Generation:
       </SubItem>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">_E_PhasingState</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_E_PhasingState</Name>
       <Comment> Phasing internal probe states </Comment>
       <BitSize>16</BitSize>
       <BaseType>INT</BaseType>
@@ -23462,7 +23462,7 @@ External Setpoint Generation:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">_InternalAxisRefData</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_InternalAxisRefData</Name>
       <BitSize>128</BitSize>
       <SubItem>
         <Name>NcCycleCounterAvailable</Name>
@@ -23494,7 +23494,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>PhasingState</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">_E_PhasingState</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_E_PhasingState</Type>
         <Comment> KSt 20190703 global handshake for phasing blocks</Comment>
         <BitSize>16</BitSize>
         <BitOffs>96</BitOffs>
@@ -23506,7 +23506,7 @@ External Setpoint Generation:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">AXIS_REF</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">AXIS_REF</Name>
       <Comment>
 	AXIS_REF data structure
 
@@ -23552,7 +23552,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>ADS</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">ST_AdsAddress</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">ST_AdsAddress</Type>
         <BitSize>224</BitSize>
         <BitOffs>3136</BitOffs>
         <Properties>
@@ -23564,7 +23564,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>Status</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">ST_AxisStatus</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">ST_AxisStatus</Type>
         <BitSize>768</BitSize>
         <BitOffs>3392</BitOffs>
         <Properties>
@@ -23576,7 +23576,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>DriveAddress</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">ST_DriveAddress</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">ST_DriveAddress</Type>
         <BitSize>672</BitSize>
         <BitOffs>4160</BitOffs>
         <Properties>
@@ -23588,7 +23588,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>_internal</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">_InternalAxisRefData</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_InternalAxisRefData</Type>
         <BitSize>128</BitSize>
         <BitOffs>4832</BitOffs>
         <Properties>
@@ -23793,7 +23793,7 @@ External Setpoint Generation:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">ST_AxisParameterSet</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">ST_AxisParameterSet</Name>
       <BitSize>8192</BitSize>
       <SubItem>
         <Name>AxisId</Name>
@@ -23804,7 +23804,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>nAxisType</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">E_NcAxisType</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">E_NcAxisType</Type>
         <Comment> 0x00000003 </Comment>
         <BitSize>32</BitSize>
         <BitOffs>32</BitOffs>
@@ -24007,7 +24007,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>nEncType</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">E_NcEncoderType</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">E_NcEncoderType</Type>
         <Comment> 0x00010003 </Comment>
         <BitSize>32</BitSize>
         <BitOffs>2080</BitOffs>
@@ -24266,7 +24266,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>nDriveType</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">E_NcDriveType</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">E_NcDriveType</Type>
         <Comment> 0x00030003 </Comment>
         <BitSize>32</BitSize>
         <BitOffs>4256</BitOffs>
@@ -24506,7 +24506,7 @@ External Setpoint Generation:
       <BitSize>25280</BitSize>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">AXIS_REF</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">AXIS_REF</Type>
         <Comment> Hardware 
  PLC Axis Reference</Comment>
         <BitSize>9088</BitSize>
@@ -25402,7 +25402,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>stAxisParameters</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">ST_AxisParameterSet</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">ST_AxisParameterSet</Type>
         <Comment> MC_ReadParameterSet Output</Comment>
         <BitSize>8192</BitSize>
         <BitOffs>16192</BitOffs>
@@ -25441,7 +25441,7 @@ External Setpoint Generation:
       </SubItem>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">_E_TcMC_STATES</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_E_TcMC_STATES</Name>
       <BitSize>16</BitSize>
       <BaseType>INT</BaseType>
       <EnumInfo>
@@ -25471,7 +25471,7 @@ External Setpoint Generation:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">_ST_FunctionBlockResults</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_ST_FunctionBlockResults</Name>
       <BitSize>96</BitSize>
       <SubItem>
         <Name>Done</Name>
@@ -25523,11 +25523,11 @@ External Setpoint Generation:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">MC_Reset</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_Reset</Name>
       <BitSize>1632</BitSize>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <Comment>Reference to an axis</Comment>
         <BitSize>32</BitSize>
         <BitOffs>32</BitOffs>
@@ -25615,7 +25615,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>iState</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">_E_TcMC_STATES</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_E_TcMC_STATES</Type>
         <BitSize>16</BitSize>
         <BitOffs>144</BitOffs>
         <Default>
@@ -25624,7 +25624,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>LastExecutionResult</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">_ST_FunctionBlockResults</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_ST_FunctionBlockResults</Type>
         <BitSize>96</BitSize>
         <BitOffs>160</BitOffs>
       </SubItem>
@@ -25647,7 +25647,7 @@ External Setpoint Generation:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">MC_BufferMode</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_BufferMode</Name>
       <BitSize>16</BitSize>
       <BaseType>UINT</BaseType>
       <EnumInfo>
@@ -25676,15 +25676,15 @@ External Setpoint Generation:
       </EnumInfo>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">ST_PowerOptions</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">ST_PowerOptions</Name>
       <BitSize>0</BitSize>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">MC_Power</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_Power</Name>
       <BitSize>768</BitSize>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <Comment>Reference to an axis</Comment>
         <BitSize>32</BitSize>
         <BitOffs>32</BitOffs>
@@ -25752,7 +25752,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>BufferMode</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">MC_BufferMode</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_BufferMode</Type>
         <Comment> V </Comment>
         <BitSize>16</BitSize>
         <BitOffs>192</BitOffs>
@@ -25765,7 +25765,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>Options</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">ST_PowerOptions</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">ST_PowerOptions</Type>
         <BitSize>0</BitSize>
         <BitOffs>208</BitOffs>
         <Properties>
@@ -25888,7 +25888,7 @@ External Setpoint Generation:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">ST_MoveOptions</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">ST_MoveOptions</Name>
       <BitSize>320</BitSize>
       <SubItem>
         <Name>EnableBlendingPosition</Name>
@@ -25934,7 +25934,7 @@ External Setpoint Generation:
       </SubItem>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">_E_TcNC_StartPosType</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_E_TcNC_StartPosType</Name>
       <BitSize>16</BitSize>
       <BaseType>UINT</BaseType>
       <EnumInfo>
@@ -26044,7 +26044,7 @@ External Setpoint Generation:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">ST_TorqueControlOptions</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">ST_TorqueControlOptions</Name>
       <BitSize>128</BitSize>
       <SubItem>
         <Name>EnableManualTorqueStartValue</Name>
@@ -26060,7 +26060,7 @@ External Setpoint Generation:
       </SubItem>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">_ST_TcNC_UnversalAxisStartRequest</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_ST_TcNC_UnversalAxisStartRequest</Name>
       <BitSize>640</BitSize>
       <SubItem>
         <Name>nStartType</Name>
@@ -26153,7 +26153,7 @@ External Setpoint Generation:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">_ST_TcNC_UniversalAxisTorqueStartRequest</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_ST_TcNC_UniversalAxisTorqueStartRequest</Name>
       <BitSize>576</BitSize>
       <SubItem>
         <Name>nStartType</Name>
@@ -26239,7 +26239,7 @@ External Setpoint Generation:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">_ST_TcNC_UnversalAxisStartResponse</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_ST_TcNC_UnversalAxisStartResponse</Name>
       <BitSize>32</BitSize>
       <SubItem>
         <Name>nCmdNo</Name>
@@ -26262,7 +26262,7 @@ External Setpoint Generation:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">_ST_TcNc_OperationModes</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_ST_TcNc_OperationModes</Name>
       <BitSize>128</BitSize>
       <SubItem>
         <Name>PosAreaControl</Name>
@@ -26338,11 +26338,11 @@ External Setpoint Generation:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">_FB_MoveUniversalGeneric</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_FB_MoveUniversalGeneric</Name>
       <BitSize>7680</BitSize>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <Comment>Reference to an axis</Comment>
         <BitSize>32</BitSize>
         <BitOffs>32</BitOffs>
@@ -26355,7 +26355,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>LastExecutionResult</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">_ST_FunctionBlockResults</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">_ST_FunctionBlockResults</Type>
         <BitSize>32</BitSize>
         <BitOffs>64</BitOffs>
         <Properties>
@@ -26379,7 +26379,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>StartType</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">_E_TcNC_StartPosType</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_E_TcNC_StartPosType</Type>
         <Comment> 20110511 KSt type changed for Tc3 </Comment>
         <BitSize>16</BitSize>
         <BitOffs>112</BitOffs>
@@ -26500,7 +26500,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>BufferMode</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">MC_BufferMode</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_BufferMode</Type>
         <Comment>	Direction			:	MC_Direction := MC_Positive_Direction;	
  E </Comment>
         <BitSize>16</BitSize>
@@ -26514,7 +26514,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>Options</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">ST_MoveOptions</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">ST_MoveOptions</Type>
         <BitSize>320</BitSize>
         <BitOffs>768</BitOffs>
         <Properties>
@@ -26526,7 +26526,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>OptionsTorque</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">ST_TorqueControlOptions</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">ST_TorqueControlOptions</Type>
         <BitSize>128</BitSize>
         <BitOffs>1088</BitOffs>
         <Properties>
@@ -26690,7 +26690,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>iState</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">_E_TcMC_STATES</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_E_TcMC_STATES</Type>
         <BitSize>16</BitSize>
         <BitOffs>1344</BitOffs>
         <Default>
@@ -26699,19 +26699,19 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>sStartRequest</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">_ST_TcNC_UnversalAxisStartRequest</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_ST_TcNC_UnversalAxisStartRequest</Type>
         <BitSize>640</BitSize>
         <BitOffs>1408</BitOffs>
       </SubItem>
       <SubItem>
         <Name>sTorqueStartRequest</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">_ST_TcNC_UniversalAxisTorqueStartRequest</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_ST_TcNC_UniversalAxisTorqueStartRequest</Type>
         <BitSize>576</BitSize>
         <BitOffs>2048</BitOffs>
       </SubItem>
       <SubItem>
         <Name>sStartResponse</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">_ST_TcNC_UnversalAxisStartResponse</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_ST_TcNC_UnversalAxisStartResponse</Type>
         <BitSize>32</BitSize>
         <BitOffs>2624</BitOffs>
       </SubItem>
@@ -26741,7 +26741,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>EmptyStartResponse</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">_ST_TcNC_UnversalAxisStartResponse</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_ST_TcNC_UnversalAxisStartResponse</Type>
         <BitSize>32</BitSize>
         <BitOffs>4160</BitOffs>
       </SubItem>
@@ -26891,7 +26891,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>OpMode</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">_ST_TcNc_OperationModes</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_ST_TcNc_OperationModes</Type>
         <BitSize>128</BitSize>
         <BitOffs>7520</BitOffs>
         <Properties>
@@ -26936,11 +26936,11 @@ External Setpoint Generation:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">MC_Halt</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_Halt</Name>
       <BitSize>8640</BitSize>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <Comment>Reference to an axis</Comment>
         <BitSize>32</BitSize>
         <BitOffs>32</BitOffs>
@@ -26989,7 +26989,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>BufferMode</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">MC_BufferMode</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_BufferMode</Type>
         <BitSize>16</BitSize>
         <BitOffs>256</BitOffs>
         <Properties>
@@ -27001,7 +27001,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>Options</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">ST_MoveOptions</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">ST_MoveOptions</Type>
         <Comment> optional parameters </Comment>
         <BitSize>320</BitSize>
         <BitOffs>320</BitOffs>
@@ -27090,7 +27090,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>LastExecutionResult</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">_ST_FunctionBlockResults</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_ST_FunctionBlockResults</Type>
         <BitSize>96</BitSize>
         <BitOffs>736</BitOffs>
       </SubItem>
@@ -27102,7 +27102,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>MoveGeneric</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">_FB_MoveUniversalGeneric</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_FB_MoveUniversalGeneric</Type>
         <BitSize>7680</BitSize>
         <BitOffs>896</BitOffs>
       </SubItem>
@@ -27120,7 +27120,7 @@ External Setpoint Generation:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">E_JogMode</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">E_JogMode</Name>
       <BitSize>16</BitSize>
       <BaseType>INT</BaseType>
       <EnumInfo>
@@ -27150,7 +27150,7 @@ External Setpoint Generation:
       </EnumInfo>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">MC_Direction</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_Direction</Name>
       <BitSize>16</BitSize>
       <BaseType>INT</BaseType>
       <EnumInfo>
@@ -27175,11 +27175,11 @@ External Setpoint Generation:
       </EnumInfo>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">MC_MoveVelocity</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_MoveVelocity</Name>
       <BitSize>8768</BitSize>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <Comment>Reference to an axis</Comment>
         <BitSize>32</BitSize>
         <BitOffs>32</BitOffs>
@@ -27254,7 +27254,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>Direction</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">MC_Direction</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_Direction</Type>
         <BitSize>16</BitSize>
         <BitOffs>384</BitOffs>
         <Default>
@@ -27269,7 +27269,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>BufferMode</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">MC_BufferMode</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_BufferMode</Type>
         <BitSize>16</BitSize>
         <BitOffs>400</BitOffs>
         <Properties>
@@ -27281,7 +27281,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>Options</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">ST_MoveOptions</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">ST_MoveOptions</Type>
         <BitSize>320</BitSize>
         <BitOffs>448</BitOffs>
         <Properties>
@@ -27370,7 +27370,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>LastExecutionResult</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">_ST_FunctionBlockResults</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_ST_FunctionBlockResults</Type>
         <BitSize>96</BitSize>
         <BitOffs>864</BitOffs>
       </SubItem>
@@ -27382,7 +27382,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>MoveGeneric</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">_FB_MoveUniversalGeneric</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_FB_MoveUniversalGeneric</Type>
         <BitSize>7680</BitSize>
         <BitOffs>1024</BitOffs>
       </SubItem>
@@ -27400,7 +27400,7 @@ External Setpoint Generation:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">ST_McOutputs</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">ST_McOutputs</Name>
       <BitSize>96</BitSize>
       <SubItem>
         <Name>Done</Name>
@@ -27446,11 +27446,11 @@ External Setpoint Generation:
       </SubItem>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">MC_MoveAbsolute</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_MoveAbsolute</Name>
       <BitSize>8832</BitSize>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <Comment>Reference to an axis</Comment>
         <BitSize>32</BitSize>
         <BitOffs>32</BitOffs>
@@ -27541,7 +27541,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>BufferMode</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">MC_BufferMode</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_BufferMode</Type>
         <Comment>	Direction			:	MC_Direction; 
  not available </Comment>
         <BitSize>16</BitSize>
@@ -27555,7 +27555,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>Options</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">ST_MoveOptions</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">ST_MoveOptions</Type>
         <Comment> optional parameters </Comment>
         <BitSize>320</BitSize>
         <BitOffs>512</BitOffs>
@@ -27644,7 +27644,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>LastExecutionResult</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">_ST_FunctionBlockResults</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_ST_FunctionBlockResults</Type>
         <BitSize>96</BitSize>
         <BitOffs>928</BitOffs>
       </SubItem>
@@ -27656,7 +27656,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>MoveGeneric</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">_FB_MoveUniversalGeneric</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_FB_MoveUniversalGeneric</Type>
         <BitSize>7680</BitSize>
         <BitOffs>1088</BitOffs>
       </SubItem>
@@ -27674,11 +27674,11 @@ External Setpoint Generation:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">MC_MoveRelative</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_MoveRelative</Name>
       <BitSize>8832</BitSize>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <Comment>Reference to an axis</Comment>
         <BitSize>32</BitSize>
         <BitOffs>32</BitOffs>
@@ -27765,7 +27765,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>BufferMode</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">MC_BufferMode</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_BufferMode</Type>
         <BitSize>16</BitSize>
         <BitOffs>448</BitOffs>
         <Properties>
@@ -27777,7 +27777,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>Options</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">ST_MoveOptions</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">ST_MoveOptions</Type>
         <BitSize>320</BitSize>
         <BitOffs>512</BitOffs>
         <Properties>
@@ -27865,7 +27865,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>LastExecutionResult</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">_ST_FunctionBlockResults</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_ST_FunctionBlockResults</Type>
         <BitSize>96</BitSize>
         <BitOffs>928</BitOffs>
       </SubItem>
@@ -27877,7 +27877,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>MoveGeneric</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">_FB_MoveUniversalGeneric</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_FB_MoveUniversalGeneric</Type>
         <BitSize>7680</BitSize>
         <BitOffs>1088</BitOffs>
       </SubItem>
@@ -27895,11 +27895,11 @@ External Setpoint Generation:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">MC_Jog</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_Jog</Name>
       <BitSize>44352</BitSize>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <Comment>Reference to an axis</Comment>
         <BitSize>32</BitSize>
         <BitOffs>32</BitOffs>
@@ -27936,7 +27936,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>Mode</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">E_JogMode</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">E_JogMode</Type>
         <BitSize>16</BitSize>
         <BitOffs>80</BitOffs>
         <Properties>
@@ -28090,7 +28090,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>LastExecutionResult</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">_ST_FunctionBlockResults</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_ST_FunctionBlockResults</Type>
         <BitSize>96</BitSize>
         <BitOffs>576</BitOffs>
       </SubItem>
@@ -28108,19 +28108,19 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>MoveVelocity</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">MC_MoveVelocity</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_MoveVelocity</Type>
         <BitSize>8768</BitSize>
         <BitOffs>704</BitOffs>
       </SubItem>
       <SubItem>
         <Name>MoveVelocityOut</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">ST_McOutputs</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">ST_McOutputs</Type>
         <BitSize>96</BitSize>
         <BitOffs>9472</BitOffs>
       </SubItem>
       <SubItem>
         <Name>Direction</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">MC_Direction</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_Direction</Type>
         <BitSize>16</BitSize>
         <BitOffs>9568</BitOffs>
       </SubItem>
@@ -28132,13 +28132,13 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>Halt</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">MC_Halt</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_Halt</Type>
         <BitSize>8640</BitSize>
         <BitOffs>9600</BitOffs>
       </SubItem>
       <SubItem>
         <Name>HaltOut</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">ST_McOutputs</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">ST_McOutputs</Type>
         <BitSize>96</BitSize>
         <BitOffs>18240</BitOffs>
       </SubItem>
@@ -28150,13 +28150,13 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>MoveAbsolute</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">MC_MoveAbsolute</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_MoveAbsolute</Type>
         <BitSize>8832</BitSize>
         <BitOffs>18368</BitOffs>
       </SubItem>
       <SubItem>
         <Name>MoveAbsoluteOut</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">ST_McOutputs</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">ST_McOutputs</Type>
         <BitSize>96</BitSize>
         <BitOffs>27200</BitOffs>
       </SubItem>
@@ -28168,25 +28168,25 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>MoveRelative</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">MC_MoveRelative</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_MoveRelative</Type>
         <BitSize>8832</BitSize>
         <BitOffs>27328</BitOffs>
       </SubItem>
       <SubItem>
         <Name>MoveRelativeOut</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">ST_McOutputs</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">ST_McOutputs</Type>
         <BitSize>96</BitSize>
         <BitOffs>36160</BitOffs>
       </SubItem>
       <SubItem>
         <Name>JogMove</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">_FB_MoveUniversalGeneric</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_FB_MoveUniversalGeneric</Type>
         <BitSize>7680</BitSize>
         <BitOffs>36288</BitOffs>
       </SubItem>
       <SubItem>
         <Name>LastJogMoveResult</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">_ST_FunctionBlockResults</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_ST_FunctionBlockResults</Type>
         <BitSize>96</BitSize>
         <BitOffs>43968</BitOffs>
       </SubItem>
@@ -28198,13 +28198,13 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>StartType</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">_E_TcNC_StartPosType</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_E_TcNC_StartPosType</Type>
         <BitSize>16</BitSize>
         <BitOffs>44080</BitOffs>
       </SubItem>
       <SubItem>
         <Name>JogMoveOut</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">ST_McOutputs</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">ST_McOutputs</Type>
         <BitSize>96</BitSize>
         <BitOffs>44096</BitOffs>
       </SubItem>
@@ -28240,11 +28240,11 @@ External Setpoint Generation:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">MC_MoveModulo</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_MoveModulo</Name>
       <BitSize>8896</BitSize>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <Comment>Reference to an axis</Comment>
         <BitSize>32</BitSize>
         <BitOffs>32</BitOffs>
@@ -28329,7 +28329,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>Direction</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">MC_Direction</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_Direction</Type>
         <Comment> modulo shortest way, modulo positive, modulo negative </Comment>
         <BitSize>16</BitSize>
         <BitOffs>448</BitOffs>
@@ -28342,7 +28342,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>BufferMode</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">MC_BufferMode</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_BufferMode</Type>
         <Comment> E </Comment>
         <BitSize>16</BitSize>
         <BitOffs>464</BitOffs>
@@ -28355,7 +28355,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>Options</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">ST_MoveOptions</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">ST_MoveOptions</Type>
         <BitSize>320</BitSize>
         <BitOffs>512</BitOffs>
         <Properties>
@@ -28443,7 +28443,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>LastExecutionResult</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">_ST_FunctionBlockResults</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_ST_FunctionBlockResults</Type>
         <BitSize>96</BitSize>
         <BitOffs>928</BitOffs>
       </SubItem>
@@ -28455,13 +28455,13 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>MoveGeneric</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">_FB_MoveUniversalGeneric</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_FB_MoveUniversalGeneric</Type>
         <BitSize>7680</BitSize>
         <BitOffs>1088</BitOffs>
       </SubItem>
       <SubItem>
         <Name>StartType</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">_E_TcNC_StartPosType</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_E_TcNC_StartPosType</Type>
         <BitSize>16</BitSize>
         <BitOffs>8768</BitOffs>
       </SubItem>
@@ -28488,7 +28488,7 @@ External Setpoint Generation:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">MC_HomingMode</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_HomingMode</Name>
       <BitSize>16</BitSize>
       <BaseType>INT</BaseType>
       <EnumInfo>
@@ -28538,7 +28538,7 @@ External Setpoint Generation:
       </EnumInfo>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">E_EncoderReferenceMode</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">E_EncoderReferenceMode</Name>
       <BitSize>32</BitSize>
       <BaseType>UDINT</BaseType>
       <EnumInfo>
@@ -28579,7 +28579,7 @@ External Setpoint Generation:
       </EnumInfo>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">ST_HomingOptions</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">ST_HomingOptions</Name>
       <BitSize>320</BitSize>
       <SubItem>
         <Name>ClearPositionLag</Name>
@@ -28590,7 +28590,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>SearchDirection</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">MC_Direction</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_Direction</Type>
         <BitSize>16</BitSize>
         <BitOffs>16</BitOffs>
         <Default>
@@ -28605,7 +28605,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>SyncDirection</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">MC_Direction</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_Direction</Type>
         <BitSize>16</BitSize>
         <BitOffs>128</BitOffs>
         <Default>
@@ -28620,7 +28620,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>ReferenceMode</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">E_EncoderReferenceMode</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">E_EncoderReferenceMode</Type>
         <BitSize>32</BitSize>
         <BitOffs>256</BitOffs>
         <Default>
@@ -28629,7 +28629,7 @@ External Setpoint Generation:
       </SubItem>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">ST_SetPositionOptions</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">ST_SetPositionOptions</Name>
       <BitSize>32</BitSize>
       <SubItem>
         <Name>ClearPositionLag</Name>
@@ -28654,7 +28654,7 @@ External Setpoint Generation:
       </SubItem>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">_ST_TcNC_SetPosOnTheFly</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_ST_TcNC_SetPosOnTheFly</Name>
       <BitSize>256</BitSize>
       <SubItem>
         <Name>nPosSetType</Name>
@@ -28701,11 +28701,11 @@ External Setpoint Generation:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">MC_SetPosition</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_SetPosition</Name>
       <BitSize>1984</BitSize>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <Comment>Reference to an axis</Comment>
         <BitSize>32</BitSize>
         <BitOffs>32</BitOffs>
@@ -28757,7 +28757,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>Options</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">ST_SetPositionOptions</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">ST_SetPositionOptions</Type>
         <Comment> Beckhoff proprietary input </Comment>
         <BitSize>32</BitSize>
         <BitOffs>208</BitOffs>
@@ -28832,13 +28832,13 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>stSetPos</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">_ST_TcNC_SetPosOnTheFly</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_ST_TcNC_SetPosOnTheFly</Type>
         <BitSize>256</BitSize>
         <BitOffs>384</BitOffs>
       </SubItem>
       <SubItem>
         <Name>iState</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">_E_TcMC_STATES</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_E_TcMC_STATES</Type>
         <BitSize>16</BitSize>
         <BitOffs>640</BitOffs>
         <Default>
@@ -28870,11 +28870,11 @@ External Setpoint Generation:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">MC_Home</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_Home</Name>
       <BitSize>7168</BitSize>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <Comment>Reference to an axis</Comment>
         <BitSize>32</BitSize>
         <BitOffs>32</BitOffs>
@@ -28914,7 +28914,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>HomingMode</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">MC_HomingMode</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_HomingMode</Type>
         <BitSize>16</BitSize>
         <BitOffs>192</BitOffs>
         <Properties>
@@ -28926,7 +28926,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>BufferMode</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">MC_BufferMode</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_BufferMode</Type>
         <BitSize>16</BitSize>
         <BitOffs>208</BitOffs>
         <Properties>
@@ -28938,7 +28938,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>Options</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">ST_HomingOptions</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">ST_HomingOptions</Type>
         <Comment> Beckhoff proprietary input </Comment>
         <BitSize>320</BitSize>
         <BitOffs>256</BitOffs>
@@ -29040,7 +29040,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>LastExecutionResult</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">_ST_FunctionBlockResults</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_ST_FunctionBlockResults</Type>
         <BitSize>96</BitSize>
         <BitOffs>672</BitOffs>
         <Properties>
@@ -29062,7 +29062,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>iState</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">_E_TcMC_STATES</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_E_TcMC_STATES</Type>
         <BitSize>16</BitSize>
         <BitOffs>784</BitOffs>
         <Default>
@@ -29131,7 +29131,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>fbSetPosition</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">MC_SetPosition</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_SetPosition</Type>
         <BitSize>1984</BitSize>
         <BitOffs>4544</BitOffs>
         <Properties>
@@ -29197,7 +29197,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>ReferenceMode</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">E_EncoderReferenceMode</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">E_EncoderReferenceMode</Type>
         <BitSize>32</BitSize>
         <BitOffs>6848</BitOffs>
         <Properties>
@@ -29340,7 +29340,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <BitSize>32</BitSize>
         <BitOffs>224</BitOffs>
         <Properties>
@@ -29471,7 +29471,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <BitSize>32</BitSize>
         <BitOffs>256</BitOffs>
         <Properties>
@@ -29565,7 +29565,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <BitSize>32</BitSize>
         <BitOffs>192</BitOffs>
         <Properties>
@@ -29713,7 +29713,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>nSearchDirTwoardsCam</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">MC_Direction</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_Direction</Type>
         <BitSize>16</BitSize>
         <BitOffs>64</BitOffs>
         <Properties>
@@ -29725,7 +29725,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>nSearchDirOffCam</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">MC_Direction</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_Direction</Type>
         <BitSize>16</BitSize>
         <BitOffs>80</BitOffs>
         <Properties>
@@ -29775,7 +29775,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <BitSize>32</BitSize>
         <BitOffs>320</BitOffs>
         <Properties>
@@ -29859,7 +29859,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>fbHome</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">MC_Home</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_Home</Type>
         <BitSize>7168</BitSize>
         <BitOffs>448</BitOffs>
       </SubItem>
@@ -29962,7 +29962,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <BitSize>32</BitSize>
         <BitOffs>128</BitOffs>
         <Properties>
@@ -30046,7 +30046,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>fbHome</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">MC_Home</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_Home</Type>
         <BitSize>7168</BitSize>
         <BitOffs>256</BitOffs>
       </SubItem>
@@ -30159,7 +30159,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <BitSize>32</BitSize>
         <BitOffs>224</BitOffs>
         <Properties>
@@ -30229,7 +30229,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <BitSize>32</BitSize>
         <BitOffs>64</BitOffs>
         <Properties>
@@ -30419,7 +30419,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <BitSize>32</BitSize>
         <BitOffs>96</BitOffs>
         <Properties>
@@ -30616,7 +30616,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <BitSize>32</BitSize>
         <BitOffs>256</BitOffs>
         <Properties>
@@ -30686,7 +30686,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <BitSize>32</BitSize>
         <BitOffs>64</BitOffs>
         <Properties>
@@ -30852,7 +30852,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <BitSize>32</BitSize>
         <BitOffs>96</BitOffs>
         <Properties>
@@ -31002,7 +31002,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>fbHomeResetCalibrationFlag</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">MC_Home</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_Home</Type>
         <Comment>Only used for reset of calibration flag</Comment>
         <BitSize>7168</BitSize>
         <BitOffs>10432</BitOffs>
@@ -31130,7 +31130,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <BitSize>32</BitSize>
         <BitOffs>96</BitOffs>
         <Properties>
@@ -31350,7 +31350,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <BitSize>32</BitSize>
         <BitOffs>224</BitOffs>
         <Properties>
@@ -31447,7 +31447,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>fbMoveVelocity</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">MC_MoveVelocity</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_MoveVelocity</Type>
         <BitSize>8768</BitSize>
         <BitOffs>23552</BitOffs>
       </SubItem>
@@ -31553,7 +31553,7 @@ External Setpoint Generation:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">ST_GearInDynOptions</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">ST_GearInDynOptions</Name>
       <BitSize>8</BitSize>
       <SubItem>
         <Name>CCVmode</Name>
@@ -31564,7 +31564,7 @@ External Setpoint Generation:
       </SubItem>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">_ST_TcNC_CoupleSlave</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_ST_TcNC_CoupleSlave</Name>
       <BitSize>384</BitSize>
       <SubItem>
         <Name>nSlaveType</Name>
@@ -31621,11 +31621,11 @@ External Setpoint Generation:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">MC_GearInDyn</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_GearInDyn</Name>
       <BitSize>4032</BitSize>
       <SubItem>
         <Name>Master</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <Comment>Reference to an axis</Comment>
         <BitSize>32</BitSize>
         <BitOffs>32</BitOffs>
@@ -31638,7 +31638,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>Slave</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <Comment>Reference to an axis</Comment>
         <BitSize>32</BitSize>
         <BitOffs>64</BitOffs>
@@ -31716,7 +31716,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>BufferMode</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">MC_BufferMode</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_BufferMode</Type>
         <BitSize>16</BitSize>
         <BitOffs>384</BitOffs>
         <Properties>
@@ -31728,7 +31728,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>Options</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">ST_GearInDynOptions</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">ST_GearInDynOptions</Type>
         <Comment> optional parameters </Comment>
         <BitSize>8</BitSize>
         <BitOffs>400</BitOffs>
@@ -31817,7 +31817,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>LastExecutionResult</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">_ST_FunctionBlockResults</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_ST_FunctionBlockResults</Type>
         <BitSize>96</BitSize>
         <BitOffs>480</BitOffs>
       </SubItem>
@@ -31829,7 +31829,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>iState</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">_E_TcMC_STATES</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_E_TcMC_STATES</Type>
         <BitSize>16</BitSize>
         <BitOffs>592</BitOffs>
         <Default>
@@ -31856,7 +31856,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>sCouple</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">_ST_TcNC_CoupleSlave</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_ST_TcNC_CoupleSlave</Type>
         <BitSize>384</BitSize>
         <BitOffs>3136</BitOffs>
       </SubItem>
@@ -31908,7 +31908,7 @@ External Setpoint Generation:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">ST_GearOutOptions</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">ST_GearOutOptions</Name>
       <BitSize>8</BitSize>
       <SubItem>
         <Name>reserved</Name>
@@ -31923,11 +31923,11 @@ External Setpoint Generation:
       </SubItem>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">MC_GearOut</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_GearOut</Name>
       <BitSize>1792</BitSize>
       <SubItem>
         <Name>Slave</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <Comment>Reference to an axis</Comment>
         <BitSize>32</BitSize>
         <BitOffs>32</BitOffs>
@@ -31952,7 +31952,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>Options</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">ST_GearOutOptions</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">ST_GearOutOptions</Type>
         <Comment> optional parameters </Comment>
         <BitSize>8</BitSize>
         <BitOffs>72</BitOffs>
@@ -32017,7 +32017,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>LastExecutionResult</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">_ST_FunctionBlockResults</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_ST_FunctionBlockResults</Type>
         <BitSize>96</BitSize>
         <BitOffs>160</BitOffs>
       </SubItem>
@@ -32029,7 +32029,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>iState</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">_E_TcMC_STATES</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_E_TcMC_STATES</Type>
         <BitSize>16</BitSize>
         <BitOffs>272</BitOffs>
         <Default>
@@ -32313,7 +32313,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>MasterAxis</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">AXIS_REF</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">AXIS_REF</Type>
         <BitSize>9088</BitSize>
         <BitOffs>1344</BitOffs>
         <Properties>
@@ -32437,7 +32437,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>Status</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">ST_AxisStatus</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">ST_AxisStatus</Type>
         <BitSize>768</BitSize>
         <BitOffs>10560</BitOffs>
         <Properties>
@@ -32497,7 +32497,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <BitSize>32</BitSize>
         <BitOffs>12192</BitOffs>
         <Properties>
@@ -32530,49 +32530,49 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>fbReset</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">MC_Reset</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_Reset</Type>
         <BitSize>1632</BitSize>
         <BitOffs>12288</BitOffs>
       </SubItem>
       <SubItem>
         <Name>fbPower</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">MC_Power</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_Power</Type>
         <BitSize>768</BitSize>
         <BitOffs>13952</BitOffs>
       </SubItem>
       <SubItem>
         <Name>fbHalt</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">MC_Halt</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_Halt</Type>
         <BitSize>8640</BitSize>
         <BitOffs>14720</BitOffs>
       </SubItem>
       <SubItem>
         <Name>fbJog</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">MC_Jog</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_Jog</Type>
         <BitSize>44352</BitSize>
         <BitOffs>23360</BitOffs>
       </SubItem>
       <SubItem>
         <Name>fbMoveVelocity</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">MC_MoveVelocity</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_MoveVelocity</Type>
         <BitSize>8768</BitSize>
         <BitOffs>67712</BitOffs>
       </SubItem>
       <SubItem>
         <Name>fbMoveRelative</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">MC_MoveRelative</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_MoveRelative</Type>
         <BitSize>8832</BitSize>
         <BitOffs>76480</BitOffs>
       </SubItem>
       <SubItem>
         <Name>fbMoveAbsolute</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">MC_MoveAbsolute</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_MoveAbsolute</Type>
         <BitSize>8832</BitSize>
         <BitOffs>85312</BitOffs>
       </SubItem>
       <SubItem>
         <Name>fbMoveModulo</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">MC_MoveModulo</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_MoveModulo</Type>
         <BitSize>8896</BitSize>
         <BitOffs>94144</BitOffs>
       </SubItem>
@@ -32584,13 +32584,13 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>fbGearInDyn</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">MC_GearInDyn</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_GearInDyn</Type>
         <BitSize>4032</BitSize>
         <BitOffs>156800</BitOffs>
       </SubItem>
       <SubItem>
         <Name>fbGearOut</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">MC_GearOut</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_GearOut</Type>
         <BitSize>1792</BitSize>
         <BitOffs>160832</BitOffs>
       </SubItem>
@@ -32690,13 +32690,13 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>fbSetPos</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">MC_SetPosition</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_SetPosition</Type>
         <BitSize>1984</BitSize>
         <BitOffs>128</BitOffs>
       </SubItem>
       <SubItem>
         <Name>fbJog</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">MC_Jog</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_Jog</Type>
         <BitSize>44352</BitSize>
         <BitOffs>2112</BitOffs>
       </SubItem>
@@ -32897,7 +32897,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>fbSetPos</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">MC_SetPosition</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_SetPosition</Type>
         <BitSize>1984</BitSize>
         <BitOffs>128</BitOffs>
       </SubItem>
@@ -33108,11 +33108,11 @@ External Setpoint Generation:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls_twincat_motion.Tc2_MC2">MC_ReadParameterSet</Name>
+      <Name Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_ReadParameterSet</Name>
       <BitSize>1600</BitSize>
       <SubItem>
         <Name>Parameter</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">ST_AxisParameterSet</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">ST_AxisParameterSet</Type>
         <BitSize>32</BitSize>
         <BitOffs>32</BitOffs>
         <Properties>
@@ -33124,7 +33124,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <Comment>Reference to an axis</Comment>
         <BitSize>32</BitSize>
         <BitOffs>64</BitOffs>
@@ -33207,7 +33207,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>state</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">_E_TcMC_STATES</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_E_TcMC_STATES</Type>
         <BitSize>16</BitSize>
         <BitOffs>224</BitOffs>
         <Default>
@@ -33295,7 +33295,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>mcReadParams</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">MC_ReadParameterSet</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_ReadParameterSet</Type>
         <BitSize>1600</BitSize>
         <BitOffs>192</BitOffs>
       </SubItem>
@@ -35636,7 +35636,7 @@ ELSE:
       <BitSize>8576</BitSize>
       <SubItem>
         <Name>stParameters</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">ST_AxisParameterSet</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">ST_AxisParameterSet</Type>
         <Comment> Parameters to check against</Comment>
         <BitSize>8192</BitSize>
         <BitOffs>64</BitOffs>
@@ -38980,7 +38980,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
       </SubItem>
       <SubItem>
         <Name>mc_power</Name>
-        <Type Namespace="lcls_twincat_motion.Tc2_MC2">MC_Power</Type>
+        <Type Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">MC_Power</Type>
         <BitSize>768</BitSize>
         <BitOffs>256</BitOffs>
       </SubItem>
@@ -44969,7 +44969,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
           <AreaNo AreaType="InputDst" CreateSymbols="true">0</AreaNo>
           <Name>PlcTask Inputs</Name>
           <ContextId>0</ContextId>
-          <ByteSize>80871424</ByteSize>
+          <ByteSize>80936960</ByteSize>
           <Symbol>
             <Name>Main.M1.Axis.NcToPlc</Name>
             <BitSize>2048</BitSize>
@@ -47892,7 +47892,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
           <AreaNo AreaType="OutputSrc" CreateSymbols="true">1</AreaNo>
           <Name>PlcTask Outputs</Name>
           <ContextId>0</ContextId>
-          <ByteSize>80871424</ByteSize>
+          <ByteSize>80936960</ByteSize>
           <Symbol>
             <Name>Main.M1.Axis.PlcToNc</Name>
             <BitSize>1024</BitSize>
@@ -48757,7 +48757,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
           <AreaNo AreaType="Internal" CreateSymbols="true">3</AreaNo>
           <Name>PlcTask Internal</Name>
           <ContextId>0</ContextId>
-          <ByteSize>80871424</ByteSize>
+          <ByteSize>80936960</ByteSize>
           <Symbol>
             <Name>DefaultGlobals.stSys</Name>
             <Comment>Included for you</Comment>
@@ -54981,7 +54981,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
           <Symbol>
             <Name>Global_Variables.TcMcGlobal</Name>
             <BitSize>6976</BitSize>
-            <BaseType Namespace="lcls_twincat_motion.Tc2_MC2">_TCMCGLOBAL</BaseType>
+            <BaseType Namespace="lcls_twincat_common_components.lcls_twincat_motion.Tc2_MC2">_TCMCGLOBAL</BaseType>
             <Properties>
               <Property>
                 <Name>TcVarGlobal</Name>
@@ -55941,7 +55941,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
           <AreaNo AreaType="RetainSrc" CreateSymbols="true">4</AreaNo>
           <Name>PlcTask Retains</Name>
           <ContextId>0</ContextId>
-          <ByteSize>80871424</ByteSize>
+          <ByteSize>80936960</ByteSize>
           <Symbol>
             <Name>PMPS_GVL.SuccessfulPreemption</Name>
             <Comment> Any time BPTM applies a new BP request which is confirmed</Comment>
@@ -56006,7 +56006,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
         </Property>
         <Property>
           <Name>ChangeDate</Name>
-          <Value>2023-08-11T14:17:34</Value>
+          <Value>2023-08-11T14:39:16</Value>
         </Property>
         <Property>
           <Name>GeneratedCodeSize</Name>

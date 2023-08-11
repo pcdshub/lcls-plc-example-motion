@@ -194,9 +194,6 @@ M3.bLimitForwardEnable := M3.Axis.NcToPlc.ActPos < 99.7;
 M3.bLimitBackwardEnable := M3.Axis.NcToPlc.ActPos > 0.2;
 
 // Run the fake IM1L0
-M4.bPowerSelf := FALSE;
-M5.bPowerSelf := TRUE;
-M6.bPowerSelf := TRUE;
 fbIM1L0(
     fbArbiter := GVL.fbArbiter,
     fbFFHWO := GVL.fbFastFaultOutput1,
@@ -207,6 +204,9 @@ fbIM1L0(
     stEl6Out := stEl6Out,
     sDeviceName := 'IM1K0:XTES',
     sTransitionKey:='IM1K0:XTES-TRANSITION',
+    bEnableMotion:=TRUE,
+    bEnableBeamParams:=TRUE,
+    bEnablePositionLimits:=TRUE,
 );
 
 // Run the 3D demo
