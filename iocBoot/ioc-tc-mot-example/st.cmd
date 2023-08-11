@@ -4,8 +4,8 @@
 #         Project: lcls-plc-example-motion.tsproj
 #        PLC name: tc_mot_example (tc_mot_example Instance)
 # Generated using: pytmc 2.15.1
-# Project version: 27899ab
-#    Project hash: 27899abcf10d4d3911adb1e2f97f38f90fa4a544
+# Project version: f3cd5c6
+#    Project hash: f3cd5c67dc51290210f079a0575a91f46e9d30cb
 #     PLC IP/host: 172.21.148.148
 #      PLC Net ID: 172.21.148.148.1.1
 # ** DEVELOPMENT MODE IOC **
@@ -15,8 +15,8 @@
 # Libraries:
 #
 #   LCLS General: * -> 2.8.2 (SLAC)
+#   lcls-twincat-common-components: * -> 0.0.0 (SLAC)
 #   lcls-twincat-motion: * -> 3.0.1 (SLAC)
-#   lcls2-cc-lib: * -> 2.0.0 (SLAC)
 #   PMPS: * -> 3.0.14 (SLAC - LCLS)
 #   Tc2_SerialCom: * (Beckhoff Automation GmbH)
 #   Tc2_Standard: * (Beckhoff Automation GmbH)
@@ -270,14 +270,14 @@ dbLoadRecords("caPutLog.db", "IOC=$(IOC)")
 dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:TST:MOT,IDX=1")
 dbLoadRecords("TwinCAT_AppInfo.db", "PORT=$(ASYN_PORT), PREFIX=PLC:TST:MOT")
 
-dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:TST:MOT,PROJECT=lcls-plc-example-motion.tsproj,HASH=27899ab,VERSION=27899ab,PYTMC=2.15.1,PLC_HOST=172.21.148.148")
+dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:TST:MOT,PROJECT=lcls-plc-example-motion.tsproj,HASH=f3cd5c6,VERSION=f3cd5c6,PYTMC=2.15.1,PLC_HOST=172.21.148.148")
 
 #   LCLS General: * -> 2.8.2 (SLAC)
 dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TST:MOT,DEPENDENCY=LCLS_General,VERSION=2.8.2,VENDOR=SLAC")
+#   lcls-twincat-common-components: * -> 0.0.0 (SLAC)
+dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TST:MOT,DEPENDENCY=lcls-twincat-common-components,VERSION=0.0.0,VENDOR=SLAC")
 #   lcls-twincat-motion: * -> 3.0.1 (SLAC)
 dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TST:MOT,DEPENDENCY=lcls-twincat-motion,VERSION=3.0.1,VENDOR=SLAC")
-#   lcls2-cc-lib: * -> 2.0.0 (SLAC)
-dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TST:MOT,DEPENDENCY=lcls2-cc-lib,VERSION=2.0.0,VENDOR=SLAC")
 #   PMPS: * -> 3.0.14 (SLAC - LCLS)
 dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TST:MOT,DEPENDENCY=PMPS,VERSION=3.0.14,VENDOR=SLAC - LCLS")
 #   Tc2_SerialCom: * (Beckhoff Automation GmbH)
