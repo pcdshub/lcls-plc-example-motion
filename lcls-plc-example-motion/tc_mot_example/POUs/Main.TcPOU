@@ -205,7 +205,7 @@ fbIM1L0(
     stFocusStage := M6,
     stEl6In := stEL6In,
     stEl6Out := stEl6Out,
-    sPmpsDeviceName := 'IM1K0:XTES',
+    sDeviceName := 'IM1K0:XTES',
     sTransitionKey:='IM1K0:XTES-TRANSITION',
 );
 
