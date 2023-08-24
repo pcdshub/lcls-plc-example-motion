@@ -11,6 +11,10 @@ VAR
     M1: ST_MotionStage := (sName := 'SIM:01');
     fbMotion1: FB_MotionStageSim;
 
+    // Tool for simulating an NC error
+    fbCauseError: FB_CauseNCError;
+
+
     // Simulated motor that is never allowed to move
     {attribute 'pytmc' := '
         pv: @(PREFIX)02
@@ -195,6 +199,9 @@ fbMotion2(stMotionStage := M2);
 fbMotion3(stMotionStage := M3);
 M3.bLimitForwardEnable := M3.Axis.NcToPlc.ActPos < 99.7;
 M3.bLimitBackwardEnable := M3.Axis.NcToPlc.ActPos > 0.2;
+
+// Let us simulate NC errors on M1 by online writing to the inputs here
+fbCauseError(Axis:=M1.Axis);
 
 // Run the fake IM1L0
 fbIM1L0(

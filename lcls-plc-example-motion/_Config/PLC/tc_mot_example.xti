@@ -1033,7 +1033,7 @@ External Setpoint Generation:
 		</DataType>
 	</DataTypes>
 	<Project GUID="{CA7AC114-7F2F-41DD-9644-D0667BBB7DBD}" Name="tc_mot_example" PrjFilePath="..\..\tc_mot_example\tc_mot_example.plcproj" TmcFilePath="..\..\tc_mot_example\tc_mot_example.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="tc_mot_example\tc_mot_example.tmc" TmcHash="{74FB377D-084D-4DA4-8120-8AFC48AE2BAB}">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="tc_mot_example\tc_mot_example.tmc" TmcHash="{872DAD41-7288-1434-6C14-A0C1280DE5FB}">
 			<Name>tc_mot_example Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">
@@ -1286,18 +1286,22 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>Main.fbIM1L0.bZoomEndFwd</Name>
+					<Comment><![CDATA[ Forward limit disable for zoom]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>Main.fbIM1L0.bZoomEndBwd</Name>
+					<Comment><![CDATA[ Backward limit disable for zoom]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>Main.fbIM1L0.bFocusEndFwd</Name>
+					<Comment><![CDATA[ Forward limit disable for focus]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>Main.fbIM1L0.bFocusEndBwd</Name>
+					<Comment><![CDATA[ Backward limit disable for focus]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
