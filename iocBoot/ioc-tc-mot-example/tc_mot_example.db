@@ -22398,6 +22398,19 @@ record(waveform, "$(PREFIX)01:PLC:sName_RBV") {
   info(archive, "VAL")
 }
 
+record(bi, "$(PREFIX)01:PLC:stEPSB:bEPS_OK_RBV") {
+  field(DESC, "check if nFlags are all true")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M1.stEPSBackwardEnable.bEPS_OK?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
 record(longin, "$(PREFIX)01:PLC:stEPSB:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
@@ -22439,6 +22452,19 @@ record(waveform, "$(PREFIX)01:PLC:stEPSB:sMessage_RBV") {
   info(archive, "VAL")
 }
 
+record(bi, "$(PREFIX)01:PLC:stEPSF:bEPS_OK_RBV") {
+  field(DESC, "check if nFlags are all true")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M1.stEPSForwardEnable.bEPS_OK?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
 record(longin, "$(PREFIX)01:PLC:stEPSF:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
@@ -22477,6 +22503,19 @@ record(waveform, "$(PREFIX)01:PLC:stEPSF:sMessage_RBV") {
   field(MPST, "On Change")
   field(APST, "On Change")
   info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(bi, "$(PREFIX)01:PLC:stEPSP:bEPS_OK_RBV") {
+  field(DESC, "check if nFlags are all true")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M1.stEPSPowerEnable.bEPS_OK?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
   info(archive, "VAL")
 }
 
@@ -23204,6 +23243,19 @@ record(waveform, "$(PREFIX)L2L:MOT:PLC:sName_RBV") {
   info(archive, "VAL")
 }
 
+record(bi, "$(PREFIX)L2L:MOT:PLC:stEPSB:bEPS_OK_RBV") {
+  field(DESC, "check if nFlags are all true")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M10.stEPSBackwardEnable.bEPS_OK?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
 record(longin, "$(PREFIX)L2L:MOT:PLC:stEPSB:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
@@ -23245,6 +23297,19 @@ record(waveform, "$(PREFIX)L2L:MOT:PLC:stEPSB:sMessage_RBV") {
   info(archive, "VAL")
 }
 
+record(bi, "$(PREFIX)L2L:MOT:PLC:stEPSF:bEPS_OK_RBV") {
+  field(DESC, "check if nFlags are all true")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M10.stEPSForwardEnable.bEPS_OK?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
 record(longin, "$(PREFIX)L2L:MOT:PLC:stEPSF:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
@@ -23283,6 +23348,19 @@ record(waveform, "$(PREFIX)L2L:MOT:PLC:stEPSF:sMessage_RBV") {
   field(MPST, "On Change")
   field(APST, "On Change")
   info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(bi, "$(PREFIX)L2L:MOT:PLC:stEPSP:bEPS_OK_RBV") {
+  field(DESC, "check if nFlags are all true")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M10.stEPSPowerEnable.bEPS_OK?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
   info(archive, "VAL")
 }
 
@@ -24010,6 +24088,19 @@ record(waveform, "$(PREFIX)02:PLC:sName_RBV") {
   info(archive, "VAL")
 }
 
+record(bi, "$(PREFIX)02:PLC:stEPSB:bEPS_OK_RBV") {
+  field(DESC, "check if nFlags are all true")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M2.stEPSBackwardEnable.bEPS_OK?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
 record(longin, "$(PREFIX)02:PLC:stEPSB:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
@@ -24051,6 +24142,19 @@ record(waveform, "$(PREFIX)02:PLC:stEPSB:sMessage_RBV") {
   info(archive, "VAL")
 }
 
+record(bi, "$(PREFIX)02:PLC:stEPSF:bEPS_OK_RBV") {
+  field(DESC, "check if nFlags are all true")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M2.stEPSForwardEnable.bEPS_OK?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
 record(longin, "$(PREFIX)02:PLC:stEPSF:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
@@ -24089,6 +24193,19 @@ record(waveform, "$(PREFIX)02:PLC:stEPSF:sMessage_RBV") {
   field(MPST, "On Change")
   field(APST, "On Change")
   info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(bi, "$(PREFIX)02:PLC:stEPSP:bEPS_OK_RBV") {
+  field(DESC, "check if nFlags are all true")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M2.stEPSPowerEnable.bEPS_OK?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
   info(archive, "VAL")
 }
 
@@ -24816,6 +24933,19 @@ record(waveform, "$(PREFIX)03:PLC:sName_RBV") {
   info(archive, "VAL")
 }
 
+record(bi, "$(PREFIX)03:PLC:stEPSB:bEPS_OK_RBV") {
+  field(DESC, "check if nFlags are all true")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M3.stEPSBackwardEnable.bEPS_OK?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
 record(longin, "$(PREFIX)03:PLC:stEPSB:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
@@ -24857,6 +24987,19 @@ record(waveform, "$(PREFIX)03:PLC:stEPSB:sMessage_RBV") {
   info(archive, "VAL")
 }
 
+record(bi, "$(PREFIX)03:PLC:stEPSF:bEPS_OK_RBV") {
+  field(DESC, "check if nFlags are all true")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M3.stEPSForwardEnable.bEPS_OK?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
 record(longin, "$(PREFIX)03:PLC:stEPSF:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
@@ -24895,6 +25038,19 @@ record(waveform, "$(PREFIX)03:PLC:stEPSF:sMessage_RBV") {
   field(MPST, "On Change")
   field(APST, "On Change")
   info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(bi, "$(PREFIX)03:PLC:stEPSP:bEPS_OK_RBV") {
+  field(DESC, "check if nFlags are all true")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M3.stEPSPowerEnable.bEPS_OK?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
   info(archive, "VAL")
 }
 
@@ -25622,6 +25778,19 @@ record(waveform, "IMTST:XTES:MMS:PLC:sName_RBV") {
   info(archive, "VAL")
 }
 
+record(bi, "IMTST:XTES:MMS:PLC:stEPSB:bEPS_OK_RBV") {
+  field(DESC, "check if nFlags are all true")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M4.stEPSBackwardEnable.bEPS_OK?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
 record(longin, "IMTST:XTES:MMS:PLC:stEPSB:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
@@ -25663,6 +25832,19 @@ record(waveform, "IMTST:XTES:MMS:PLC:stEPSB:sMessage_RBV") {
   info(archive, "VAL")
 }
 
+record(bi, "IMTST:XTES:MMS:PLC:stEPSF:bEPS_OK_RBV") {
+  field(DESC, "check if nFlags are all true")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M4.stEPSForwardEnable.bEPS_OK?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
 record(longin, "IMTST:XTES:MMS:PLC:stEPSF:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
@@ -25701,6 +25883,19 @@ record(waveform, "IMTST:XTES:MMS:PLC:stEPSF:sMessage_RBV") {
   field(MPST, "On Change")
   field(APST, "On Change")
   info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(bi, "IMTST:XTES:MMS:PLC:stEPSP:bEPS_OK_RBV") {
+  field(DESC, "check if nFlags are all true")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M4.stEPSPowerEnable.bEPS_OK?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
   info(archive, "VAL")
 }
 
@@ -26428,6 +26623,19 @@ record(waveform, "IMTST:XTES:CLZ:PLC:sName_RBV") {
   info(archive, "VAL")
 }
 
+record(bi, "IMTST:XTES:CLZ:PLC:stEPSB:bEPS_OK_RBV") {
+  field(DESC, "check if nFlags are all true")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M5.stEPSBackwardEnable.bEPS_OK?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
 record(longin, "IMTST:XTES:CLZ:PLC:stEPSB:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
@@ -26469,6 +26677,19 @@ record(waveform, "IMTST:XTES:CLZ:PLC:stEPSB:sMessage_RBV") {
   info(archive, "VAL")
 }
 
+record(bi, "IMTST:XTES:CLZ:PLC:stEPSF:bEPS_OK_RBV") {
+  field(DESC, "check if nFlags are all true")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M5.stEPSForwardEnable.bEPS_OK?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
 record(longin, "IMTST:XTES:CLZ:PLC:stEPSF:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
@@ -26507,6 +26728,19 @@ record(waveform, "IMTST:XTES:CLZ:PLC:stEPSF:sMessage_RBV") {
   field(MPST, "On Change")
   field(APST, "On Change")
   info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(bi, "IMTST:XTES:CLZ:PLC:stEPSP:bEPS_OK_RBV") {
+  field(DESC, "check if nFlags are all true")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M5.stEPSPowerEnable.bEPS_OK?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
   info(archive, "VAL")
 }
 
@@ -27234,6 +27468,19 @@ record(waveform, "IMTST:XTES:CLF:PLC:sName_RBV") {
   info(archive, "VAL")
 }
 
+record(bi, "IMTST:XTES:CLF:PLC:stEPSB:bEPS_OK_RBV") {
+  field(DESC, "check if nFlags are all true")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M6.stEPSBackwardEnable.bEPS_OK?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
 record(longin, "IMTST:XTES:CLF:PLC:stEPSB:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
@@ -27275,6 +27522,19 @@ record(waveform, "IMTST:XTES:CLF:PLC:stEPSB:sMessage_RBV") {
   info(archive, "VAL")
 }
 
+record(bi, "IMTST:XTES:CLF:PLC:stEPSF:bEPS_OK_RBV") {
+  field(DESC, "check if nFlags are all true")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M6.stEPSForwardEnable.bEPS_OK?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
 record(longin, "IMTST:XTES:CLF:PLC:stEPSF:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
@@ -27313,6 +27573,19 @@ record(waveform, "IMTST:XTES:CLF:PLC:stEPSF:sMessage_RBV") {
   field(MPST, "On Change")
   field(APST, "On Change")
   info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(bi, "IMTST:XTES:CLF:PLC:stEPSP:bEPS_OK_RBV") {
+  field(DESC, "check if nFlags are all true")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M6.stEPSPowerEnable.bEPS_OK?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
   info(archive, "VAL")
 }
 
@@ -28040,6 +28313,19 @@ record(waveform, "$(PREFIX)3D:X:PLC:sName_RBV") {
   info(archive, "VAL")
 }
 
+record(bi, "$(PREFIX)3D:X:PLC:stEPSB:bEPS_OK_RBV") {
+  field(DESC, "check if nFlags are all true")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M7.stEPSBackwardEnable.bEPS_OK?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
 record(longin, "$(PREFIX)3D:X:PLC:stEPSB:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
@@ -28081,6 +28367,19 @@ record(waveform, "$(PREFIX)3D:X:PLC:stEPSB:sMessage_RBV") {
   info(archive, "VAL")
 }
 
+record(bi, "$(PREFIX)3D:X:PLC:stEPSF:bEPS_OK_RBV") {
+  field(DESC, "check if nFlags are all true")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M7.stEPSForwardEnable.bEPS_OK?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
 record(longin, "$(PREFIX)3D:X:PLC:stEPSF:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
@@ -28119,6 +28418,19 @@ record(waveform, "$(PREFIX)3D:X:PLC:stEPSF:sMessage_RBV") {
   field(MPST, "On Change")
   field(APST, "On Change")
   info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(bi, "$(PREFIX)3D:X:PLC:stEPSP:bEPS_OK_RBV") {
+  field(DESC, "check if nFlags are all true")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M7.stEPSPowerEnable.bEPS_OK?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
   info(archive, "VAL")
 }
 
@@ -28846,6 +29158,19 @@ record(waveform, "$(PREFIX)3D:Y:PLC:sName_RBV") {
   info(archive, "VAL")
 }
 
+record(bi, "$(PREFIX)3D:Y:PLC:stEPSB:bEPS_OK_RBV") {
+  field(DESC, "check if nFlags are all true")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M8.stEPSBackwardEnable.bEPS_OK?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
 record(longin, "$(PREFIX)3D:Y:PLC:stEPSB:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
@@ -28887,6 +29212,19 @@ record(waveform, "$(PREFIX)3D:Y:PLC:stEPSB:sMessage_RBV") {
   info(archive, "VAL")
 }
 
+record(bi, "$(PREFIX)3D:Y:PLC:stEPSF:bEPS_OK_RBV") {
+  field(DESC, "check if nFlags are all true")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M8.stEPSForwardEnable.bEPS_OK?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
 record(longin, "$(PREFIX)3D:Y:PLC:stEPSF:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
@@ -28925,6 +29263,19 @@ record(waveform, "$(PREFIX)3D:Y:PLC:stEPSF:sMessage_RBV") {
   field(MPST, "On Change")
   field(APST, "On Change")
   info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(bi, "$(PREFIX)3D:Y:PLC:stEPSP:bEPS_OK_RBV") {
+  field(DESC, "check if nFlags are all true")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M8.stEPSPowerEnable.bEPS_OK?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
   info(archive, "VAL")
 }
 
@@ -29652,6 +30003,19 @@ record(waveform, "$(PREFIX)3D:Z:PLC:sName_RBV") {
   info(archive, "VAL")
 }
 
+record(bi, "$(PREFIX)3D:Z:PLC:stEPSB:bEPS_OK_RBV") {
+  field(DESC, "check if nFlags are all true")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M9.stEPSBackwardEnable.bEPS_OK?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
 record(longin, "$(PREFIX)3D:Z:PLC:stEPSB:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
@@ -29693,6 +30057,19 @@ record(waveform, "$(PREFIX)3D:Z:PLC:stEPSB:sMessage_RBV") {
   info(archive, "VAL")
 }
 
+record(bi, "$(PREFIX)3D:Z:PLC:stEPSF:bEPS_OK_RBV") {
+  field(DESC, "check if nFlags are all true")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M9.stEPSForwardEnable.bEPS_OK?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
 record(longin, "$(PREFIX)3D:Z:PLC:stEPSF:nFlags_RBV") {
   field(DESC, "Contains EPS flags")
   field(SCAN, "I/O Intr")
@@ -29731,6 +30108,19 @@ record(waveform, "$(PREFIX)3D:Z:PLC:stEPSF:sMessage_RBV") {
   field(MPST, "On Change")
   field(APST, "On Change")
   info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(bi, "$(PREFIX)3D:Z:PLC:stEPSP:bEPS_OK_RBV") {
+  field(DESC, "check if nFlags are all true")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/Main.M9.stEPSPowerEnable.bEPS_OK?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
   info(archive, "VAL")
 }
 
