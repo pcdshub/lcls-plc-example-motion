@@ -23,13 +23,25 @@ VAR
     M2: DUT_MotionStage := (sName := 'SIM:02');
     fbMotion2: FB_MotionStage;
 
-    // Simulated motor with limits at 0 and 100
+    // Simulated motor with limits at 0 and 100 and EPS
     {attribute 'pytmc' := '
         pv: @(PREFIX)03
         field: DESC Simulated Working Motor With Limits
     '}
     M3: ST_MotionStage := (sName := 'SIM:03');
     fbMotion3: FB_MotionStage;
+
+    // Online write FALSE to simulate an EPS concern
+    fbM3FwdEPS: FB_EPS;
+    bM3EPSFwd1: BOOL := TRUE;
+    fbM3BwdEPS: FB_EPS;
+    bM3EPSBwd1: BOOL := TRUE;
+    bM3EPSBwd2: BOOL := TRUE;
+    fbM3PwrEPS: FB_EPS;
+    bM3EPSPwr1: BOOL := TRUE;
+    bM3EPSPwr2: BOOL := TRUE;
+    bM3EPSPwr3: BOOL := TRUE;
+    sM3EPSMessage: STRING := 'Sim EPS Message';
 
     // Simulated motor xpim y
     {attribute 'pytmc' := '
@@ -202,6 +214,27 @@ M3.bLimitBackwardEnable := M3.Axis.NcToPlc.ActPos > 0.2;
 
 // Let us simulate NC errors on M1 by online writing to the inputs here
 fbCauseError(Axis:=M1.Axis);
+
+// Let us simulate EPS status on M3 by calling the EPS handlers.
+// Start as OK and allow login to make it not OK.
+// Have 1, 2 or 3 cases depending on the direction so we can see different sizes in the ui.
+fbM3FwdEPS(eps:=M3.stEPSForwardEnable);
+fbM3FwdEPS.setDescription('Sim Forward 1');
+fbM3FwdEPS.setMessage(sM3EPSMessage);
+fbM3FwdEPS.setBit(0, bM3EPSFwd1);
+
+fbM3BwdEPS(eps:=M3.stEPSBackwardEnable);
+fbM3BwdEPS.setDescription('Sim Backward 1;Sim Backward 2');
+fbM3BwdEPS.setMessage(sM3EPSMessage);
+fbM3BwdEPS.setBit(0, bM3EPSBwd1);
+fbM3BwdEPS.setBit(1, bM3EPSBwd2);
+
+fbM3PwrEPS(eps:=M3.stEPSPowerEnable);
+fbM3PwrEPS.setDescription('Sim Power 1;Sim Power 2;Sim Power 3');
+fbM3PwrEPS.setMessage(sM3EPSMessage);
+fbM3PwrEPS.setBit(0, bM3EPSPwr1);
+fbM3PwrEPS.setBit(1, bM3EPSPwr2);
+fbM3PwrEPS.setBit(2, bM3EPSPwr3);
 
 // Run the fake IM1L0
 fbIM1L0(
