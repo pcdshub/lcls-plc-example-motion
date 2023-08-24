@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{F57C39D5-25D6-4AD7-633A-1D4FFC1E11F6}" GeneratedBy="TwinCAT XAE Plc">
+<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{288B79C4-A575-FE98-9B04-CF60758A17E1}" GeneratedBy="TwinCAT XAE Plc">
   <DataTypes>
     <DataType>
       <Name Namespace="LCLS_General">ST_System</Name>
@@ -23942,6 +23942,16 @@ External Setpoint Generation:
         <Default>
           <Bool>true</Bool>
         </Default>
+        <Properties>
+          <Property>
+            <Name>pytmc</Name>
+            <Value>
+        pv: bEPS_OK
+        io: i
+        field: DESC check if nFlags are all true
+    </Value>
+          </Property>
+        </Properties>
       </SubItem>
     </DataType>
     <DataType>
@@ -56637,7 +56647,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
         </Property>
         <Property>
           <Name>ChangeDate</Name>
-          <Value>2023-08-24T14:00:08</Value>
+          <Value>2023-08-24T14:16:29</Value>
         </Property>
         <Property>
           <Name>GeneratedCodeSize</Name>
