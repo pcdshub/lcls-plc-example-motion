@@ -82,10 +82,10 @@
       <Resolution>LCLS General, 2.9.1 (SLAC)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="lcls-twincat-common-components">
-      <Resolution>lcls-twincat-common-components, 0.0.0 (SLAC)</Resolution>
+      <Resolution>lcls-twincat-common-components, 3.0.1 (SLAC)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="lcls-twincat-motion">
-      <Resolution>lcls-twincat-motion, 3.0.1 (SLAC)</Resolution>
+      <Resolution>lcls-twincat-motion, 4.0.2 (SLAC)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="PMPS">
       <Resolution>PMPS, 3.0.14 (SLAC - LCLS)</Resolution>
