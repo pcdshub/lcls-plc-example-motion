@@ -1033,7 +1033,7 @@ External Setpoint Generation:
 		</DataType>
 	</DataTypes>
 	<Project GUID="{CA7AC114-7F2F-41DD-9644-D0667BBB7DBD}" Name="tc_mot_example" PrjFilePath="..\..\tc_mot_example\tc_mot_example.plcproj" TmcFilePath="..\..\tc_mot_example\tc_mot_example.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="tc_mot_example\tc_mot_example.tmc" TmcHash="{C0F57D91-FAF4-B4A1-6D6C-73173BF168A8}">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="tc_mot_example\tc_mot_example.tmc" TmcHash="{7DD0FD9A-16CB-CF8D-6A03-8925A175DF7C}">
 			<Name>tc_mot_example Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">
@@ -1286,18 +1286,22 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>Main.fbIM1L0.bZoomEndFwd</Name>
+					<Comment><![CDATA[ Forward limit disable for zoom]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>Main.fbIM1L0.bZoomEndBwd</Name>
+					<Comment><![CDATA[ Backward limit disable for zoom]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>Main.fbIM1L0.bFocusEndFwd</Name>
+					<Comment><![CDATA[ Forward limit disable for focus]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>Main.fbIM1L0.bFocusEndBwd</Name>
+					<Comment><![CDATA[ Backward limit disable for focus]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -1311,6 +1315,123 @@ External Setpoint Generation:
 				<Var>
 					<Name>Main.fbIM1L0.fbFocus.fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{25521FAA-EA5F-4C7F-8864-BBCCDACD2E98}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbIM1L0.fbStates.astMotionStageMax[1].Axis.NcToPlc</Name>
+					<Type GUID="{25521FAA-EA5F-4C7F-8864-BBCCDACD2E98}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbIM1L0.fbStates.astMotionStageMax[1].bLimitForwardEnable</Name>
+					<Comment><![CDATA[ NC Forward Limit Switch: TRUE if ok to move]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbIM1L0.fbStates.astMotionStageMax[1].bLimitBackwardEnable</Name>
+					<Comment><![CDATA[ NC Backward Limit Switch: TRUE if ok to move]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbIM1L0.fbStates.astMotionStageMax[1].bHome</Name>
+					<Comment><![CDATA[ NO Home Switch: TRUE if at home]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbIM1L0.fbStates.astMotionStageMax[1].bHardwareEnable</Name>
+					<Comment><![CDATA[ NC STO Input: TRUE if ok to move]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbIM1L0.fbStates.astMotionStageMax[1].nRawEncoderULINT</Name>
+					<Comment><![CDATA[ Raw encoder IO for ULINT (Biss-C)]]></Comment>
+					<Type>ULINT</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbIM1L0.fbStates.astMotionStageMax[1].nRawEncoderUINT</Name>
+					<Comment><![CDATA[ Raw encoder IO for UINT (Relative Encoders)]]></Comment>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbIM1L0.fbStates.astMotionStageMax[1].nRawEncoderINT</Name>
+					<Comment><![CDATA[ Raw encoder IO for INT (LVDT)]]></Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbIM1L0.fbStates.astMotionStageMax[2].Axis.NcToPlc</Name>
+					<Type GUID="{25521FAA-EA5F-4C7F-8864-BBCCDACD2E98}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbIM1L0.fbStates.astMotionStageMax[2].bLimitForwardEnable</Name>
+					<Comment><![CDATA[ NC Forward Limit Switch: TRUE if ok to move]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbIM1L0.fbStates.astMotionStageMax[2].bLimitBackwardEnable</Name>
+					<Comment><![CDATA[ NC Backward Limit Switch: TRUE if ok to move]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbIM1L0.fbStates.astMotionStageMax[2].bHome</Name>
+					<Comment><![CDATA[ NO Home Switch: TRUE if at home]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbIM1L0.fbStates.astMotionStageMax[2].bHardwareEnable</Name>
+					<Comment><![CDATA[ NC STO Input: TRUE if ok to move]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbIM1L0.fbStates.astMotionStageMax[2].nRawEncoderULINT</Name>
+					<Comment><![CDATA[ Raw encoder IO for ULINT (Biss-C)]]></Comment>
+					<Type>ULINT</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbIM1L0.fbStates.astMotionStageMax[2].nRawEncoderUINT</Name>
+					<Comment><![CDATA[ Raw encoder IO for UINT (Relative Encoders)]]></Comment>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbIM1L0.fbStates.astMotionStageMax[2].nRawEncoderINT</Name>
+					<Comment><![CDATA[ Raw encoder IO for INT (LVDT)]]></Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbIM1L0.fbStates.astMotionStageMax[3].Axis.NcToPlc</Name>
+					<Type GUID="{25521FAA-EA5F-4C7F-8864-BBCCDACD2E98}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbIM1L0.fbStates.astMotionStageMax[3].bLimitForwardEnable</Name>
+					<Comment><![CDATA[ NC Forward Limit Switch: TRUE if ok to move]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbIM1L0.fbStates.astMotionStageMax[3].bLimitBackwardEnable</Name>
+					<Comment><![CDATA[ NC Backward Limit Switch: TRUE if ok to move]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbIM1L0.fbStates.astMotionStageMax[3].bHome</Name>
+					<Comment><![CDATA[ NO Home Switch: TRUE if at home]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbIM1L0.fbStates.astMotionStageMax[3].bHardwareEnable</Name>
+					<Comment><![CDATA[ NC STO Input: TRUE if ok to move]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbIM1L0.fbStates.astMotionStageMax[3].nRawEncoderULINT</Name>
+					<Comment><![CDATA[ Raw encoder IO for ULINT (Biss-C)]]></Comment>
+					<Type>ULINT</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbIM1L0.fbStates.astMotionStageMax[3].nRawEncoderUINT</Name>
+					<Comment><![CDATA[ Raw encoder IO for UINT (Relative Encoders)]]></Comment>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbIM1L0.fbStates.astMotionStageMax[3].nRawEncoderINT</Name>
+					<Comment><![CDATA[ Raw encoder IO for INT (LVDT)]]></Comment>
+					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>Main.fbIM1L0.fbFlowSwitch.bFlowOk</Name>
@@ -1806,6 +1927,33 @@ External Setpoint Generation:
 				<Var>
 					<Name>Main.fbIM1L0.fbFocus.fbDriveVirtual.MasterAxis.PlcToNc</Name>
 					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbIM1L0.fbStates.astMotionStageMax[1].Axis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbIM1L0.fbStates.astMotionStageMax[1].bBrakeRelease</Name>
+					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbIM1L0.fbStates.astMotionStageMax[2].Axis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbIM1L0.fbStates.astMotionStageMax[2].bBrakeRelease</Name>
+					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbIM1L0.fbStates.astMotionStageMax[3].Axis.PlcToNc</Name>
+					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>Main.fbIM1L0.fbStates.astMotionStageMax[3].bBrakeRelease</Name>
+					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
+					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>Main.fbIM1L0.fbOpal.bOpalPower</Name>

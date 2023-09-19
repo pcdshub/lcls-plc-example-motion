@@ -11,6 +11,10 @@ VAR
     M1: ST_MotionStage := (sName := 'SIM:01');
     fbMotion1: FB_MotionStageSim;
 
+    // Tool for simulating an NC error
+    fbCauseError: FB_CauseNCError;
+
+
     // Simulated motor that is never allowed to move
     {attribute 'pytmc' := '
         pv: @(PREFIX)02
@@ -19,13 +23,25 @@ VAR
     M2: DUT_MotionStage := (sName := 'SIM:02');
     fbMotion2: FB_MotionStage;
 
-    // Simulated motor with limits at 0 and 100
+    // Simulated motor with limits at 0 and 100 and EPS
     {attribute 'pytmc' := '
         pv: @(PREFIX)03
         field: DESC Simulated Working Motor With Limits
     '}
     M3: ST_MotionStage := (sName := 'SIM:03');
     fbMotion3: FB_MotionStage;
+
+    // Online write FALSE to simulate an EPS concern
+    fbM3FwdEPS: FB_EPS;
+    bM3EPSFwd1: BOOL := TRUE;
+    fbM3BwdEPS: FB_EPS;
+    bM3EPSBwd1: BOOL := TRUE;
+    bM3EPSBwd2: BOOL := TRUE;
+    fbM3PwrEPS: FB_EPS;
+    bM3EPSPwr1: BOOL := TRUE;
+    bM3EPSPwr2: BOOL := TRUE;
+    bM3EPSPwr3: BOOL := TRUE;
+    sM3EPSMessage: STRING := 'Sim EPS Message';
 
     // Simulated motor xpim y
     {attribute 'pytmc' := '
@@ -48,7 +64,6 @@ VAR
 
     {attribute 'pytmc' := '
         pv: IMTST:XTES
-        io: io
     '}
     fbIM1L0: FB_XPIM;
     stEL6In AT %I*: EL6InData22b;
@@ -77,6 +92,9 @@ VAR
     fbMotion9: FB_MotionStage;
     {attribute 'pytmc' := '
         pv: @(PREFIX)3D
+        astPositionState1.array: 1..3
+        astPositionState2.array: 1..3
+        astPositionState3.array: 1..3
     '}
     fb3D: FB_PositionStatePMPS3D;
 
@@ -111,6 +129,7 @@ VAR
     fbMotion10: FB_MotionStage;
     {attribute 'pytmc' := '
         pv: @(PREFIX)L2L
+        astPositionState.array: 1..2
     '}
     fbM10States: FB_PositionState1D;
     astM10States: ARRAY[1..GeneralConstants.MAX_STATES] OF ST_PositionState;
@@ -193,10 +212,31 @@ fbMotion3(stMotionStage := M3);
 M3.bLimitForwardEnable := M3.Axis.NcToPlc.ActPos < 99.7;
 M3.bLimitBackwardEnable := M3.Axis.NcToPlc.ActPos > 0.2;
 
+// Let us simulate NC errors on M1 by online writing to the inputs here
+fbCauseError(Axis:=M1.Axis);
+
+// Let us simulate EPS status on M3 by calling the EPS handlers.
+// Start as OK and allow login to make it not OK.
+// Have 1, 2 or 3 cases depending on the direction so we can see different sizes in the ui.
+fbM3FwdEPS(eps:=M3.stEPSForwardEnable);
+fbM3FwdEPS.setDescription('Sim Forward 1');
+fbM3FwdEPS.setMessage(sM3EPSMessage);
+fbM3FwdEPS.setBit(0, bM3EPSFwd1);
+
+fbM3BwdEPS(eps:=M3.stEPSBackwardEnable);
+fbM3BwdEPS.setDescription('Sim Backward 1;Sim Backward 2');
+fbM3BwdEPS.setMessage(sM3EPSMessage);
+fbM3BwdEPS.setBit(0, bM3EPSBwd1);
+fbM3BwdEPS.setBit(1, bM3EPSBwd2);
+
+fbM3PwrEPS(eps:=M3.stEPSPowerEnable);
+fbM3PwrEPS.setDescription('Sim Power 1;Sim Power 2;Sim Power 3');
+fbM3PwrEPS.setMessage(sM3EPSMessage);
+fbM3PwrEPS.setBit(0, bM3EPSPwr1);
+fbM3PwrEPS.setBit(1, bM3EPSPwr2);
+fbM3PwrEPS.setBit(2, bM3EPSPwr3);
+
 // Run the fake IM1L0
-M4.bPowerSelf := FALSE;
-M5.bPowerSelf := TRUE;
-M6.bPowerSelf := TRUE;
 fbIM1L0(
     fbArbiter := GVL.fbArbiter,
     fbFFHWO := GVL.fbFastFaultOutput1,
@@ -205,8 +245,11 @@ fbIM1L0(
     stFocusStage := M6,
     stEl6In := stEL6In,
     stEl6Out := stEl6Out,
-    sPmpsDeviceName := 'IM1K0:XTES',
+    sDeviceName := 'IM1K0:XTES',
     sTransitionKey:='IM1K0:XTES-TRANSITION',
+    bEnableMotion:=TRUE,
+    bEnableBeamParams:=TRUE,
+    bEnablePositionLimits:=TRUE,
 );
 
 // Run the 3D demo

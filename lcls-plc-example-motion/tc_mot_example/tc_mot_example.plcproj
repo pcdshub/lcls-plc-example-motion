@@ -42,19 +42,19 @@
       <DefaultResolution>LCLS General, * (SLAC)</DefaultResolution>
       <Namespace>LCLS_General</Namespace>
       <Parameters>
-        <Parameter ListName="GENERALCONSTANTS" xmlns="">
+        <Parameter ListName="GENERALCONSTANTS">
           <Key>MAX_STATES</Key>
-          <Value>4</Value>
+          <Value>6</Value>
         </Parameter>
       </Parameters>
+    </PlaceholderReference>
+    <PlaceholderReference Include="lcls-twincat-common-components">
+      <DefaultResolution>lcls-twincat-common-components, * (SLAC)</DefaultResolution>
+      <Namespace>lcls_twincat_common_components</Namespace>
     </PlaceholderReference>
     <PlaceholderReference Include="lcls-twincat-motion">
       <DefaultResolution>lcls-twincat-motion, * (SLAC)</DefaultResolution>
       <Namespace>lcls_twincat_motion</Namespace>
-    </PlaceholderReference>
-    <PlaceholderReference Include="lcls2-cc-lib">
-      <DefaultResolution>lcls2-cc-lib, * (SLAC)</DefaultResolution>
-      <Namespace>lcls2_cc_lib</Namespace>
     </PlaceholderReference>
     <PlaceholderReference Include="PMPS">
       <DefaultResolution>PMPS, * (SLAC - LCLS)</DefaultResolution>
@@ -79,13 +79,13 @@
   </ItemGroup>
   <ItemGroup>
     <PlaceholderResolution Include="LCLS General">
-      <Resolution>LCLS General, 2.8.2 (SLAC)</Resolution>
+      <Resolution>LCLS General, 2.9.1 (SLAC)</Resolution>
+    </PlaceholderResolution>
+    <PlaceholderResolution Include="lcls-twincat-common-components">
+      <Resolution>lcls-twincat-common-components, 3.0.1 (SLAC)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="lcls-twincat-motion">
-      <Resolution>lcls-twincat-motion, 3.0.1 (SLAC)</Resolution>
-    </PlaceholderResolution>
-    <PlaceholderResolution Include="lcls2-cc-lib">
-      <Resolution>lcls2-cc-lib, 2.0.0 (SLAC)</Resolution>
+      <Resolution>lcls-twincat-motion, 4.0.2 (SLAC)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="PMPS">
       <Resolution>PMPS, 3.0.14 (SLAC - LCLS)</Resolution>
